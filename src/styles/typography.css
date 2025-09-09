@@ -1,0 +1,61 @@
+
+
+
+/* Body Text */
+.body-1 {
+  font-family: var(--font-primary);
+  font-size: 20px;
+  font-weight: var(--fw-medium);
+  line-height: auto;
+}
+
+.body-2 {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: var(--fw-medium);
+  line-height: auto;
+}
+
+.body-3 {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: var(--fw-regular);
+  line-height: auto;
+}
+
+/* Captions */
+.caption-1 {
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: var(--fw-medium);
+  line-height: auto;
+}
+
+.caption-2 {
+  font-family: var(--font-primary);
+  font-size: 14px;
+  font-weight: var(--fw-bold);
+  line-height: auto;
+}
+
+/* Header */
+.h1 {
+  font-family: var(--font-primary);
+  font-size: 32px;
+  font-weight: var(--fw-medium);
+  line-height: auto;
+}
+
+.h2 {
+  font-family: var(--font-primary);
+  font-size: 28px;
+  font-weight: var(--fw-medium);
+  line-height: auto;
+}
+
+.h3 {
+  font-family: var(--font-primary);
+  font-size: 24px;
+  font-weight: var(--fw-medium);
+  line-height: auto;
+}
