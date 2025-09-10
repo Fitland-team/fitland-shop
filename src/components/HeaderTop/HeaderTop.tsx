@@ -1,3 +1,5 @@
+import './HeaderTop.css'
+
 function HeaderTop() {
   return (
     <div className="header-top">
