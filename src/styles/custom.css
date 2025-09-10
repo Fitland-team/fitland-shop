@@ -10,4 +10,5 @@ body {
 
 .container {
   max-width: 1224px;
+  margin: 0 auto;
 }
