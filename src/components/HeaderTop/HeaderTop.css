@@ -1,7 +1,12 @@
 .header-top-title {
+    position: relative;
+    left: 50%;
+    right: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    margin-right: -50vw;
     background-color: var(--secondary);
     color: var(--white);
-    width: 100vw;
     height: 40px;
 }
 
@@ -11,3 +16,101 @@
     text-align: center;
     padding: 10px;
 }
+
+/* Start Header Top First Section */
+
+.header-top__first-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.header-top__icon-title {
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 5px;
+    color: var(--Neutral-Colors-6);
+}
+
+.header-top__search-box {
+    display: flex;
+    position: relative;
+    width: 638px;
+    height: 48px;
+}
+
+.header-top__serach {
+    border: 1px solid var(--Neutral-Colors-4);
+    width: 100%;
+    border-radius: var(--radius-large);
+    padding-right: 3rem;
+    outline: none;
+}
+
+.header-top__serach::placeholder {
+    font-size: 12px;
+    color: var(--Neutral-Colors-6);
+    font-weight: 700;
+    font-family: sans-serif;
+}
+
+.header-top__search-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header-top__search-icon svg {
+    fill: var(--primary);
+}
+
+.header-top__register-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.header-top__register-btn {
+    background-color: var(--white);
+    border: none;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    padding: 5px 5px;
+    width: 142px;
+    height: 48px;
+}
+
+.header-top__register-title {
+    font-weight: 700;
+    color: var(--Neutral-Colors-8);
+    font-size: 16px;
+}
+
+.header-top__register-icon svg{
+    fill: var(--Neutral-Colors-8);
+}
+
+.header-top__card {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-top__card-btn {
+    background: unset;
+    border: none;
+    cursor: pointer;
+}
+
+/* End Header Top First Section */
