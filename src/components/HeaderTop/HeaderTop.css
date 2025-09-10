@@ -1,0 +1,13 @@
+.header-top-title {
+    background-color: var(--secondary);
+    color: var(--white);
+    width: 100vw;
+    height: 40px;
+}
+
+.header-top-title h3 {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px;
+}
