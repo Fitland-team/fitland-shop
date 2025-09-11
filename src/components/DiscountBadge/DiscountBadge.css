@@ -1,0 +1,21 @@
+.discount-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  font-size: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.secondary {
+  background-color: #67AAE6;
+    color: var(--secondary);
+}

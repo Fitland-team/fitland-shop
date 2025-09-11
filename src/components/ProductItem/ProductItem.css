@@ -1,4 +1,5 @@
 .product-card {
+    position: relative;
     max-width: 366px;
     height: 467px;
     border-radius: var(--radius-large);
