@@ -74,7 +74,7 @@
     font-size: 16px;
 }
 
-.header-top__register-icon svg{
+.header-top__register-icon svg {
     fill: var(--Neutral-Colors-8);
 }
 
@@ -86,10 +86,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
     position: relative;
-=======
->>>>>>> feature/footer
 }
 
 .header-top__card-btn {
@@ -98,19 +95,21 @@
     cursor: pointer;
 }
 
-<<<<<<< HEAD
 .header-top__card-count {
     position: absolute;
     background-color: var(--secondary);
     color: var(--white);
-    width: 16px;
-    height: 16px;
+    width: 19px;
+    height: 19px;
     border-radius: 50px;
     padding: 4px;
-    top: -8px;
-    left: -8px;
+    top: -4px;
+    left: -4px;
     font-size: 12px;
     font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* End Header Top First Section */
@@ -159,6 +158,3 @@
 }
 
 /* End Header Top Second Section */
-=======
-/* End Header Top First Section */
->>>>>>> feature/footer

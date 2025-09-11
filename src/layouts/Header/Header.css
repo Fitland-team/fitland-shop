@@ -1,10 +1,5 @@
 .header-top-title {
-    position: relative;
-    left: 50%;
-    right: 50%;
-    width: 100vw;
-    margin-left: -50vw;
-    margin-right: -50vw;
+    width: 100%;
     background-color: var(--secondary);
     color: var(--white);
     height: 40px;

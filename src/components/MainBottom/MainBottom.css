@@ -1,6 +1,5 @@
 .main-bottom {
     border: none;
-    background-color: var(--secondary);
     border-radius: var(--radius-small);
     width: 207px;
     padding: 8px 24px 8px 24px;
@@ -8,6 +7,14 @@
     align-items: center;
     gap: 8px;
     cursor: pointer;
+}
+
+.main-bottom.secondary {
+    background-color: var(--secondary);
+}
+
+.main-bottom.primary {
+    background-color: var(--primary);
 }
 
 .main-bottom__title {

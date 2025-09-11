@@ -1,56 +1,74 @@
 .footer {
   background: #0d1b2a;
   color: #fff;
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  right: 50%;
-  width: 100vw;
   height: 558px;
-  margin-left: -50vw;
-  margin-right: -50vw;
+  position: relative;
 }
-.footer-wrapper {
-  width: 1224px;
-  margin: 0px auto;
-}
+
 .footer__top {
   display: flex;
   justify-content: space-between;
-  gap: 32px;
+  gap: 142px;
   padding: 48px 0;
 }
 
 .footer__links {
   display: flex;
-  flex: 1;
-  gap: 90px;
   width: 760px;
+  justify-content: space-around;
 }
 
 .footer__column {
   font-size: 14px;
+  text-wrap: nowrap;
+}
+
+.favorite {
+  width: 91px;
+}
+
+.services {
+  width: 154px;
+}
+
+.guide {
+  width: 165px;
+}
+
+.contact {
+  width: 230px;
+}
+
+.footer__column-contact-number {
+  color: var(--primary);
+}
+
+.footer__column-email {
+  color: var(--primary);
 }
 
 .footer__title {
   font-weight: 600;
   margin-bottom: 24px;
+  font-size: 14px;
 }
 
 .footer__list {
   list-style: disc inside;
-  color: #d1d5db; /* text-neutral-300 */
+  color: #d1d5db;
+  /* text-neutral-300 */
   line-height: 30px;
   margin-right: 6px;
 }
 
 .footer__list li {
   margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--Neutral-Colors-4);
 }
 
 .footer__social {
-  text-align: center;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -59,41 +77,61 @@
 .footer__follow-text {
   font-size: 14px;
   font-weight: 600;
-  margin-bottom: 16px;
 }
 
 .footer__icons {
   display: flex;
-  gap: 16px;
-  justify-content: space-evenly;
+  gap: 26px;
   align-items: center;
 }
-.footer__icon-item{
-    width: 40px;
-    height: 40px;
+
+.footer__icon-item {
+  width: 40px;
+  height: 40px;
 }
+
+.ooter-social__input-title-text {
+  font-size: 14px;
+  font-weight: 700;
+}
+
 .footer__user-email {
   position: relative;
   display: inline-block;
+  height: 38px;
 }
+
 .footer__user-email-input {
-  padding: 10px 10px 10px 60px; /* فاصله سمت چپ برای دکمه */
-  border: none; /* بدون خط دور */
-  outline: none; /* بدون اوت لاین */
+  padding: 10px 33px 10px 60px;
+  border: 1px solid var(--Neutral-Colors-6);
+  outline: none;
   border-radius: var(--radius-medium);
-  background-color: white;
-  font-size: 14px;
+  background-color: unset;
+  font-size: 15px;
   width: 330px;
+  color: var(--secondary);
+}
+
+.footer__user-email-input::placeholder {
+  font-family: sans-serif;
+}
+
+.footer__user-email-input-icon {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  right: 10px;
 }
 
 .footer__user-email-submit {
   position: absolute;
   left: 3px;
-  top: 0;
-  bottom: 0;
+  top: 50%;
+  transform: translateY(-50%);
   border: none;
-  background-color: var(--primary); /* رنگ دکمه */
-  padding: 0 15px;
+  background-color: var(--primary);
+  /* رنگ دکمه */
+  padding: 3px 15px;
   margin: 3px;
   border-radius: var(--radius-small);
   cursor: pointer;
@@ -101,37 +139,58 @@
 
 .footer__bottom {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-top: 32px;
 }
+
 .footer__bottom-desc {
   text-align: justify;
   font-size: 14px;
   line-height: 1.6;
   max-width: 650px;
-  max-height: 90px;
 }
+
+.footer-bottom__title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
 .footer__namad {
   display: flex;
   gap: 36px;
 }
+
+.footer-namad-wrapper {
+  margin-top: 1.7rem;
+}
+
 .footer-namad-wrapper p {
   margin-top: 30px;
   text-align: center;
 }
-.full-line {
-  position: fixed; /* به صفحه فیکس میشه، نه به پرنت */
-  left: 0;
-  bottom: 35px; /* فاصله از کف */
-  width: 100vw; /* کل عرض صفحه */
-  height: 2px;
-  background: #cbcbcb;
-}
+
 .footer-copy-right {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 4.3rem;
+  margin-top: 3.9rem;
 }
 
+.footer-copy-right__organ,
+.footer__made-by {
+  font-size: 12px;
+  font-weight: bold;
+  color: var(--Neutral-Colors-5);
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.footer-copy-right__full-width::after {
+  content: '';
+  position: absolute;
+  background-color: var(--white);
+  width: 100%;
+  height: 1px;
+  bottom: 45px;
+}
