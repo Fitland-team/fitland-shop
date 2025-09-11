@@ -109,7 +109,7 @@
   background-color: unset;
   font-size: 15px;
   width: 330px;
-  color: var(--secondary);
+  color: var(--white);
 }
 
 .footer__user-email-input::placeholder {
