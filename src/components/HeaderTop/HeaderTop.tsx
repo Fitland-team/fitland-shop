@@ -62,11 +62,16 @@ function HeaderTop() {
                 <path d="M15.4163 13.1504C14.8563 13.1504 14.4062 12.7004 14.4062 12.1504C14.4062 11.6004 14.8562 11.1504 15.4062 11.1504C15.9562 11.1504 16.4062 11.6004 16.4062 12.1504C16.4062 12.7004 15.9663 13.1504 15.4163 13.1504Z" fill="white" />
                 <path d="M8.41625 13.1504C7.85625 13.1504 7.40625 12.7004 7.40625 12.1504C7.40625 11.6004 7.85625 11.1504 8.40625 11.1504C8.95625 11.1504 9.40625 11.6004 9.40625 12.1504C9.40625 12.7004 8.96625 13.1504 8.41625 13.1504Z" fill="white" />
               </svg>
+<<<<<<< HEAD
               <span className='header-top__card-count'>0</span>
+=======
+
+>>>>>>> feature/footer
             </button>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
       <div className="header-top__second-section">
         <div className="navbar">
           <div className="navbar-right">
@@ -133,6 +138,9 @@ function HeaderTop() {
           </div>
         </div>
       </div>
+=======
+      <div className="header-top__second-section"></div>
+>>>>>>> feature/footer
     </div>
   )
 }

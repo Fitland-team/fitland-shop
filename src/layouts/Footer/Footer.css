@@ -1,0 +1,137 @@
+.footer {
+  background: #0d1b2a;
+  color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  height: 558px;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+.footer-wrapper {
+  width: 1224px;
+  margin: 0px auto;
+}
+.footer__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 48px 0;
+}
+
+.footer__links {
+  display: flex;
+  flex: 1;
+  gap: 90px;
+  width: 760px;
+}
+
+.footer__column {
+  font-size: 14px;
+}
+
+.footer__title {
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.footer__list {
+  list-style: disc inside;
+  color: #d1d5db; /* text-neutral-300 */
+  line-height: 30px;
+  margin-right: 6px;
+}
+
+.footer__list li {
+  margin-bottom: 8px;
+}
+
+.footer__social {
+  text-align: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.footer__follow-text {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.footer__icons {
+  display: flex;
+  gap: 16px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.footer__icon-item{
+    width: 40px;
+    height: 40px;
+}
+.footer__user-email {
+  position: relative;
+  display: inline-block;
+}
+.footer__user-email-input {
+  padding: 10px 10px 10px 60px; /* فاصله سمت چپ برای دکمه */
+  border: none; /* بدون خط دور */
+  outline: none; /* بدون اوت لاین */
+  border-radius: var(--radius-medium);
+  background-color: white;
+  font-size: 14px;
+  width: 330px;
+}
+
+.footer__user-email-submit {
+  position: absolute;
+  left: 3px;
+  top: 0;
+  bottom: 0;
+  border: none;
+  background-color: var(--primary); /* رنگ دکمه */
+  padding: 0 15px;
+  margin: 3px;
+  border-radius: var(--radius-small);
+  cursor: pointer;
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+.footer__bottom-desc {
+  text-align: justify;
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 650px;
+  max-height: 90px;
+}
+.footer__namad {
+  display: flex;
+  gap: 36px;
+}
+.footer-namad-wrapper p {
+  margin-top: 30px;
+  text-align: center;
+}
+.full-line {
+  position: fixed; /* به صفحه فیکس میشه، نه به پرنت */
+  left: 0;
+  bottom: 35px; /* فاصله از کف */
+  width: 100vw; /* کل عرض صفحه */
+  height: 2px;
+  background: #cbcbcb;
+}
+.footer-copy-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4.3rem;
+}
+

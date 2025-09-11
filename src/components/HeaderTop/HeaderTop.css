@@ -105,7 +105,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+<<<<<<< HEAD
     position: relative;
+=======
+>>>>>>> feature/footer
 }
 
 .header-top__card-btn {
@@ -114,6 +117,7 @@
     cursor: pointer;
 }
 
+<<<<<<< HEAD
 .header-top__card-count {
     position: absolute;
     background-color: var(--secondary);
@@ -174,3 +178,6 @@
 }
 
 /* End Header Top Second Section */
+=======
+/* End Header Top First Section */
+>>>>>>> feature/footer
