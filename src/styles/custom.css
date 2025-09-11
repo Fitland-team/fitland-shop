@@ -4,9 +4,71 @@
   font-style: normal;
 }
 
-body {
+/* =========================
+   Reset / Normalize CSS
+   ========================= */
+
+/* همه المنت‌ها به border-box */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* متن پایه */
+html, body {
+  height: 100%;
+  font-family: 'IranSans', sans-serif;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+  color: #111;
+}
+
+/* تصاویر، ویدیوها و SVG ها */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* فرم‌ها */
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+/* placeholder */
+input::placeholder,
+textarea::placeholder {
+  color: #888;
   font-family: 'IranSans', sans-serif;
 }
+
+/* دکمه‌ها */
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* لینک‌ها */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* لیست‌ها */
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
 
 .container {
   max-width: 1224px;
