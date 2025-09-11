@@ -49,8 +49,6 @@ textarea::placeholder {
   font-family: 'IranSans', sans-serif;
 }
 
-<<<<<<< HEAD
-=======
 /* دکمه‌ها */
 button {
   cursor: pointer;
@@ -72,8 +70,24 @@ ul, ol {
 }
 
 
->>>>>>> feature/footer
 .container {
   max-width: 1224px;
   margin: 0 auto;
+}
+
+/* کل اسکرول‌بار */
+::-webkit-scrollbar {
+  width: 6px;  
+}
+
+/* پس‌زمینه‌ی اسکرول‌بار */
+::-webkit-scrollbar-track {
+  background: var(--secondary); 
+  border-radius: 8px;
+}
+
+/* قسمت حرکت‌کننده (thumb) */
+::-webkit-scrollbar-thumb {
+  background: var(--primary); 
+  border-radius: 8px;
 }
