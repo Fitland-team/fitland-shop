@@ -3,9 +3,6 @@ import './HeaderTop.css'
 function HeaderTop() {
   return (
     <div className="header-top">
-      <div className="header-top-title">
-        <h3>با عضویت در فیت لند اولین ارسال را مهمون ما باش :)</h3>
-      </div>
       <div className="header-top__first-section">
         <div className="header-top__icon">
           <svg width="151" height="32" viewBox="0 0 151 32" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -1,0 +1,17 @@
+.main-bottom {
+    border: none;
+    background-color: var(--secondary);
+    border-radius: var(--radius-small);
+    width: 207px;
+    padding: 8px 24px 8px 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.main-bottom__title {
+    color: var(--white);
+    font-size: 16px;
+    font-weight: 700;
+}
