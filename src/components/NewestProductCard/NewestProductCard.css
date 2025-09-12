@@ -1,0 +1,33 @@
+.newest-product__card {
+    width: 392px;
+    height: 462px;
+    border-radius: var(--radius-large);
+    border: 1px solid var(--Neutral-Colors-2);
+    position: relative;
+    overflow: hidden;
+}
+
+.newest-product__card-img {
+    width: 392px;
+    object-fit: contain;
+}
+
+.newest-product__card-title {
+    color: var(--white);
+    position: absolute;
+    bottom: -6px;
+}
+
+.newest-product__card-title-content {
+    position: absolute;
+    z-index: 9999;
+    bottom: 26px;
+    right: 17px;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 2rem;
+}
+
+.newest-product__card-title-text-sapn {
+    color: var(--primary);
+}

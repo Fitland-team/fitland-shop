@@ -1,0 +1,28 @@
+.newest-products {
+    margin-top: 7rem;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+
+.newest-products__content {
+    width: 309px;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    gap: 16px;
+}
+
+.newest-products__content-title {
+    color: var(--secondary);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.newest-products__content-text {
+    font-size: 17px;
+    color: var(--Neutral-Colors-7);
+    font-weight: 700;
+}
