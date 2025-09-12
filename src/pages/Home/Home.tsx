@@ -1,12 +1,14 @@
+import './Home.css'
 import Footer from "../../layouts/Footer/Footer";
 import Header from "../../layouts/Header/Header";
-import ProductItem from "../../components/ProductItem/ProductItem";
+import Pagination from "../../layouts/Pagination/Pagination";
 
 function Home() {
   return (
     <>
       <Header />
-      <ProductItem image="./images/Rectangle.png" title="کفش نایک مدل S200" price="200000" sizeRangeSmall="L" sizeRangeBig="XXL" />
+      <Pagination title="تخفیفات ویژه" />
+      <Pagination title="جدید ترین کفش های ورزشی" />
       <Footer />
     </>
   );

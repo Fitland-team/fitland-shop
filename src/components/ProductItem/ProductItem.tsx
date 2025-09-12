@@ -17,7 +17,6 @@ function ProductItem({
   sizeRangeBig,
 }: ProductItemProps) {
   return (
-    <div className="container">
       <div className="product-card">
         <DiscountBadge variant={"primary"} discount={"VIP"} />
         <div className="product-img-container">
@@ -40,7 +39,6 @@ function ProductItem({
           </div>
         </div>
       </div>
-    </div>
   );
 }
 

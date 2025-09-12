@@ -7,7 +7,7 @@ type DiscountBadgeProps = {
 
 function DiscountBadge({discount, variant}: DiscountBadgeProps) {
 
-  if (!discount) return null; // اگه تخفیف نیست، چیزی رندر نمیشه
+  if (!discount) return null;
 
   return <div className={`discount-badge ${variant}`}>{discount}</div>
 
