@@ -4,6 +4,7 @@
     height: 467px;
     border-radius: var(--radius-large);
     border: 1px solid var(--Neutral-Colors-2);
+    background-color: var(--white);
 }
 .product-img-container {
     width: 100%;

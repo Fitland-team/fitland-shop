@@ -1,6 +1,12 @@
 .pagination {
   margin-top: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100%;
+  padding-bottom: 37px;
 }
+
 .pagination__title {
   font-weight: 600;
   font-size: 32px;
@@ -8,27 +14,37 @@
   text-align: center;
   margin-bottom: 20px;
 }
+
+.pagination-title__bgimage {
+  position: relative;
+  right: 8px;
+}
+
 .pagination-button-wrapper {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 8px;
 }
+
 .pagination__see-all-button {
   display: flex;
   gap: 4px;
   align-items: center;
   justify-content: center;
 }
+
 .pagination__see-all-button svg {
   width: 24px;
   height: 24px;
   color: var(--secondary);
 }
+
 .pagination__see-all-button span {
   color: var(--secondary);
   font-size: 18px;
   font-weight: 600;
 }
+
 .pagination-product-wrapper {
   display: flex;
   align-items: center;
@@ -36,16 +52,20 @@
   margin-bottom: 37px;
   justify-content: space-between;
 }
+
 .pagination__arrow {
   position: absolute;
   cursor: pointer;
 }
+
 .pagination__arrow-right {
   right: -32px;
 }
+
 .pagination__arrow-left {
   left: -32px;
 }
+
 .pagination__arrow svg {
   color: #021526;
   width: 32px;

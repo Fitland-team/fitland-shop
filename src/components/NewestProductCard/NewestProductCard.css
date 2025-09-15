@@ -7,6 +7,61 @@
     overflow: hidden;
 }
 
+.newest-product__card:hover {
+    .newest-product__card-overlay {
+        opacity: 1;        
+    }
+}
+
+.newest-product__card-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(13, 13, 13, 0.6);
+    backdrop-filter: blur(12px);
+    opacity: 0;
+    z-index: 5;
+    position: absolute;
+    transition: all 200ms ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 12rem;
+}
+
+.newest-product__card-overlay-wrapper {
+    width: 234px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+}
+
+.newest-product__card-overlay-title {
+    font-size: 20px;
+    color: var(--white);
+    font-weight: 500;
+}
+
+.newest-product__card-overlay-btn {
+    width: 100%;
+    border: 2px solid var(--white);
+    padding: 8px 31px;
+    color: var(--white);
+    font-size: 16px;
+    border-radius: var(--radius-medium);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    height: 56px;
+    transition: all 200ms ease;
+}
+
+.newest-product__card-overlay-btn:hover {
+    background-color: var(--primary);
+    color: var(--white);
+    border: 2px solid var(--primary);
+}
+
 .newest-product__card-img {
     width: 392px;
     object-fit: contain;
@@ -20,7 +75,7 @@
 
 .newest-product__card-title-content {
     position: absolute;
-    z-index: 9999;
+    z-index: 1;
     bottom: 26px;
     right: 17px;
     font-size: 17px;

@@ -135,6 +135,11 @@
     color: var(--black);
     font-size: 16px;
     font-weight: 700;
+    transition: all 200ms ease;
+}
+
+.navbar-right__item-link:hover {
+    color: var(--primary);
 }
 
 .navbar-left-list {
@@ -149,6 +154,11 @@
     gap: 5px;
     font-size: 16px;
     font-weight: 700;
+    transition: all 200ms ease;
+}
+
+.navbar-left__item-link:hover {
+    color: var(--primary);
 }
 
 .navbar-left__item-link svg {
