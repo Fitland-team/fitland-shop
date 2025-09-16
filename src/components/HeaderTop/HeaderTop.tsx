@@ -1,12 +1,23 @@
 import { useState } from "react";
-import MegaMenu from "../MegaMenu/MegaMenu"
-import { womenSubMenu } from "../../api/menuData";
+import MegaMenu from "../MegaMenu/MegaMenu";
+import {
+  womenSubMenu,
+  menSubMenu,
+  kidSubMenu,
+  sportSubMenu,
+  shakerSubMenu,
+} from "../../api/menuData";
 import "./HeaderTop.css";
 
 function HeaderTop() {
-  
-  const [womenData, setWomenData] = useState(womenSubMenu)
+  const [womenData, setWomenData] = useState(womenSubMenu);
+  const [menData, setMenData] = useState(menSubMenu);
+  const [kidData, setKidData] = useState(kidSubMenu);
+  const [sportData, setSportData] = useState(sportSubMenu);
+  const [shakerData, setShakerData] = useState(shakerSubMenu);
 
+  console.log(menData);
+  
   return (
     <div className="container">
       <div className="header-top">
@@ -159,27 +170,31 @@ function HeaderTop() {
                   <a href="#" className="navbar-right__item-link">
                     مردانه
                   </a>
+                  <MegaMenu data={menData} />
                 </li>
                 <li className="navbar-right-item">
                   <a href="#" className="navbar-right__item-link">
                     زنانه
-                  </a>              
-                      <MegaMenu data={womenData} />
+                  </a>
+                  <MegaMenu data={womenData} />
                 </li>
                 <li className="navbar-right-item">
                   <a href="#" className="navbar-right__item-link">
                     بچگانه
                   </a>
+                  <MegaMenu data={kidData} />
                 </li>
                 <li className="navbar-right-item">
                   <a href="#" className="navbar-right__item-link">
                     لوازم ورزشی
                   </a>
+                  <MegaMenu data={sportData} />
                 </li>
                 <li className="navbar-right-item">
                   <a href="#" className="navbar-right__item-link">
                     شیکر و جاگ
                   </a>
+                  <MegaMenu data={shakerData} />
                 </li>
               </ul>
             </div>

@@ -5,7 +5,7 @@ type MegaMenuProps = {
   data: SubMenuData;
 };
 
-function MegaMenu({ data}: MegaMenuProps) {
+function MegaMenu({ data }: MegaMenuProps) {
   return (
     <div className="megamenu">
       <div className="megamenu-wrapper">
