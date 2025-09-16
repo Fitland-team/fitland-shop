@@ -7,13 +7,11 @@ export interface SubMenuCategory {
 }
 
 export interface SubMenuData {
-  image: string;
   categories: SubMenuCategory[];
 }
 
 // دیتای منوها
 export const menSubMenu: SubMenuData = {
-  image: "/images/man.png",
   categories: [
     {
       title: "لباس ورزشی زنانه",
@@ -42,7 +40,6 @@ export const menSubMenu: SubMenuData = {
   ],
 };
 export const womenSubMenu: SubMenuData = {
-  image: "/images/woman.png",
   categories: [
     {
       title: "لباس ورزشی زنانه",
@@ -71,7 +68,6 @@ export const womenSubMenu: SubMenuData = {
   ],
 };
 export const kidSubMenu: SubMenuData = {
-  image: "/images/kid.png",
   categories: [
     {
       title: "لباس ورزشی زنانه",
@@ -100,23 +96,18 @@ export const kidSubMenu: SubMenuData = {
   ],
 };
 export const sportSubMenu: SubMenuData = {
-  image: "/images/sport.png",
   categories: [
     {
-      title: "لباس ورزشی زنانه",
-      items: ["ست لباس ورزشی", "تیشرت ,بلوز و استرچ ورزشی", "نیم تنه ورزشی", "تاب ورزشی", "کیت ورزشی", "سویشرت", "هودی", "مایو"],
+      title: "لوازم ورزش",
+      items: ["وزنه و دمبل", "لوازم یوگا و بیلاتس", "لوازم فیتنس و بدنسازی",],
     },
     {
-      title: "شلوار ورزشی زنانه",
-      items: ["شلوار ورزشی", "شلوارک ورزشی", "لگ و نیم لگ", "جاگر"],
+      title: "وسایل ورزشی",
+      items: ["مچ بند ,ساق بند ,زانو بند ", "ساک ورزشی", "وسایل شنا",],
     },
     {
-      title: "کفش ورزشی",
-      items: ["کتونی رانینگ", "کتونی پیاده‌روی", "کفش اسکیت","کفش کوهنوردی","کفش بسکتبال","کفش کشتی","استوک","دمبایی"],
-    },
-    {
-      title: "برند پیشنهادی",
-      items: ["nike", "the north face", "under armour", "adidas", "fila"],
+      title: "لوازم دیگر",
+      items: ["کتونی رانینگ", "کوله و شوزبگ", "لوازم دیگر",],
     },
     {
       title: "اکسسوری",
@@ -126,30 +117,33 @@ export const sportSubMenu: SubMenuData = {
       title: "جوراب ورزشی",
       items: ["جوراب ورزشی",],
     },
+    {
+      title: "برند پیشنهادی",
+      items: ["nike", "under armour",],
+    },
   ],
 };
 export const shakerSubMenu: SubMenuData = {
-  image: "/images/shaker.png",
   categories: [
     {
-      title: "لباس ورزشی زنانه",
-      items: ["ست لباس ورزشی", "تیشرت ,بلوز و استرچ ورزشی", "نیم تنه ورزشی", "تاب ورزشی", "کیت ورزشی", "سویشرت", "هودی", "مایو"],
+      title: "شیکر",
+      items: ["شیکر بدنسازی", "مخلوط کن و شیکر برقی",],
     },
     {
-      title: "شلوار ورزشی زنانه",
-      items: ["شلوار ورزشی", "شلوارک ورزشی", "لگ و نیم لگ", "جاگر"],
+      title: "ماگ و فلاسک",
+      items: ["ماگ و فلاسک",],
     },
     {
-      title: "کفش ورزشی",
-      items: ["کتونی رانینگ", "کتونی پیاده‌روی", "کفش اسکیت","کفش کوهنوردی","کفش بسکتبال","کفش کشتی","استوک","دمبایی"],
+      title: "جا بودری و جا قرصی",
+      items: ["جا بودری و جا قرصی",],
     },
     {
-      title: "برند پیشنهادی",
-      items: ["nike", "the north face", "under armour", "adidas", "fila"],
+      title: "قمقمه ورزشی",
+      items: ["قمقمه ورزشی",],
     },
     {
       title: "اکسسوری",
-      items: ["جوراب ورزشی", "کلاه ورزشی", "دستبند ورزشی", "هدبند"],
+      items: ["جوراب ورزشی", "کلاه ورزشی", "دستبند ورزشی", "هدبند","دستبند","مچ بند"],
     },
     {
       title: "جوراب ورزشی",
