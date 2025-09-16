@@ -118,6 +118,7 @@
 
 .navbar {
     background-color: var(--Neutral-Colors-1);
+    position: relative;
     margin-top: 3rem;
     border-radius: var(--radius-large);
     padding: 16px 40px 16px 40px;
@@ -129,6 +130,16 @@
 .navbar-right-list {
     display: flex;
     gap: 2.3rem;
+}
+
+.navbar-right-item {
+    padding: 0.5rem;
+}
+
+.navbar-right-item:hover > .megamenu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: visible;
 }
 
 .navbar-right__item-link {

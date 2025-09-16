@@ -1,0 +1,47 @@
+.megamenu {
+  position: absolute;
+  top: 52px;
+  right: 0;
+  left: 0;
+  z-index: 50;
+  background-color: var(--white);
+  border-radius: var(--radius-large);
+  padding: 40px 50px 65px 110px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 250ms ease;
+  box-shadow: 0 0 50px 10px rgba(0, 0, 0, 0.08);
+}
+.megamenu-wrapper {
+  position: relative;
+}
+.megamenu-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  row-gap: 32px;
+}
+.megamenu__img {
+  position: absolute;
+  left: -50px;
+  bottom: -50px;
+  width: 250px;
+  height: 320px;
+}
+.megamenu__column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.megamenu__title {
+  color: var(--primary);
+  font-size: 14px;
+}
+.megamenu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.megamenu__item {
+  font-size: 14px;
+}
