@@ -131,6 +131,17 @@
     display: flex;
     gap: 2.3rem;
 }
+
+.navbar-right-item {
+    padding: 0.5rem;
+}
+
+.navbar-right-item:hover > .megamenu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: visible;
+}
+
 .navbar-right__item-link {
     color: var(--black);
     font-size: 16px;

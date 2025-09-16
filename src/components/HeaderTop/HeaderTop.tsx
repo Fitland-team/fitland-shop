@@ -4,7 +4,8 @@ import { womenSubMenu } from "../../api/menuData";
 import "./HeaderTop.css";
 
 function HeaderTop() {
-  const [isOpen, setIsOpen] = useState(false);
+  
+  const [womenData, setWomenData] = useState(womenSubMenu)
 
   return (
     <div className="container">
@@ -159,15 +160,11 @@ function HeaderTop() {
                     مردانه
                   </a>
                 </li>
-                <li
-                  className="navbar-right-item"
-                  onMouseEnter={() => setIsOpen(true)}
-                  onMouseLeave={() => setIsOpen(false)}
-                >
+                <li className="navbar-right-item">
                   <a href="#" className="navbar-right__item-link">
                     زنانه
-                  </a>
-                    <MegaMenu data={womenSubMenu} isOpen={true} />
+                  </a>              
+                      <MegaMenu data={womenData} />
                 </li>
                 <li className="navbar-right-item">
                   <a href="#" className="navbar-right__item-link">

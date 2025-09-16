@@ -3,12 +3,9 @@ import "./MegaMenu.css";
 
 type MegaMenuProps = {
   data: SubMenuData;
-  isOpen: boolean;
 };
 
-function MegaMenu({ data, isOpen = true }: MegaMenuProps) {
-  if (!isOpen) return null;
-
+function MegaMenu({ data}: MegaMenuProps) {
   return (
     <div className="megamenu">
       <div className="megamenu-wrapper">
