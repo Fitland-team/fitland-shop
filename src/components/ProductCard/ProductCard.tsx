@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import "./ProductCard.css";
 
 type ProductCardProps = {
-  key: number;
+  id: number;
   image: string;
   title: string;
   price: number;
@@ -10,7 +11,7 @@ type ProductCardProps = {
 };
 
 function ProductCard({
-  key,
+  id,
   title,
   image,
   price,
@@ -19,7 +20,7 @@ function ProductCard({
 }: ProductCardProps) {
 
   return (
-    <div>
+    <Link to={`/products/${id}`} className="product-card-link">
       <div className="product-card">
         <div className="product-img-container">
           <img src={image} alt={title} className="product__img" />
@@ -60,7 +61,7 @@ function ProductCard({
           )}
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

@@ -221,3 +221,6 @@
     row-gap: 24px;
     column-gap: 24px;
 }
+.products-section__left div {
+    cursor: pointer;
+}
