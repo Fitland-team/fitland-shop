@@ -16,8 +16,7 @@ function HeaderTop() {
   const [sportData, setSportData] = useState(sportSubMenu);
   const [shakerData, setShakerData] = useState(shakerSubMenu);
 
-  console.log(menData);
-  
+
   return (
     <div className="container">
       <div className="header-top">

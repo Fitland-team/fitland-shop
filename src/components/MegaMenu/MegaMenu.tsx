@@ -1,11 +1,16 @@
 import type { SubMenuData } from "../../api/menuData";
+import { Link } from "react-router-dom";
 import "./MegaMenu.css";
+import { useBreadcrumb } from "../../Contexts/BreadCrumbContext";
 
 type MegaMenuProps = {
   data: SubMenuData;
 };
 
 function MegaMenu({ data }: MegaMenuProps) {
+
+  const { setRest } = useBreadcrumb()
+  
   return (
     <div className="megamenu">
       <div className="megamenu-wrapper">
@@ -16,7 +21,9 @@ function MegaMenu({ data }: MegaMenuProps) {
               <ul className="megamenu__list">
                 {cat.items.map((item, i) => (
                   <li key={i} className="megamenu__item">
-                    {item}
+                    <Link to='/products' onClick={() => setRest([data.headTitle, cat.title, item])}>
+                      {item}
+                    </Link>
                   </li>
                 ))}
               </ul>
