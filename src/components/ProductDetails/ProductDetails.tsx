@@ -6,6 +6,7 @@ import Comment from "./Comment/Comment";
 import Footer from "../../layouts/Footer/Footer";
 import { useState } from "react";
 import SiteOptions from "../SIteOptions/SiteOptions";
+import ProductSharePopup from "./ProductSharePopUp/ProductSharePopUp";
 
 type Tab = "features" | "description" | "comments";
 
@@ -22,8 +23,10 @@ function ProductDetails() {
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [selected, setSelected] = useState<string | null>(null);
-  const [count, setCount] = useState<number>(0);
+  const [count, setCount] = useState<number>(1);
   const [activeTab, setActiveTab] = useState<Tab>("features");
+
+  const [isLiked, setIsLiked] = useState(false);
 
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -31,7 +34,7 @@ function ProductDetails() {
   const [rating, setRating] = useState<number>(0);
 
   const increment = () => setCount((prev) => prev + 1);
-  const decrement = () => setCount((prev) => (prev > 0 ? prev - 1 : 0));
+  const decrement = () => setCount((prev) => (prev > 1 ? prev - 1 : 1));
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -51,7 +54,6 @@ function ProductDetails() {
               />
             </div>
             <div className="product-details-others-imges">
-
               {product?.images?.map((img, index) => (
                 <div
                   className={`product-detailes-other-img ${
@@ -222,50 +224,25 @@ function ProductDetails() {
                 افزودن به سبد خرید
               </button>
               <div className="product__icon-like">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+                <ProductSharePopup productUrl={window.location.href} />
+                <button
+                  className="like-button"
+                  onClick={() => setIsLiked(!isLiked)}
                 >
-                  <path
-                    d="M21.2857 13.0703C20.9057 13.0703 20.5857 12.7803 20.5357 12.4003C20.2957 10.1403 19.0757 8.09035 17.1957 6.79035C16.8557 6.55035 16.7757 6.09035 17.0057 5.75035C17.2457 5.41035 17.7157 5.33035 18.0457 5.56035C20.2857 7.11035 21.7257 9.55035 22.0157 12.2403C22.0557 12.6503 21.7657 13.0203 21.3457 13.0703C21.3357 13.0703 21.3057 13.0703 21.2857 13.0703Z"
-                    fill="#2F5F8A"
-                  />
-                  <path
-                    d="M4.15592 13.1203C4.12592 13.1203 4.10592 13.1203 4.07592 13.1203C3.66592 13.0703 3.36592 12.7003 3.40592 12.2903C3.67592 9.60026 5.10592 7.17026 7.31592 5.60026C7.65592 5.36026 8.12592 5.44026 8.36592 5.78026C8.60592 6.12026 8.52592 6.59026 8.18592 6.83026C6.32592 8.14026 5.12592 10.1903 4.89592 12.4503C4.86592 12.8303 4.53592 13.1203 4.15592 13.1203Z"
-                    fill="#2F5F8A"
-                  />
-                  <path
-                    d="M12.724 22.61C11.244 22.61 9.83403 22.27 8.51403 21.61C8.14403 21.42 7.99403 20.97 8.18403 20.6C8.37403 20.23 8.82403 20.08 9.19403 20.27C11.354 21.36 13.954 21.38 16.134 20.33C16.504 20.15 16.954 20.31 17.134 20.68C17.314 21.05 17.154 21.5 16.784 21.68C15.504 22.3 14.144 22.61 12.724 22.61Z"
-                    fill="#2F5F8A"
-                  />
-                  <path
-                    d="M12.7253 8.43988C10.7753 8.43988 9.19531 6.85988 9.19531 4.90988C9.19531 2.95988 10.7753 1.37988 12.7253 1.37988C14.6753 1.37988 16.2553 2.95988 16.2553 4.90988C16.2553 6.85988 14.6653 8.43988 12.7253 8.43988ZM12.7253 2.88988C11.6053 2.88988 10.6953 3.79988 10.6953 4.91988C10.6953 6.03988 11.6053 6.94988 12.7253 6.94988C13.8453 6.94988 14.7553 6.03988 14.7553 4.91988C14.7553 3.79988 13.8353 2.88988 12.7253 2.88988Z"
-                    fill="#2F5F8A"
-                  />
-                  <path
-                    d="M5.49484 20.6704C3.54484 20.6704 1.96484 19.0904 1.96484 17.1404C1.96484 15.2004 3.54484 13.6104 5.49484 13.6104C7.44484 13.6104 9.02484 15.1904 9.02484 17.1404C9.02484 19.0804 7.44484 20.6704 5.49484 20.6704ZM5.49484 15.1104C4.37484 15.1104 3.46484 16.0204 3.46484 17.1404C3.46484 18.2604 4.37484 19.1704 5.49484 19.1704C6.61484 19.1704 7.52484 18.2604 7.52484 17.1404C7.52484 16.0204 6.61484 15.1104 5.49484 15.1104Z"
-                    fill="#2F5F8A"
-                  />
-                  <path
-                    d="M19.8347 20.6704C17.8847 20.6704 16.3047 19.0904 16.3047 17.1404C16.3047 15.2004 17.8847 13.6104 19.8347 13.6104C21.7847 13.6104 23.3647 15.1904 23.3647 17.1404C23.3547 19.0804 21.7747 20.6704 19.8347 20.6704ZM19.8347 15.1104C18.7147 15.1104 17.8047 16.0204 17.8047 17.1404C17.8047 18.2604 18.7147 19.1704 19.8347 19.1704C20.9547 19.1704 21.8647 18.2604 21.8647 17.1404C21.8547 16.0204 20.9547 15.1104 19.8347 15.1104Z"
-                    fill="#2F5F8A"
-                  />
-                </svg>
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12.6641 21.6496C12.3541 21.6496 12.0541 21.6096 11.8041 21.5196C7.98406 20.2096 1.91406 15.5596 1.91406 8.68961C1.91406 5.18961 4.74406 2.34961 8.22406 2.34961C9.91406 2.34961 11.4941 3.00961 12.6641 4.18961C13.8341 3.00961 15.4141 2.34961 17.1041 2.34961C20.5841 2.34961 23.4141 5.19961 23.4141 8.68961C23.4141 15.5696 17.3441 20.2096 13.5241 21.5196C13.2741 21.6096 12.9741 21.6496 12.6641 21.6496ZM8.22406 3.84961C5.57406 3.84961 3.41406 6.01961 3.41406 8.68961C3.41406 15.5196 9.98406 19.3196 12.2941 20.1096C12.4741 20.1696 12.8641 20.1696 13.0441 20.1096C15.3441 19.3196 21.9241 15.5296 21.9241 8.68961C21.9241 6.01961 19.7641 3.84961 17.1141 3.84961C15.5941 3.84961 14.1841 4.55961 13.2741 5.78961C12.9941 6.16961 12.3541 6.16961 12.0741 5.78961C11.1441 4.54961 9.74406 3.84961 8.22406 3.84961Z"
-                    fill="#404040"
-                  />
-                </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M16.44 3.09961C14.63 3.09961 13.01 3.97961 12 5.32961C10.99 3.97961 9.37 3.09961 7.56 3.09961C4.49 3.09961 2 5.59961 2 8.68961C2 9.87961 2.19 10.9796 2.52 11.9996C4.1 16.9996 8.97 19.9896 11.38 20.8096C11.72 20.9296 12.28 20.9296 12.62 20.8096C15.03 19.9896 19.9 16.9996 21.48 11.9996C21.81 10.9796 22 9.87961 22 8.68961C22 5.59961 19.51 3.09961 16.44 3.09961Z"
+                      fill={isLiked ? "#e0245e" : "none"}
+                      stroke={isLiked ? "#e0245e" : "#404040"}
+                    />
+                  </svg>
+                </button>
               </div>
             </div>
           </div>
@@ -278,6 +255,7 @@ function ProductDetails() {
               onClick={() => setActiveTab("features")}
               style={{
                 backgroundColor: activeTab === "features" ? "#CFE8FF" : "",
+                color: activeTab === "features" ? "#194165" : "",
               }}
             >
               ویژگی های محصول
@@ -287,6 +265,7 @@ function ProductDetails() {
               onClick={() => setActiveTab("description")}
               style={{
                 backgroundColor: activeTab === "description" ? "#CFE8FF" : "",
+                color: activeTab === "description" ? "#194165" : "",
               }}
             >
               توضیحات
@@ -296,6 +275,7 @@ function ProductDetails() {
               onClick={() => setActiveTab("comments")}
               style={{
                 backgroundColor: activeTab === "comments" ? "#CFE8FF" : "",
+                color: activeTab === "comments" ? "#194165" : "",
               }}
             >
               نظرات

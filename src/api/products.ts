@@ -32,8 +32,8 @@ export const products: product[] = [
     title: "تیشرت زنانه کد 1727",
     image: "/images/products/Rectangle 1167 (1).png",
     images: [
-      "/images/products/Rectangle 1167.png",
       "/images/products/Rectangle 1167 (1).png",
+      "/images/products/Rectangle 1167.png",
       "/images/products/Rectangle 1167 (2).png",
       "/images/products/Rectangle 1167 (3).png",
       "/images/products/Rectangle 1167 (2).png",
@@ -49,9 +49,9 @@ export const products: product[] = [
     title: "تیشرت زنانه کد 1717",
     image: "/images/products/Rectangle 1167 (2).png",
     images: [
+      "/images/products/Rectangle 1167 (2).png",
       "/images/products/Rectangle 1167.png",
       "/images/products/Rectangle 1167 (1).png",
-      "/images/products/Rectangle 1167 (2).png",
       "/images/products/Rectangle 1167 (3).png",
       "/images/products/Rectangle 1167 (2).png",
       "/images/products/Rectangle 1167 (4).png",
@@ -65,10 +65,10 @@ export const products: product[] = [
     title: "تیشرت زنانه کد 1717",
     image: "/images/products/Rectangle 1167 (3).png",
     images: [
+      "/images/products/Rectangle 1167 (3).png",
       "/images/products/Rectangle 1167.png",
       "/images/products/Rectangle 1167 (1).png",
       "/images/products/Rectangle 1167 (2).png",
-      "/images/products/Rectangle 1167 (3).png",
       "/images/products/Rectangle 1167 (2).png",
       "/images/products/Rectangle 1167 (4).png",
     ],
@@ -82,12 +82,12 @@ export const products: product[] = [
     title: "تیشرت زنانه کد 1757",
     image: "/images/products/Rectangle 1167 (4).png",
     images: [
+      "/images/products/Rectangle 1167 (4).png",
       "/images/products/Rectangle 1167.png",
       "/images/products/Rectangle 1167 (1).png",
       "/images/products/Rectangle 1167 (2).png",
       "/images/products/Rectangle 1167 (3).png",
       "/images/products/Rectangle 1167 (2).png",
-      "/images/products/Rectangle 1167 (4).png",
     ],
     price: 175000,
     color: ["F2F2F2", "716C59", "FE9AA0"],
@@ -99,7 +99,7 @@ export const products: product[] = [
     title: "تیشرت زنانه کد 1767",
     image: "/images/products/Rectangle 1167 (5).png",
     images: [
-      "/images/products/Rectangle 1167.png",
+    "/images/products/Rectangle 1167 (5).png",
       "/images/products/Rectangle 1167 (1).png",
       "/images/products/Rectangle 1167 (2).png",
       "/images/products/Rectangle 1167 (3).png",
@@ -116,7 +116,7 @@ export const products: product[] = [
     title: "تیشرت زنانه کد 1757",
     image: "/images/products/Rectangle 1167 (6).png",
     images: [
-      "/images/products/Rectangle 1167.png",
+      "/images/products/Rectangle 1167 (6).png",
       "/images/products/Rectangle 1167 (1).png",
       "/images/products/Rectangle 1167 (2).png",
       "/images/products/Rectangle 1167 (3).png",
@@ -133,7 +133,7 @@ export const products: product[] = [
     title: "",
     image: "/images/products/Rectangle 1167 (7).png",
     images: [
-      "/images/products/Rectangle 1167.png",
+      "/images/products/Rectangle 1167 (7).png",
       "/images/products/Rectangle 1167 (1).png",
       "/images/products/Rectangle 1167 (2).png",
       "/images/products/Rectangle 1167 (3).png",
@@ -149,7 +149,7 @@ export const products: product[] = [
     title: "تیشرت زنانه کد 1797",
     image: "/images/products/Rectangle 1167 (8).png",
     images: [
-      "/images/products/Rectangle 1167.png",
+      "/images/products/Rectangle 1167 (8).png",
       "/images/products/Rectangle 1167 (1).png",
       "/images/products/Rectangle 1167 (2).png",
       "/images/products/Rectangle 1167 (3).png",
@@ -166,7 +166,7 @@ export const products: product[] = [
     title: "تیشرت زنانه کد 1778",
     image: "/images/products/Rectangle 1167 (9).png",
     images: [
-      "/images/products/Rectangle 1167.png",
+      "/images/products/Rectangle 1167 (9).png",
       "/images/products/Rectangle 1167 (1).png",
       "/images/products/Rectangle 1167 (2).png",
       "/images/products/Rectangle 1167 (3).png",
@@ -183,7 +183,7 @@ export const products: product[] = [
     title: "تیشرت زنانه کد 1777",
     image: "/images/products/Rectangle 1167 (3).png",
     images: [
-      "/images/products/Rectangle 1167.png",
+      "/images/products/Rectangle 1167 (3).png",
       "/images/products/Rectangle 1167 (1).png",
       "/images/products/Rectangle 1167 (2).png",
       "/images/products/Rectangle 1167 (3).png",
@@ -200,7 +200,7 @@ export const products: product[] = [
     title: "تیشرت زنانه کد 1827",
     image: "/images/products/Rectangle 1167 (10).png",
     images: [
-      "/images/products/Rectangle 1167.png",
+      "/images/products/Rectangle 1167 (10).png",
       "/images/products/Rectangle 1167 (1).png",
       "/images/products/Rectangle 1167 (2).png",
       "/images/products/Rectangle 1167 (3).png",
@@ -217,7 +217,7 @@ export const products: product[] = [
     title: "تیشرت زنانه کد 1817",
     image: "/images/products/Rectangle 1167 (5).png",
     images: [
-      "/images/products/Rectangle 1167.png",
+      "/images/products/Rectangle 1167 (5).png",
       "/images/products/Rectangle 1167 (1).png",
       "/images/products/Rectangle 1167 (2).png",
       "/images/products/Rectangle 1167 (3).png",
@@ -234,7 +234,7 @@ export const products: product[] = [
     title: "تیشرت زنانه کد 1807",
     image: "/images/products/Rectangle 1167 (7).png",
     images: [
-      "/images/products/Rectangle 1167.png",
+      "/images/products/Rectangle 1167 (7).png",
       "/images/products/Rectangle 1167 (1).png",
       "/images/products/Rectangle 1167 (2).png",
       "/images/products/Rectangle 1167 (3).png",
@@ -250,7 +250,7 @@ export const products: product[] = [
     title: "تیشرت زنانه کد 1807",
     image: "/images/products/Rectangle 1167 (9).png",
     images: [
-      "/images/products/Rectangle 1167.png",
+      "/images/products/Rectangle 1167 (9).png",
       "/images/products/Rectangle 1167 (1).png",
       "/images/products/Rectangle 1167 (2).png",
       "/images/products/Rectangle 1167 (3).png",
@@ -267,12 +267,7 @@ export const products: product[] = [
     title: "تیشرت زنانه کد 1807",
     image: "/images/products/Rectangle 1167 (10).png",
     images: [
-      "/images/products/Rectangle 1167.png",
-      "/images/products/Rectangle 1167 (1).png",
-      "/images/products/Rectangle 1167 (2).png",
-      "/images/products/Rectangle 1167 (3).png",
-      "/images/products/Rectangle 1167 (2).png",
-      "/images/products/Rectangle 1167 (4).png",
+
     ],
     price: 655000,
     color: ["F15827", "515549", "334B4F"],
