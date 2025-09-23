@@ -251,9 +251,9 @@ function Products() {
                             step={null}
                             marks={marks.map((m) => ({ value: m }))}
                             sx={{
-                              color: "#fa541c", // رنگ اصلی اسلایدر (track و thumb)
+                              color: "#fa541c",
                               "& .MuiSlider-thumb": {
-                                backgroundColor: "#fa541c", // رنگ دکمه اسلایدر
+                                backgroundColor: "#fa541c",
                               },
                             }}
                           />
