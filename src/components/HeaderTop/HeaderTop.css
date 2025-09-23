@@ -66,16 +66,31 @@
     padding: 5px 5px;
     width: 142px;
     height: 48px;
+    transition: all 250ms ease;
+}
+
+.header-top__register-btn:hover {
+    background-color: var(--primary);
+}
+
+.header-top__register-btn:hover .header-top__register-title {
+    color: white;
+}
+
+.header-top__register-btn:hover .header-top__register-icon svg {
+    fill: white;
 }
 
 .header-top__register-title {
     font-weight: 700;
     color: var(--Neutral-Colors-8);
     font-size: 16px;
+    transition: all 250ms ease;
 }
 
 .header-top__register-icon svg {
     fill: var(--Neutral-Colors-8);
+    transition: all 250ms ease;
 }
 
 .header-top__card {
