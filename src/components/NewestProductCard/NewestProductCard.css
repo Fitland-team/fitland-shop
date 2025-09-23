@@ -37,7 +37,7 @@
 }
 
 .newest-product__card-overlay-title {
-    font-size: 20px;
+    font-size: 18px;
     color: var(--white);
     font-weight: 500;
 }
@@ -47,7 +47,7 @@
     border: 2px solid var(--white);
     padding: 8px 31px;
     color: var(--white);
-    font-size: 16px;
+    font-size: 14px;
     border-radius: var(--radius-medium);
     display: flex;
     align-items: center;
