@@ -8,6 +8,7 @@ import {
   shakerSubMenu,
 } from "../../api/menuData";
 import "./HeaderTop.css";
+import { Link } from "react-router-dom";
 
 function HeaderTop() {
   const [womenData, setWomenData] = useState(womenSubMenu);
@@ -112,7 +113,7 @@ function HeaderTop() {
           </div>
           <div className="header-top__register-card">
             <div className="header-top__register">
-              <button className="header-top__register-btn">
+              <Link to='/login' className="header-top__register-btn">
                 <span className="header-top__register-title">
                   ثبت نام | ورود
                 </span>
@@ -128,7 +129,7 @@ function HeaderTop() {
                     <path d="M20.5901 22.75C20.1801 22.75 19.8401 22.41 19.8401 22C19.8401 18.55 16.3202 15.75 12.0002 15.75C7.68015 15.75 4.16016 18.55 4.16016 22C4.16016 22.41 3.82016 22.75 3.41016 22.75C3.00016 22.75 2.66016 22.41 2.66016 22C2.66016 17.73 6.85015 14.25 12.0002 14.25C17.1502 14.25 21.3401 17.73 21.3401 22C21.3401 22.41 21.0001 22.75 20.5901 22.75Z" />
                   </svg>
                 </div>
-              </button>
+              </Link>
             </div>
             <div className="header-top__card">
               <button className="header-top__card-btn">
