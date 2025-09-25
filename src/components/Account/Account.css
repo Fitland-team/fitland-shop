@@ -1,0 +1,121 @@
+.account {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.account-title {
+    position: relative;
+    margin-right: 0.9rem;
+}
+
+.account-title h1 {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--Neutral-Colors-8);
+}
+
+.account-title::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 8px;
+    height: 8px;
+    background-color: var(--Neutral-Colors-8);
+    border-radius: 50%;
+    right: -14px;
+    top: 50%;
+}
+
+.account-wrapper {
+    width: 912px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid var(--Neutral-Colors-4);
+    padding: 24px;
+    border-radius: 16px;
+    gap: 24px;
+}
+
+.account-wrapper__input {
+    position: relative;
+    height: 58px;
+}
+
+.account-wrapper__input input {
+    position: absolute;
+    width: 100%;
+    padding: 0 10px;
+    border-radius: 5px;
+    background: transparent;
+    transition: all .1s ease;
+    z-index: 1111;
+    border: 1px solid var(--Neutral-Colors-4) !important;
+    height: 40px;
+}
+
+.labelline {
+    position: absolute;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(3, 35, 64, 1);
+    padding: 0 25px;
+    margin: 9px 0;
+    transition: all 0.2s ease;
+    background-color: var(--white);
+}
+
+.account-wrapper__input input:focus,
+.account-wrapper__input input:valid {
+    color: var(--secondary);
+    border: 1px solid rgba(25, 65, 101, 1) !important;
+}
+
+.account-wrapper__input input:focus+.labelline,
+.account-wrapper__input input:valid+.labelline {
+    transform: translate(-20px, -23px) scale(0.88);
+    z-index: 1111;
+    padding: 0 12px;
+}
+
+.account-wrapper__btn {
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 8px;
+    height: 40px;
+}
+
+.profile-box {
+    width: 912px;
+    border: 1px solid var(--Neutral-Colors-4);
+    border-radius: 16px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+}
+
+.profile-box__content {
+    display: flex;
+    flex-direction: column;
+    gap: .6rem;
+    margin-bottom: 1.5rem;
+}
+
+.profile-box__content h1 {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--Neutral-Colors-7);
+}
+
+.profile-box__content p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.edit-profile {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    cursor: pointer;
+}

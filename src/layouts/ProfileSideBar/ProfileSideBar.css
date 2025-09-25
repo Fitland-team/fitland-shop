@@ -1,7 +1,6 @@
 .profile-side-bar {
   width: 300px;
   height: 700px;
-  margin-top: 32px;
   position: sticky;
   top: 10px;
 }
