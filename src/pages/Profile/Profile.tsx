@@ -1,7 +1,6 @@
 import "./Profile.css";
-import Footer from "../../layouts/Footer/Footer";
 import HeaderTop from "../../components/HeaderTop/HeaderTop";
-import ProfileSideBar from "../../layouts/ProfileSelection/ProfileSideBar"
+import ProfileSideBar from "../../layouts/ProfileSideBar/ProfileSideBar"
 
 export default function Profile() {
   return (
@@ -10,7 +9,6 @@ export default function Profile() {
       <div className="container">
         <ProfileSideBar />
       </div>
-      <Footer />
     </>
   );
 }
