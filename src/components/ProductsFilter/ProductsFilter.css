@@ -1,0 +1,190 @@
+.products-section__right {
+    width: 288px;
+    height: fit-content;
+    border-radius: var(--radius-large);
+    border: 1px solid rgba(203, 203, 203, 1);
+    position: sticky;
+    top: 1rem;
+}
+
+.products-section__right-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 18px;
+}
+
+.products-section__right-filter-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgba(0, 3, 6, 1);
+}
+
+.products-section__right-filter-buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.products-section__right-filter-buttons1,
+.products-section__right-filter-buttons2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(0, 3, 6, 1);
+}
+
+.products-accordion__title {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: rgba(0, 3, 6, 1) !important;
+}
+
+.products-section__accordion-price {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.products-section__accordion-price-max,
+.products-section__accordion-price-min {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.products-section__accordion-price-min {
+    padding-right: 5px;
+}
+
+.products-section__accordion-price-max span,
+.products-section__accordion-price-min span {
+    font-weight: 500;
+    font-size: 14px;
+    color: rgba(0, 3, 6, 1);
+}
+
+.products-section__accordion-price-max input,
+.products-section__accordion-price-min input {
+    background-color: var(--Neutral-Colors-2);
+    border-radius: 8px;
+    padding: 5px 8px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.products-section__accordion-price-max input::placeholder,
+.products-section__accordion-price-min input::placeholder {
+    font-size: 10px;
+    font-weight: 500;
+    color: var(--Neutral-Colors-6);
+}
+
+.products-section__accordion-filter-colors {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.products-color__filter {
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.products-section__accordion-filter-color1 {
+    background-color: var(--secondary);
+}
+
+.products-section__accordion-filter-color2 {
+    background-color: rgba(63, 204, 136, 1);
+}
+
+.products-section__accordion-filter-color3 {
+    background-color: rgba(251, 244, 60, 1);
+}
+
+.products-section__accordion-filter-color4 {
+    background-color: rgba(251, 60, 60, 1);
+}
+
+.products-section__accordion-filter-color5 {
+    background-color: rgba(64, 60, 251, 1);
+}
+
+.products-section__accordion-filter-color6 {
+    background-color: rgba(250, 84, 28, 1);
+}
+
+.products-section__accordion-filter-color7 {
+    background-color: rgba(255, 32, 139, 1);
+}
+
+.products-section__accordion-size {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.products-section__accordion-size-btn {
+    background-color: var(--Neutral-Colors-2);
+    border-radius: 4px;
+    width: 67px;
+    padding: 3px;
+}
+
+.products-section__filter-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.products-section__filter-brand-search {
+    width: 100%;
+    position: relative;
+}
+
+.products-section__filter-brand-search-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 8px;
+    color: var(--Neutral-Colors-5);
+}
+
+.products-section__filter-brand-search input {
+    background-color: rgba(237, 237, 237, 1);
+    border-radius: 16px;
+    padding: .4rem 2.3rem;
+}
+
+.products-section__filter-brand-search input::placeholder {
+    color: var(--Neutral-Colors-5);
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.products-section__filter-brand-btns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 252px;
+    row-gap: 5px;
+    column-gap: 8px;
+}
+
+.products-section__filter-brand-btn {
+    width: 79px;
+    height: 28px;
+    font-size: 10px;
+    background-color: var(--Neutral-Colors-3);
+    border-radius: 4px;
+    padding: 8px 4px;
+    color: black;
+    font-weight: 500;
+}
