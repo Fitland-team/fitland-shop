@@ -24,7 +24,7 @@ export default function Account() {
   return (
     <div className='account'>
       <div className="account-title">
-        <h1>حساب کاربری</h1>
+        <h2>حساب کاربری</h2>
       </div>
       {
         !showProfile && (

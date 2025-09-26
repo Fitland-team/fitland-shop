@@ -67,20 +67,25 @@
   padding-bottom: 24px;
   display: flex;
   align-items: center;
-  gap: 8px;
   font-size: 16px;
   color: var(--black);
   border-bottom: 1px solid var(--Neutral-Colors-2);
   cursor: pointer;
 }
+.side-bar__item li {
+  gap: 8px;
+  display: flex;
+  align-items: center;
+}
+
 .side-bar__item svg {
   color: var(--Neutral-Colors-8);
 }
-.side-bar__item:hover {
+.side-bar__item:hover, .side-bar__item.active {
   color: #194165;
   border-bottom: 1px solid #194165;
 }
-.side-bar__item:hover svg {
+.side-bar__item:hover svg, .side-bar__item.active svg {
   color: #194165;
 }
 .side-bar__item:last-child {

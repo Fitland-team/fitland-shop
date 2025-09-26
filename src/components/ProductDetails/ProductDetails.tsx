@@ -7,6 +7,9 @@ import Footer from "../../layouts/Footer/Footer";
 import { useState } from "react";
 import SiteOptions from "../SIteOptions/SiteOptions";
 import ProductSharePopup from "./ProductSharePopUp/ProductSharePopUp";
+import IsLike from "./IsLike/IsLike"
+
+
 
 type Tab = "features" | "description" | "comments";
 
@@ -26,7 +29,7 @@ function ProductDetails() {
   const [count, setCount] = useState<number>(1);
   const [activeTab, setActiveTab] = useState<Tab>("features");
 
-  const [isLiked, setIsLiked] = useState(false);
+  // const [isLiked, setIsLiked] = useState(false);
 
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -225,7 +228,7 @@ function ProductDetails() {
               </button>
               <div className="product__icon-like">
                 <ProductSharePopup productUrl={window.location.href} />
-                <button
+                {/* <button
                   className="like-button"
                   onClick={() => setIsLiked(!isLiked)}
                 >
@@ -242,7 +245,10 @@ function ProductDetails() {
                       stroke={isLiked ? "#e0245e" : "#404040"}
                     />
                   </svg>
-                </button>
+                </button> */}
+                
+                <IsLike id={product.id} />
+
               </div>
             </div>
           </div>

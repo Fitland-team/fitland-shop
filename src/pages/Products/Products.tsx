@@ -15,7 +15,7 @@ import ProductSectionNavigate from "../../components/ProductSectionNavigate/Prod
 import ProductsFilter from "../../components/ProductsFilter/ProductsFilter";
 
 function Products() {
-  
+
   const ITEMS_PER_PAGE = 12;
   const [page, setPage] = useState(1);
 

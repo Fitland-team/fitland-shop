@@ -36,8 +36,13 @@ export default function ProfileSelection() {
         </div>
         <div className="side-bar-bottom">
           <ul className="side-bar__options">
-            <NavLink to='account'>
-              <li className="side-bar__item">
+            <NavLink
+              to="account"
+              className={({ isActive }) =>
+                isActive ? "side-bar__item active" : "side-bar__item"
+              }
+            >
+              <li >
                 <svg
                   width="20"
                   height="20"
@@ -64,8 +69,13 @@ export default function ProfileSelection() {
                 حساب کاربری
               </li>
             </NavLink>
-            <NavLink to='orders'>
-              <li className="side-bar__item">
+            <NavLink
+              to="orders"
+              className={({ isActive }) =>
+                isActive ? "side-bar__item active" : "side-bar__item"
+              }
+            >
+              <li >
                 <svg
                   width="20"
                   height="20"
@@ -93,8 +103,13 @@ export default function ProfileSelection() {
                 تاریخچه سفارشات
               </li>
             </NavLink>
-            <NavLink to='favorites'>
-              <li className="side-bar__item">
+            <NavLink
+              to="favorites"
+              className={({ isActive }) =>
+                isActive ? "side-bar__item active" : "side-bar__item"
+              }
+            >
+              <li >
                 <svg
                   width="20"
                   height="20"
@@ -110,8 +125,13 @@ export default function ProfileSelection() {
                 علاقه مندی ها
               </li>
             </NavLink>
-            <NavLink to='Addresses'>
-              <li className="side-bar__item">
+            <NavLink
+              to="Addresses"
+              className={({ isActive }) =>
+                isActive ? "side-bar__item active" : "side-bar__item"
+              }
+            >
+              <li >
                 <svg
                   width="20"
                   height="20"
@@ -131,8 +151,13 @@ export default function ProfileSelection() {
                 آدرس ها
               </li>
             </NavLink>
-            <NavLink to='comments'>
-              <li className="side-bar__item">
+            <NavLink
+              to="comments"
+              className={({ isActive }) =>
+                isActive ? "side-bar__item active" : "side-bar__item"
+              }
+            >
+              <li >
                 <svg
                   width="20"
                   height="20"
