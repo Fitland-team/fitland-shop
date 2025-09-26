@@ -14,7 +14,7 @@
 /* محتوی پاپ‌آپ */
 .popup-content {
   background-color: var(--white);
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-large);
   width: 650px;
   height: 180px;
   padding: 16px;
@@ -34,9 +34,6 @@
 }
 .close-btn {
   cursor: pointer;
-}
-
-.popup-buttom {
 }
 .popup-bottom__description {
   font-size: 16px;

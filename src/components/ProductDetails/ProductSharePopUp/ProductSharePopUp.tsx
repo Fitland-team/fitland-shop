@@ -11,11 +11,13 @@ export default function ProductSharePopup({ productUrl }: Props) {
   const [isCopied, setIsCopied] = useState(false);
   const modalRef = useRef<HTMLDivElement>(null);
 
+  // برای کپی کردن لینک
   const copyLink = () => {
     navigator.clipboard.writeText(productUrl);
     setIsCopied(true);
   };
 
+  // بستن مدال با کلیک روی دکمه esc
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") setIsOpen(false);
@@ -26,12 +28,12 @@ export default function ProductSharePopup({ productUrl }: Props) {
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [isOpen]);
 
-
+// بستن مدال با کلیک روی بیرون اون
   const handleOverlayClick = (e: React.MouseEvent<HTMLDivElement>) => {
     if (modalRef.current && !modalRef.current.contains(e.target as Node)) {
       setIsOpen(false);
     }
-  };
+  };  
 
   return (
     <>
