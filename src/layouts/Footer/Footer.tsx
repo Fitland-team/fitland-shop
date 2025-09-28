@@ -78,7 +78,7 @@ function Footer() {
 
           <div className="footer__bottom">
             <p className="footer__bottom-desc">
-              <h2 className="footer-bottom__title">فروشگاه اینترنتی فیت‌لند</h2>
+              <span className="footer-bottom__title">فروشگاه اینترنتی فیت‌لند</span>
               فروشگاه لوازم ورزشی فیت‌لند در سال 1403 کار خود را به صورت حرفه ای
               آغاز کرد و با هدف ارائه جدیدترین محصولات ورزشی از قبیل لوازم فوتبال،
               فوتسال، والیبال، بسکتبال، تنیس و... همچنین پوشاک ورزشی و تجهیزات

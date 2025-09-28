@@ -1,0 +1,16 @@
+.products-section__navigate {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 8px;
+    font-size: 16px;
+    margin: 2rem 0;
+}
+
+.products-section__navigate-text {
+    color: var(--Neutral-Colors-5);
+}
+
+.products-section__navigate-text:last-child {
+    color: var(--Neutral-Colors-8);
+}
