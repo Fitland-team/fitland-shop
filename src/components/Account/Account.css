@@ -75,7 +75,7 @@
 .account-wrapper__input input:valid+.labelline {
     transform: translate(-20px, -23px) scale(0.88);
     z-index: 2;
-    padding: 0 12px;
+    padding: 0 5px;
 }
 
 .account-wrapper__btn {
