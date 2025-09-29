@@ -1,5 +1,6 @@
 import "./ProductItem.css";
 import DiscountBadge from "../DiscountBadge/DiscountBadge";
+import formatNumber from "../../Utils/FormatNumber";
 
 type ProductItemProps = {
   image: string;
@@ -24,7 +25,7 @@ function ProductItem({
         </div>
         <div className="product-attribute">
           <h3 className="product__title">{title}</h3>
-          <p className="product__price">{price}تومان</p>
+          <p className="product__price">{formatNumber(price)}تومان</p>
 
           <p className="product__size-range">از سایز L تا XXL</p>
 
