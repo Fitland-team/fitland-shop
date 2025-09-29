@@ -1,5 +1,11 @@
-import "./Pagination.css";
+import "./Slider.css";
 import ProductItem from "../../components/ProductItem/ProductItem";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Autoplay, Navigation } from "swiper/modules";
+import { products } from "../../api/products";
+import { useState } from "react";
 
 type paginationProps = {
   title: string
@@ -7,7 +13,9 @@ type paginationProps = {
 }
 function Pagination({ title, bgImage }: paginationProps) {
 
-  console.log(bgImage)
+  const [homeProducts, setHomeProducts] = useState(products)
+
+  console.log(homeProducts)
 
   return (
     <div className="pagination" style={{ backgroundImage: `url(${bgImage})` }}>
@@ -41,6 +49,33 @@ function Pagination({ title, bgImage }: paginationProps) {
         </div>
 
         <div className="pagination-product-wrapper">
+          <Swiper
+            modules={[Navigation, Autoplay]}
+            spaceBetween={170}
+            loop={true}
+            slidesPerView={3}
+            navigation={{
+              nextEl: ".pagination__arrow-left",
+              prevEl: ".pagination__arrow-right",
+            }}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false
+            }}
+            speed={500}
+          >
+            {
+              homeProducts.map(product => (
+                  <SwiperSlide>
+                    <ProductItem
+                      image={product.image}
+                      title={product.title}
+                      price={product.price}
+                    />
+                  </SwiperSlide>
+              ))
+            }
+          </Swiper>
           <span className="pagination__arrow pagination__arrow-right">
             <svg width="24" height="24" viewBox="0 0 24 24">
               <path
@@ -49,27 +84,6 @@ function Pagination({ title, bgImage }: paginationProps) {
               />
             </svg>
           </span>
-          <ProductItem
-            image="./images/Rectangle.png"
-            title="کفش نایک مدل S200"
-            price="200000"
-            sizeRangeSmall="L"
-            sizeRangeBig="XXL"
-          />
-          <ProductItem
-            image="./images/Rectangle.png"
-            title="کفش نایک مدل S200"
-            price="200000"
-            sizeRangeSmall="L"
-            sizeRangeBig="XXL"
-          />
-          <ProductItem
-            image="./images/Rectangle.png"
-            title="کفش نایک مدل S200"
-            price="200000"
-            sizeRangeSmall="L"
-            sizeRangeBig="XXL"
-          />
           <span className="pagination__arrow pagination__arrow-left">
             <svg width="24" height="24" viewBox="0 0 24 24">
               <path
