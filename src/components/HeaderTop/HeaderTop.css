@@ -21,15 +21,21 @@
     height: 48px;
 }
 
-.header-top__serach {
+.header-top__search {
     border: 1px solid var(--Neutral-Colors-4);
     width: 100%;
     border-radius: var(--radius-large);
     padding-right: 3rem;
     outline: none;
+    transition: var(--theme-transition);
 }
 
-.header-top__serach::placeholder {
+.header-top__search.dark {
+    color: var(--white);
+    background-color: var(--secondary-dark-2);
+}
+
+.header-top__search::placeholder {
     font-size: 12px;
     color: var(--Neutral-Colors-6);
     font-weight: 700;
@@ -44,13 +50,18 @@
 }
 
 .header-top__search-icon svg {
-    fill: var(--primary);
+    fill: var(--primary-light);
 }
 
 .header-top__register-card {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+}
+
+.header-top__register {
+    display: flex;
+    gap: 10px;
 }
 
 .header-top__register-btn {
@@ -69,8 +80,33 @@
     transition: all 250ms ease;
 }
 
+.header-top__register-btn.light {
+    background-color: var(--secondary-light);
+}
+
+.header-top__register-btn.light span {
+    color: var(--white);
+}
+
+.header-top__register-btn.light .header-top__register-icon svg {
+    fill: var(--white);
+}
+
+.header-top__register-btn.dark {
+    background-color: var(--secondary-dark-2);
+}
+
+.header-top__register-btn.dark span {
+    color: var(--white);
+}
+
+.header-top__register-btn.dark .header-top__register-icon svg {
+    fill: var(--white);
+}
+
+
 .header-top__register-btn:hover {
-    background-color: var(--primary);
+    background-color: var(--secondary-dark);
 }
 
 .header-top__register-btn:hover .header-top__register-title {
@@ -97,11 +133,15 @@
     width: 48px;
     height: 48px;
     border-radius: 12px;
-    background-color: var(--primary);
+    background-color: var(--primary-light);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+}
+
+.header-top__card.dark {
+    background-color: var(--primary-dark);
 }
 
 .header-top__card-btn {
@@ -110,9 +150,13 @@
     cursor: pointer;
 }
 
+.header-top__card.dark .header-top__card-count {
+    background-color: var(--secondary-dark);
+}
+
 .header-top__card-count {
     position: absolute;
-    background-color: var(--secondary);
+    background-color: var(--secondary-light);
     color: var(--white);
     width: 19px;
     height: 19px;

@@ -1,8 +1,13 @@
 .header-top-title {
     width: 100%;
-    background-color: var(--secondary);
+    background-color: var(--secondary-light);
     color: var(--white);
     height: 40px;
+    transition: var(--theme-transition);
+}
+
+.header-top-title.dark {
+    background-color: var(--secondary-dark);
 }
 
 .header-top-title h3 {
