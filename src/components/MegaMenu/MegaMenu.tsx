@@ -2,6 +2,8 @@ import type { SubMenuData } from "../../api/menuData";
 import { Link } from "react-router-dom";
 import "./MegaMenu.css";
 import { useBreadcrumb } from "../../Contexts/BreadCrumbContext";
+import { useContext } from "react";
+import { ThemeContext } from "../../Contexts/ThemeContext";
 
 type MegaMenuProps = {
   data: SubMenuData;
@@ -9,10 +11,12 @@ type MegaMenuProps = {
 
 function MegaMenu({ data }: MegaMenuProps) {
 
+  const { theme } = useContext(ThemeContext)
+
   const { setRest } = useBreadcrumb()
-  
+
   return (
-    <div className="megamenu">
+    <div className={`megamenu ${theme === 'light' ? 'light' : 'dark'}`}>
       <div className="megamenu-wrapper">
         <div className="megamenu-grid">
           {data.categories.map((cat, index) => (

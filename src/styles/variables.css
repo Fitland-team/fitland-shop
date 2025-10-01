@@ -18,21 +18,12 @@
   --fw-thin: 100;
 
   /* Base Light Colors */
-  /* --primary: #fa541c; */
-  /* --secondary: #032340; */
-  --primary-light: #FE7743;
-  --secondary-light: #273F4F;
-  --secondary-light-2: #447D9B;
-  --bg-color-light: #D7D7D7;
+  --primary: #fa541c;
+  --secondary: #032340;
   --Background: #ffffff;
   --primary-Back: #feeee8;
   --Secondary-Back: #ebf5ff;
 
-  /* Base Dark Colors */
-  --primary-dark: #FF6500;
-  --secondary-dark: #1E3E62;
-  --secondary-dark-2: #0B192C;
-  --bg-color-dark: #000000;
   /* State Colors */
   --cinnabar-800: #8a1513;
   --cinnabar-500: #e53935;

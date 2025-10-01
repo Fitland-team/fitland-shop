@@ -18,13 +18,18 @@ function Products() {
 
   const ITEMS_PER_PAGE = 12;
   const [page, setPage] = useState(1);
+  const [filteredProducts, setFilteredProducts] = useState<product[]>(products);
 
-  const pageCount = Math.ceil(products.length / ITEMS_PER_PAGE);
+  const pageCount = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
 
   // محاسبه اندکس شروع و پایان
   const startIndex = (page - 1) * ITEMS_PER_PAGE;
   const endIndex = startIndex + ITEMS_PER_PAGE;
-  const currentProducts = products.slice(startIndex, endIndex);
+  const currentProducts = filteredProducts.slice(startIndex, endIndex);
+
+  React.useEffect(() => {
+    setPage(1);
+  }, [filteredProducts]);
 
   return (
     <div>
@@ -34,21 +39,22 @@ function Products() {
           <ProductSectionNavigate />
 
           <div className="product-section__bottom">
-            <ProductsFilter />
+            <ProductsFilter products={products} onPriceChange={setFilteredProducts} />
 
             <div className="products-section__pagination">
               <div className="products-section__left">
                 <>
-                  {currentProducts.map((products: product) => (
+                  {currentProducts.map((p) => (
                     <ProductCard
-                      id={products.id}
-                      title={products.title}
-                      image={products.image}
-                      price={products.price}
-                      color={products.color}
-                      rating={products.rating}
+                      id={p.id}
+                      title={p.title}
+                      image={p.image}
+                      price={p.price}
+                      color={p.color}
+                      rating={p.rating}
                     />
                   ))}
+
                 </>
               </div>
 

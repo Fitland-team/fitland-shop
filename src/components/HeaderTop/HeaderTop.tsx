@@ -236,7 +236,7 @@ function HeaderTop() {
           </div>
         </div>
         <div className="header-top__second-section">
-          <div className="navbar">
+          <div className={`navbar ${theme === 'light' ? 'light' : 'dark'}`}>
             <div className="navbar-right">
               <ul className="navbar-right-list">
                 <li className="navbar-right-item">
@@ -302,6 +302,7 @@ function HeaderTop() {
                 <li className="navbar-left-item">
                   <Link to="/" className="navbar-left__item-link">
                     <svg
+                    className="navbar-left__item-link-home"
                       width="24"
                       height="24"
                       viewBox="0 0 24 24"

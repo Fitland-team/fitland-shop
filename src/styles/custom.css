@@ -30,12 +30,12 @@ body {
 }
 
 body.light {
-  background-color: var(--bg-color-light);
+  /* background-color: #F5EFFF; */
 }
 
-body.dark {
-  background-color: var(--bg-color-dark);
-}
+/* body.dark {
+  background-color: #CDC1FF;
+} */
 
 /* تصاویر، ویدیوها و SVG ها */
 img,
@@ -101,12 +101,12 @@ ol {
 
 /* پس‌زمینه‌ی اسکرول‌بار */
 ::-webkit-scrollbar-track {
-  background: var(--secondary-light);
+  background: var(--secondary);
   border-radius: 8px;
 }
 
 /* قسمت حرکت‌کننده (thumb) */
 ::-webkit-scrollbar-thumb {
-  background: var(--primary-light);
+  background: var(--primary);
   border-radius: 8px;
 }

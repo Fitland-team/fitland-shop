@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./ProductCard.css";
+import formatNumber from "../../Utils/FormatNumber";
 
 type ProductCardProps = {
   id: number;
@@ -47,7 +48,7 @@ function ProductCard({
           </div>
 
           <p className="product__size-range">از سایز M تا 3XL</p>
-          <p className="product__price">{price} تومان</p>
+          <p className="product__price">{formatNumber(price)} تومان</p>
 
           {color && (
             <div className="product__color-circles">

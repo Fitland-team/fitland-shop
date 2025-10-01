@@ -50,7 +50,7 @@
 }
 
 .header-top__search-icon svg {
-    fill: var(--primary-light);
+    fill: var(--primary);
 }
 
 .header-top__register-card {
@@ -80,33 +80,8 @@
     transition: all 250ms ease;
 }
 
-.header-top__register-btn.light {
-    background-color: var(--secondary-light);
-}
-
-.header-top__register-btn.light span {
-    color: var(--white);
-}
-
-.header-top__register-btn.light .header-top__register-icon svg {
-    fill: var(--white);
-}
-
-.header-top__register-btn.dark {
-    background-color: var(--secondary-dark-2);
-}
-
-.header-top__register-btn.dark span {
-    color: var(--white);
-}
-
-.header-top__register-btn.dark .header-top__register-icon svg {
-    fill: var(--white);
-}
-
-
 .header-top__register-btn:hover {
-    background-color: var(--secondary-dark);
+    background-color: var(--primary);
 }
 
 .header-top__register-btn:hover .header-top__register-title {
@@ -133,15 +108,12 @@
     width: 48px;
     height: 48px;
     border-radius: 12px;
-    background-color: var(--primary-light);
+    background-color: var(--primary);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-}
-
-.header-top__card.dark {
-    background-color: var(--primary-dark);
+    transition: var(--theme-transition);
 }
 
 .header-top__card-btn {
@@ -150,13 +122,9 @@
     cursor: pointer;
 }
 
-.header-top__card.dark .header-top__card-count {
-    background-color: var(--secondary-dark);
-}
-
 .header-top__card-count {
     position: absolute;
-    background-color: var(--secondary-light);
+    background-color: var(--secondary);
     color: var(--white);
     width: 19px;
     height: 19px;
@@ -184,6 +152,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: var(--theme-transition);
 }
 
 .navbar-right-list {
@@ -195,14 +164,13 @@
     padding: 0.5rem;
 }
 
-.navbar-right-item:hover > .megamenu {
+.navbar-right-item:hover>.megamenu {
     opacity: 1;
     visibility: visible;
     pointer-events: visible;
 }
 
 .navbar-right__item-link {
-    color: var(--black);
     font-size: 16px;
     font-weight: 700;
     transition: all 200ms ease;
@@ -220,11 +188,14 @@
 .navbar-left__item-link {
     display: flex;
     align-items: center;
-    color: var(--black);
     gap: 5px;
     font-size: 16px;
     font-weight: 700;
     transition: all 200ms ease;
+}
+
+.navbar-left__item-link-home {
+    /* fill: var(--black); */
 }
 
 .navbar-left__item-link:hover {
@@ -234,7 +205,13 @@
 .navbar-left__item-link svg {
     width: 16px;
     height: 16px;
-    fill: var(--primary) !important;
+    fill: black;
+    transition: all 200ms ease;
 }
+
+.navbar-left__item-link:hover svg {
+    fill: var(--primary);
+}
+
 
 /* End Header Top Second Section */
