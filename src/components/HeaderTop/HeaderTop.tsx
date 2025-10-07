@@ -9,6 +9,8 @@ import {
 } from "../../api/menuData";
 import "./HeaderTop.css";
 import { Link, NavLink } from "react-router-dom";
+import { useCart } from "../../Contexts/CartContext";
+
 
 function HeaderTop() {
   const [womenData, setWomenData] = useState(womenSubMenu);
@@ -16,6 +18,10 @@ function HeaderTop() {
   const [kidData, setKidData] = useState(kidSubMenu);
   const [sportData, setSportData] = useState(sportSubMenu);
   const [shakerData, setShakerData] = useState(shakerSubMenu);
+
+  const { cart } = useCart();
+  const totalItems = cart.reduce((acc, item) => acc + item.count, 0);
+
 
   return (
     <div className="container">
@@ -158,7 +164,7 @@ function HeaderTop() {
                       fill="white"
                     />
                   </svg>
-                  <span className="header-top__card-count">0</span>
+                  <span className="header-top__card-count">{totalItems}</span>
                 </button>
               </div>
             </NavLink>

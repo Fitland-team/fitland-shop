@@ -1,7 +1,22 @@
-import React from "react";
+import { useMemo } from "react";
+import { useCart  } from "../../../Contexts/CartContext";
 import "./ShoppingCardSum.css"
 
 export default function ShoppingCardSum() {
+
+  const { cart } = useCart();
+
+    // اعداد ثابت
+  const profit = 150000;
+  const shipping = 35000;
+
+    // جمع قیمت کالاها
+  const totalItemsPrice = useMemo(() => {
+    return cart.reduce((sum, item) => sum + item.price * item.count, 0);
+  }, [cart]);
+
+   const totalPayable = totalItemsPrice + profit + shipping;
+
   return (
     <div className="shoppingcard-left">
       <div className="shoppingcard-left-top">
@@ -35,23 +50,23 @@ export default function ShoppingCardSum() {
       <div className="shoppingcard-left-center">
         <div className="cart-summary__item">
           <span>قیمت کالاها</span>
-          <span>۴۵۰٬۰۰۰ تومان</span>
+          <span>{totalItemsPrice.toLocaleString()} تومان</span>
         </div>
 
         <div className="cart-summary__item">
           <span className="cart-summary__profit">سود شما از خرید</span>
-          <span className="cart-summary__profit">۱۵۰,۰۰۰ تومان</span>
+          <span className="cart-summary__profit">{profit.toLocaleString()} تومان</span>
         </div>
 
         <div className="cart-summary__item">
           <span>هزینه ارسال</span>
-          <span>۳۵,۰۰۰ تومان</span>
+          <span>{shipping.toLocaleString()} تومان</span>
         </div>
       </div>
       <div className="shoppingcard-left-bottom">
         <div className="cart-sum__item">
           <span>مبلغ قابل پرداخت</span>
-          <span>۱۵۰,۰۰۰ تومان</span>
+          <span>{totalPayable.toLocaleString()} تومان</span>
         </div>
 
         <button className="cart-buy-item">
