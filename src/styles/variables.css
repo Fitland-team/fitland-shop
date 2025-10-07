@@ -1,6 +1,10 @@
 :root {
+  min-height: 100vh;
   /* Fonts */
   --font-primary: "IranSans", sans-serif;
+  
+  /* Theme Transition */
+  --theme-transition: all 200ms ease;
 
   /* Font Weights */
   --fw-heavy: 900;
@@ -13,7 +17,7 @@
   --fw-ultra-light: 200;
   --fw-thin: 100;
 
-  /* Base Colors */
+  /* Base Light Colors */
   --primary: #fa541c;
   --secondary: #032340;
   --Background: #ffffff;
@@ -96,4 +100,3 @@
 
   /* End Corner Radius */
 }
-

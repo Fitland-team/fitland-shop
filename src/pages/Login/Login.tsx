@@ -1,8 +1,31 @@
 import './Login.css'
 import RoofingOutlinedIcon from '@mui/icons-material/RoofingOutlined';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Login() {
+
+    const [inputValue, setInputValue] = useState('')
+    const [error, setError] = useState('')
+    const navigate = useNavigate();
+
+    const handleLogin = () => {
+        const users = JSON.parse(localStorage.getItem('users') || '[]');
+        const foundUser = users.find(
+            (u: { email: string; phone?: string }) =>
+                u.email === inputValue || u.phone === inputValue
+        );
+
+        if (foundUser) {
+            setError('');
+            localStorage.setItem('loggedInUser', JSON.stringify(foundUser));
+            navigate('/');
+        } else {
+            alert('not FOund')
+        }
+    };
+
+
     return (
         <div className='login'>
             <div className="login-section">
@@ -15,9 +38,9 @@ export default function Login() {
                     </div>
                     <div className="login-wrapper__input">
                         <label htmlFor="">لطفا شماره موبایل یا ایمیل خود را وارد کنید</label>
-                        <input type="text" placeholder='*********09 یا Example@gmail.com' />
+                        <input type="text" placeholder='*********09 یا Example@gmail.com' value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
                     </div>
-                    <button className='login-wrapper__btn'>ادامه</button>
+                    <button className='login-wrapper__btn' onClick={handleLogin}>ادامه</button>
                 </div>
             </div>
             <div className="login-img">

@@ -9,32 +9,50 @@
    ========================= */
 
 /* همه المنت‌ها به border-box */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 /* متن پایه */
-html, body {
+html,
+body {
   height: 100%;
   font-family: 'IranSans', sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fff;
   color: #111;
+  transition: var(--theme-transition);
 }
 
+body.light {
+  /* background-color: #F5EFFF; */
+}
+
+/* body.dark {
+  background-color: #CDC1FF;
+} */
+
 /* تصاویر، ویدیوها و SVG ها */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
 /* فرم‌ها */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
   color: inherit;
   background: transparent;
@@ -63,7 +81,8 @@ a {
 }
 
 /* لیست‌ها */
-ul, ol {
+ul,
+ol {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -77,17 +96,17 @@ ul, ol {
 
 /* کل اسکرول‌بار */
 ::-webkit-scrollbar {
-  width: 6px;  
+  width: 6px;
 }
 
 /* پس‌زمینه‌ی اسکرول‌بار */
 ::-webkit-scrollbar-track {
-  background: var(--secondary); 
+  background: var(--secondary);
   border-radius: 8px;
 }
 
 /* قسمت حرکت‌کننده (thumb) */
 ::-webkit-scrollbar-thumb {
-  background: var(--primary); 
+  background: var(--primary);
   border-radius: 8px;
 }

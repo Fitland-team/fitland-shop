@@ -3,6 +3,7 @@
     background-color: var(--secondary);
     color: var(--white);
     height: 40px;
+    transition: var(--theme-transition);
 }
 
 .header-top-title h3 {
