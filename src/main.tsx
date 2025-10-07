@@ -6,16 +6,18 @@ import App from './App.tsx'
 import { BreadcrumbProvider } from './Contexts/BreadCrumbContext.tsx'
 import { FavoritesProvider } from './Contexts/FavoritesContext.tsx'
 import { ThemeProvider } from './Contexts/ThemeContext.tsx'
+import { CartProvider } from './Contexts/CartContext.tsx'
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
     <ThemeProvider>
       <BreadcrumbProvider>
         <FavoritesProvider>
-          <App />
+          <CartProvider>
+            <App />
+          </CartProvider>
         </FavoritesProvider>
       </BreadcrumbProvider>
     </ThemeProvider>
   </BrowserRouter>
-)
-
+);

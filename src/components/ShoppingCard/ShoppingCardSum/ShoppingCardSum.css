@@ -1,0 +1,75 @@
+.shoppingcard-left {
+  width: 390px;
+  border: 1px solid var(--Neutral-Colors-3);
+  border-radius: var(--radius-medium);
+}
+.shoppingcard-left-top {
+  padding: 24px;
+  border-bottom: 2px solid var(--Neutral-Colors-3);
+}
+.shopping__discount-code {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.shopping__discount-holder {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+.shopping__discount-input {
+  height: 40px;
+  border: 1px solid var(--Neutral-Colors-3);
+  border-radius: var(--radius-medium);
+  padding: 8px;
+  flex: 1;
+}
+.shopping__discount-submit {
+  height: 40px;
+  display: flex;
+  gap: 8px;
+  padding: 8px 20px;
+  border: 1px solid var(--secondary);
+  border-radius: var(--radius-medium);
+}
+.shoppingcard-left-center {
+  padding: 24px;
+  border-bottom: 2px solid var(--Neutral-Colors-3);
+}
+.cart-summary__item {
+  display: flex;
+  justify-content: space-between;
+  color: var(--Neutral-Colors-8);
+  font-size: 14px;
+}
+.cart-summary__item:nth-child(2) {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.cart-summary__profit {
+  color: var(--primary);
+}
+.shoppingcard-left-bottom {
+  padding: 24px;
+}
+.cart-sum__item {
+  display: flex;
+  justify-content: space-between;
+  color: var(--Neutral-Colors-8);
+  font-size: 16px;
+  font-weight: 600;
+}
+.cart-buy-item {
+  height: 48px;
+  font-size: 16px;
+  background-color: var(--primary);
+  color: var(--white);
+  width: 100%;
+  padding: 8px 24px;
+  margin-top: 16px;
+  border-radius: var(--radius-medium);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
