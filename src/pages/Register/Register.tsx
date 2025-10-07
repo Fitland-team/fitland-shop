@@ -1,8 +1,52 @@
 import './Register.css'
 import RoofingOutlinedIcon from '@mui/icons-material/RoofingOutlined';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+
+type User = {
+    fullName: string;
+    phone: string;
+    email?: string;
+};
 
 export default function Register() {
+
+    const [fullName, setFullName] = useState<string>("");
+    const [phone, setPhone] = useState<string>("");
+    const [email, setEmail] = useState<string>("");
+
+    const navigate = useNavigate()
+
+    const [isMember, setIsMember] = useState<boolean>(false)
+    const [success, setSuccess] = useState<boolean>(false)
+
+    const handleRegister = () => {
+        // گرفتن آرایه فعلی کاربران
+        const users: User[] = JSON.parse(localStorage.getItem("users") || "[]");
+
+        const existingUser = users.find(
+            user => user.phone === phone || (email && user.email === email)
+        );
+        if (existingUser) {
+            alert("این کاربر قبلاً ثبت شده!");
+            return;
+        }
+
+        const newUser: User = {
+            fullName,
+            phone,
+            email: email || undefined,    
+        };
+
+        users.push(newUser);
+
+        localStorage.setItem("users", JSON.stringify(users));
+
+        alert("ثبت‌نام موفق بود! حالا می‌تونی وارد بشی");
+
+        navigate('/login')
+    };
+
     return (
         <div className='register'>
             <div className="register-section">
@@ -14,17 +58,17 @@ export default function Register() {
                     </div>
                     <div className="register-wrapper__input">
                         <label htmlFor="">نام و نام خانوادگی *</label>
-                        <input type="text" placeholder='نام خود را به فارسی وارد کنید' />
+                        <input type="text" placeholder='نام خود را به فارسی وارد کنید' value={fullName} onChange={(e) => setFullName(e.target.value)}/>
                     </div>
                     <div className="register-wrapper__input">
                         <label htmlFor="">شماره تلفن همراه *</label>
-                        <input type="text" placeholder='09123456789' />
+                        <input type="text" placeholder='09123456789' value={phone} onChange={(e) => setPhone(e.target.value)}/>
                     </div>
                     <div className="register-wrapper__input">
                         <label htmlFor="">ایمیل (اختیاری)</label>
-                        <input type="text" placeholder='Example@gmail.com' />
+                        <input type="text" placeholder='Example@gmail.com' value={email} onChange={(e) => setEmail(e.target.value)}/>
                     </div>
-                    <button className='register-wrapper__btn'>تایید</button>
+                    <button className='register-wrapper__btn' onClick={handleRegister}>تایید</button>
                     <div className="register-checkbox">
                         <input id='check' type="checkbox" />
                         <label htmlFor="check"><span>قوانین و مقررات</span> را خوانده و قبول دارم.</label>
@@ -55,7 +99,8 @@ export default function Register() {
                                     fill="#FA541C"
                                 />
                                 <path
-                                    d="M51.3922 30.8794C50.7422 31.2732 49.9547 31.5563 49.0297 31.7286C48.1297 31.9132 47.1797 31.9994 46.1797 31.9994C43.3672 31.9994 41.1672 31.3101 39.5922 29.9194C38.0172 28.504 37.2297 26.3501 37.2297 23.4455V18.0547H34.4297V11.704H37.2297V5.80859H45.6922V11.704H49.8922V18.0547H45.6922V23.3717C45.6922 24.0117 45.8547 24.5163 46.1797 24.8732C46.5297 25.2301 46.9547 25.4147 47.4547 25.4147C48.1797 25.4147 48.8172 25.2178 49.3672 24.8363L51.3922 30.8794Z"
+                                    d="M51.3922 30.8794C50.7422 31.2732 49.9547 31.5563 49.0297 31.7286C48.1297 31.9132 47.1797 31.9994 46.1797 31.9994C43.3672 31.9994 41.1672 31.3101 39.5922 29.9194C38.0172 28.504 37.2297 26.3501 37.2297 23.4455V18.0547H34.4297V11.704H37.2297V5.80859H45.6922V11.704H49.8922V18.0547H45.6922V23.3717C45.6922 24.0117 45.8547 24.5163 46.1797 24.8732C46.5297 25.2301 46.9547 25.4147 47.4547 25.4147C48.1797 25.4147 48.8172 25.2178 49.3672 24.
+                                    8363L51.3922 30.8794Z"
                                     fill="#FA541C"
                                 />
                                 <path
