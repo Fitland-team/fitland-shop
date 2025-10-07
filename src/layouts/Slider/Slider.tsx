@@ -11,6 +11,7 @@ type paginationProps = {
   title: string
   bgImage?: string
 }
+
 function Pagination({ title, bgImage }: paginationProps) {
 
   const [homeProducts, setHomeProducts] = useState(products)

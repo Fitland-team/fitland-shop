@@ -1,0 +1,89 @@
+.product__add-to-shopping-card {
+  height: 100%;
+  font-size: 16px;
+  background-color: var(--primary);
+  color: var(--white);
+  width: 341px;
+  padding: 8px 32px;
+  border-radius: var(--radius-small);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+.popup-buy-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(41, 45, 50, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.popup-buy-content {
+  background-color: var(--white);
+  border-radius: var(--radius-large);
+  width: 370px;
+  padding: 16px;
+  position: relative;
+}
+.popup-buy-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--Neutral-Colors-4);
+}
+.pop-buy-title {
+  color: #257028;
+  font-size: 16px;
+  font-weight: 500;
+}
+.close-buy-btn {
+  cursor: pointer;
+}
+.popup-buy-buttom {
+  margin-top: 16px;
+}
+.popup-product-detail {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.popup__product-image {
+  width: 80px;
+  height: 80px;
+}
+.popup__product-image img {
+  border-radius: var(--radius-small);
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+.popup__product-title {
+  font-size: 16px;
+}
+.popup__shoping-cart {
+  border: 1px solid var(--primary);
+  color: var(--primary);
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  margin-top: 16px;
+  padding: 8px 16px;
+  border-radius: var(--radius-medium);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.3s;
+}
+.popup__shoping-cart:hover {
+  background-color: var(--primary);
+  color: var(--white);
+}

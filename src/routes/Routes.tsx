@@ -7,7 +7,7 @@ import Register from "../pages/Register/Register";
 import ProductDetails from "../components/ProductDetails/ProductDetails";
 import Profile from "../pages/Profile/Profile";
 import Account from "../components/Account/Account";
-import Orders from "../components/Orders/Orders";
+import ShoppingCard from "../components/ShoppingCard/ShoppingCard";
 import Favorites from "../components/Favorites/Favorites";
 import Addresses from "../components/Addresses/Addresses";
 import Comments from "../components/Comments/Comments";
@@ -18,13 +18,13 @@ const routes: RouteObject[] = [
   { path: "/login", element: <Login /> },
   { path: "/register", element: <Register /> },
   { path: "/products/:id", element: <ProductDetails /> },
+  { path: "/shoppingcard", element: <ShoppingCard /> },
   {
     path: "/profile",
     element: <Profile />,
     children: [
       { index: true, element: <Navigate to="account" replace /> },
       { path: "account", element: <Account /> },
-      { path: "orders", element: <Orders /> },
       { path: "favorites", element: <Favorites /> },
       { path: "addresses", element: <Addresses /> },
       { path: "comments", element: <Comments /> },

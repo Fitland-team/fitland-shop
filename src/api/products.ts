@@ -14,7 +14,7 @@ export const products: product[] = [
     id: 1,
     title: "تیشرت زنانه کد 1737",
     image: "/images/products/Rectangle 1167.png",
-    price: 400000,
+    price: 600000 ,
     color: ["334B4F", "515549", "F00000"],
     images: [
       "/images/products/Rectangle 1167.png",

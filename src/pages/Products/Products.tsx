@@ -41,6 +41,7 @@ function Products() {
                 <>
                   {currentProducts.map((products: product) => (
                     <ProductCard
+                    key={products.id}
                       id={products.id}
                       title={products.title}
                       image={products.image}

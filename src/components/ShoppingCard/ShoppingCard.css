@@ -1,0 +1,6 @@
+.shoppingcard {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 25px;
+}
