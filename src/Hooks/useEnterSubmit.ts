@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export const useEnterSubmit = (callback: () => void) => {
+ const useEnterSubmit = (callback: () => void) => {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Enter") {
@@ -13,3 +13,5 @@ export const useEnterSubmit = (callback: () => void) => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [callback]);
 };
+
+export default useEnterSubmit

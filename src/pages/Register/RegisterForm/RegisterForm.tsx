@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./RegisterForm.css";
 import { useNavigate } from "react-router-dom";
 import { validateFullName, validatePhone, validateEmail } from "../validations";
-import { useEnterSubmit } from "../../../Hooks/useEnterSubmit";
+import useEnterSubmit from "../../../Hooks/useEnterSubmit";
 
 type User = {
   fullName: string;

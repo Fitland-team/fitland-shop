@@ -1,19 +1,20 @@
-import { useState, useEffect } from 'react';
-import './Account.css';
-import BorderColorIcon from '@mui/icons-material/BorderColor';
+import { useState, useEffect } from "react";
+import BorderColorIcon from "@mui/icons-material/BorderColor";
+
+import "./Account.css";
 
 export default function Account() {
   const [showProfile, setShowProfile] = useState<boolean>(false);
 
-  const [username, setUsername] = useState<string>('');
-  const [phone, setPhone] = useState<string>('');
-  const [identity, setIdentity] = useState<string>('');
-  const [gender, setGender] = useState<string>('');
-  const [email, setEmail] = useState<string>('');
+  const [username, setUsername] = useState<string>("");
+  const [phone, setPhone] = useState<string>("");
+  const [identity, setIdentity] = useState<string>("");
+  const [gender, setGender] = useState<string>("");
+  const [email, setEmail] = useState<string>("");
 
   // گرفتن اطلاعات از localStorage وقتی کامپوننت لود شد
   useEffect(() => {
-    const savedUser = localStorage.getItem('loggedInUser');
+    const savedUser = localStorage.getItem("loggedInUser");
     if (savedUser) {
       const user = JSON.parse(savedUser);
       if (user.fullName) setUsername(user.fullName);
@@ -24,8 +25,19 @@ export default function Account() {
 
   // فیلدهای فرم
   const fields = [
-    { label: "نام و نام خانوادگی", value: username, setValue: setUsername, type: "text" },
-    { label: "شماره تماس", value: phone, setValue: setPhone, type: "text", onlyNumbers: true },
+    {
+      label: "نام و نام خانوادگی",
+      value: username,
+      setValue: setUsername,
+      type: "text",
+    },
+    {
+      label: "شماره تماس",
+      value: phone,
+      setValue: setPhone,
+      type: "text",
+      onlyNumbers: true,
+    },
     { label: "کد ملی", value: identity, setValue: setIdentity, type: "text" },
     { label: "جنسیت", value: gender, setValue: setGender, type: "text" },
     { label: "ایمیل", value: email, setValue: setEmail, type: "email" },
@@ -35,8 +47,13 @@ export default function Account() {
   const submitProfile = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (!/^09\d{9}$/.test(phone)) {
+      alert("شماره موبایل نامعتبر است");
+      return;
+    }
+
     const updatedUser = {
-      name: username,
+      fullName: username,
       phone,
       identity,
       gender,
@@ -44,16 +61,17 @@ export default function Account() {
     };
 
     // ذخیره در localStorage
-    localStorage.setItem('loggedInUser', JSON.stringify(updatedUser));
+    localStorage.setItem("loggedInUser", JSON.stringify(updatedUser));
 
     setShowProfile(true);
   };
+
 
   // وقتی روی ادیت کلیک کرد
   const editProfile = () => setShowProfile(false);
 
   return (
-    <div className='account'>
+    <div className="account">
       <div className="account-title">
         <h2>حساب کاربری</h2>
       </div>
@@ -68,7 +86,12 @@ export default function Account() {
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
                 onKeyDown={(e) => {
-                  if (onlyNumbers && !/^09\d{9}$/.test(e.key) && e.key !== "Backspace" && e.key !== "Delete") {
+                  if (
+                    onlyNumbers &&
+                    !/^\d*$/.test(e.key) &&
+                    e.key !== "Backspace" &&
+                    e.key !== "Delete"
+                  ) {
                     e.preventDefault();
                   }
                 }}
@@ -76,7 +99,9 @@ export default function Account() {
               <div className="labelline">{label}</div>
             </div>
           ))}
-          <button className="account-wrapper__btn" type='submit'>ثبت</button>
+          <button className="account-wrapper__btn" type="submit">
+            ثبت
+          </button>
         </form>
       ) : (
         <div className="profile-box">
@@ -87,7 +112,10 @@ export default function Account() {
             </div>
           ))}
           <div className="edit-profile" onClick={editProfile}>
-            <BorderColorIcon className='profile-box__edit' style={{ color: 'rgba(250, 84, 28, 1)' }} />
+            <BorderColorIcon
+              className="profile-box__edit"
+              style={{ color: "rgba(250, 84, 28, 1)" }}
+            />
           </div>
         </div>
       )}

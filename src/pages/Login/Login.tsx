@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import LoginForm from "./LoginForm/LoginForm";
 import LoginImage from "./LoginImage/LoginImage";
-import { useEnterSubmit } from "../../Hooks/useEnterSubmit";
+import useEnterSubmit from "../../Hooks/useEnterSubmit";
 import "./Login.css";
 
 export default function Login() {

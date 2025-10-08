@@ -49,9 +49,9 @@ export default function ProfileSelection() {
                 />
               </svg>
             </div>
-            <h4 className="side-bar__profile-name">{user?.fullName ? user.fullName : "کاربر"}</h4>
+            <h4 className="side-bar__profile-name">{user?.fullName ? user.fullName : ""}</h4>
             <p className="side-bar__profile-email">
-              {user?.email ? user.email : "ایمیل ثبت نشده"}
+              {user?.email ? user.email : ""}
             </p>
           </div>
           <div className="side-bar-bottom">
