@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./RegisterForm.css";
 import { useNavigate } from "react-router-dom";
 import { validateFullName, validatePhone, validateEmail } from "../validations";
+import { useEnterSubmit } from "../../../Hooks/useEnterSubmit";
 
 type User = {
   fullName: string;
@@ -60,6 +61,8 @@ export default function RegisterForm() {
 
     navigate("/login");
   };
+
+  useEnterSubmit(handleRegister);
 
   return (
     <div className="register-wrapper">
@@ -151,7 +154,11 @@ export default function RegisterForm() {
         {errors.email && <span className="error-text">{errors.email}</span>}
       </div>
 
-      <button className="register-wrapper__btn" onClick={handleRegister}>
+      <button
+        type="submit"
+        className="register-wrapper__btn"
+        onClick={handleRegister}
+      >
         تایید
       </button>
 

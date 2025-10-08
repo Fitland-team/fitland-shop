@@ -1,10 +1,25 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./ProfileSideBar.css";
 import { NavLink } from "react-router-dom";
 import ProfileExit from "../../components/ExitProfile/ProfileExit";
 
 export default function ProfileSelection() {
   const exitRef = useRef<{ open: () => void }>(null);
+
+  const [user, setUser] = useState<{ fullName?: string; email?: string } | null>(null);
+
+  useEffect(() => {
+    // تلاش برای خوندن اطلاعات کاربر از localStorage
+    const storedUser = localStorage.getItem("loggedInUser");
+    if (storedUser) {
+      try {
+        const parsedUser = JSON.parse(storedUser);
+        setUser(parsedUser);
+      } catch (err) {
+        console.error("خطا در خوندن اطلاعات کاربر:", err);
+      }
+    }
+  }, []);
 
   return (
     <>
@@ -34,9 +49,9 @@ export default function ProfileSelection() {
                 />
               </svg>
             </div>
-            <h4 className="side-bar__profile-name">متین ولی زاده</h4>
+            <h4 className="side-bar__profile-name">{user?.fullName ? user.fullName : "کاربر"}</h4>
             <p className="side-bar__profile-email">
-              mahsashirinzaban751@gmail.com
+              {user?.email ? user.email : "ایمیل ثبت نشده"}
             </p>
           </div>
           <div className="side-bar-bottom">

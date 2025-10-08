@@ -15,7 +15,7 @@ const LoginForm: FC<LoginFormProps> = ({
   handleChange,
 }) => {
   return (
-    <div className="login-wrapper">
+    <form className="login-wrapper"  onSubmit={handleLogin}>
       <div className="login-wrapper__title">
         <h2>ورود | ثبت‌نام</h2>
       </div>
@@ -30,10 +30,10 @@ const LoginForm: FC<LoginFormProps> = ({
         />
         {error && <span className="error-text">{error}</span>}
       </div>
-      <button className="login-wrapper__btn" onClick={handleLogin}>
+      <button type="submit" className="login-wrapper__btn">
         ادامه
       </button>
-    </div>
+    </form>
   );
 };
 

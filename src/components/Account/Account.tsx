@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './Account.css';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 
@@ -11,7 +11,18 @@ export default function Account() {
   const [gender, setGender] = useState<string>('');
   const [email, setEmail] = useState<string>('');
 
-  // آرایه فیلدها برای فرم و پروفایل
+  // گرفتن اطلاعات از localStorage وقتی کامپوننت لود شد
+  useEffect(() => {
+    const savedUser = localStorage.getItem('loggedInUser');
+    if (savedUser) {
+      const user = JSON.parse(savedUser);
+      if (user.fullName) setUsername(user.fullName);
+      if (user.phone) setPhone(user.phone);
+      if (user.email) setEmail(user.email);
+    }
+  }, []);
+
+  // فیلدهای فرم
   const fields = [
     { label: "نام و نام خانوادگی", value: username, setValue: setUsername, type: "text" },
     { label: "شماره تماس", value: phone, setValue: setPhone, type: "text", onlyNumbers: true },
@@ -20,11 +31,25 @@ export default function Account() {
     { label: "ایمیل", value: email, setValue: setEmail, type: "email" },
   ];
 
+  // وقتی کاربر اطلاعات رو ویرایش و ثبت کرد
   const submitProfile = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    const updatedUser = {
+      name: username,
+      phone,
+      identity,
+      gender,
+      email,
+    };
+
+    // ذخیره در localStorage
+    localStorage.setItem('loggedInUser', JSON.stringify(updatedUser));
+
     setShowProfile(true);
   };
 
+  // وقتی روی ادیت کلیک کرد
   const editProfile = () => setShowProfile(false);
 
   return (
@@ -43,7 +68,7 @@ export default function Account() {
                 value={value}
                 onChange={(e) => setValue(e.target.value)}
                 onKeyDown={(e) => {
-                  if (onlyNumbers && !/[0-9]/.test(e.key) && e.key !== "Backspace" && e.key !== "Delete") {
+                  if (onlyNumbers && !/^09\d{9}$/.test(e.key) && e.key !== "Backspace" && e.key !== "Delete") {
                     e.preventDefault();
                   }
                 }}
@@ -58,7 +83,7 @@ export default function Account() {
           {fields.map(({ label, value }) => (
             <div className="profile-box__content" key={label}>
               <h1>{label}</h1>
-              <p>{value}</p>
+              <p>{value || "ثبت نشده"}</p>
             </div>
           ))}
           <div className="edit-profile" onClick={editProfile}>
