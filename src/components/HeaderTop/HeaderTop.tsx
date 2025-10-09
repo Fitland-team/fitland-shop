@@ -25,8 +25,22 @@ function HeaderTop() {
   const [sportData, setSportData] = useState(sportSubMenu);
   const [shakerData, setShakerData] = useState(shakerSubMenu);
 
-  const users = JSON.parse(localStorage.getItem("users") || "[]");
-  const isLoggedIn = users.length > 0;
+  const [loggedInUser, setLoggedInUser] = useState(
+  JSON.parse(localStorage.getItem("loggedInUser") || "null")
+);
+
+useEffect(() => {
+  const handleStorageChange = () => {
+    setLoggedInUser(JSON.parse(localStorage.getItem("loggedInUser") || "null"));
+  };
+
+  window.addEventListener("storage", handleStorageChange);
+  return () => window.removeEventListener("storage", handleStorageChange);
+}, []);
+
+const isLoggedIn = !!loggedInUser;
+// ذ
+
   const navigateProfile = useNavigate();
 
   const goToProfile = () => navigateProfile("/profile");
@@ -225,7 +239,7 @@ function HeaderTop() {
                     }`}
                   >
                     <span className="header-top__register-title">
-                      {users[0].fullName}
+                      {loggedInUser.fullName}
                     </span>
                     <div className="header-top__register-icon">
                       <svg

@@ -1,16 +1,19 @@
+import "./ProfileExit.css";
+import {
+  useState,
+  useEffect,
+  useImperativeHandle,
+  forwardRef,
+  useRef,
+} from "react";
 
-import './ProfileExit.css'
-import { useState, useEffect,useImperativeHandle,forwardRef, useRef } from "react";
-
- const ProfileExit = forwardRef((_, ref) => {
-
+const ProfileExit = forwardRef((_, ref) => {
   const [isShowModal, setIsShowModal] = useState(false);
 
   const modalRef = useRef<HTMLDivElement>(null);
 
-
-    useImperativeHandle(ref, () => ({
-    open: () => setIsShowModal(true)
+  useImperativeHandle(ref, () => ({
+    open: () => setIsShowModal(true),
   }));
 
   // بستن مدال با کلیک روی دکمه esc
@@ -31,7 +34,14 @@ import { useState, useEffect,useImperativeHandle,forwardRef, useRef } from "reac
     }
   };
 
-    if (!isShowModal) return null;
+  const handleLogout = () => {
+    localStorage.removeItem("loggedInUser");
+    localStorage.removeItem("isLoggedIn");
+    setIsShowModal(false);
+    window.location.reload();
+  };
+
+  if (!isShowModal) return null;
 
   return (
     <>
@@ -76,8 +86,15 @@ import { useState, useEffect,useImperativeHandle,forwardRef, useRef } from "reac
               </p>
 
               <div className="exit-bottom-buttons">
-                <button className="cancel__exit" onClick={() => setIsShowModal(false)}>انصراف</button>
-                <button className="exit__btn">خروج از حساب</button>
+                <button
+                  className="cancel__exit"
+                  onClick={() => setIsShowModal(false)}
+                >
+                  انصراف
+                </button>
+                <button className="exit__btn" onClick={handleLogout}>
+                  خروج از حساب
+                </button>
               </div>
             </div>
           </div>
@@ -85,6 +102,6 @@ import { useState, useEffect,useImperativeHandle,forwardRef, useRef } from "reac
       )}
     </>
   );
-})
+});
 
 export default ProfileExit;

@@ -20,6 +20,10 @@ export default function Login() {
     if (foundUser) {
       setError("");
       localStorage.setItem("loggedInUser", JSON.stringify(foundUser));
+
+          // ثبت وضعیت لاگین (به درد چک در رندر اولیه یا گارد صفحات می‌خوره)
+    localStorage.setItem("isLoggedIn", "true");
+    
       navigate("/");
     } else {
       setError("کاربر یافت نشد");
