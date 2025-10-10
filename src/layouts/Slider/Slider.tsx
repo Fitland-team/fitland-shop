@@ -1,8 +1,8 @@
 import "./Slider.css";
 import ProductItem from "../../components/ProductItem/ProductItem";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
+import 'swiper/css';
+import 'swiper/css/navigation';
 import { Autoplay, Navigation } from "swiper/modules";
 import { products } from "../../api/products";
 import { useState } from "react";
@@ -16,7 +16,6 @@ function Pagination({ title, bgImage }: paginationProps) {
 
   const [homeProducts, setHomeProducts] = useState(products)
 
-  console.log(homeProducts)
 
   return (
     <div className="pagination" style={{ backgroundImage: `url(${bgImage})` }}>
@@ -67,7 +66,7 @@ function Pagination({ title, bgImage }: paginationProps) {
           >
             {
               homeProducts.map(product => (
-                  <SwiperSlide>
+                  <SwiperSlide key={product.id}>
                     <ProductItem
                       image={product.image}
                       title={product.title}

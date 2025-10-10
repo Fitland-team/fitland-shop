@@ -35,11 +35,14 @@ const ProfileExit = forwardRef((_, ref) => {
   };
 
   const handleLogout = () => {
+    localStorage.setItem("justLoggedOut", "true"); 
     localStorage.removeItem("loggedInUser");
     localStorage.removeItem("isLoggedIn");
     setIsShowModal(false);
     window.location.reload();
   };
+
+  
 
   if (!isShowModal) return null;
 

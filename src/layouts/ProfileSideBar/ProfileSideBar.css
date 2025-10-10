@@ -37,7 +37,25 @@
   height: 100px;
   border-radius: var(--radius-full);
   border: 2px solid var(--white);
+  object-fit: cover;
 }
+.side-bar__profile-placeholder {
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-full);
+  background-color: var(--white);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-icon {
+  position: static !important;
+  width: 56px !important;
+  height: 56px !important;
+}
+
 .side-bar__profile-name {
   font-size: 12px;
   color: #01070d;
@@ -81,11 +99,13 @@
 .side-bar__item svg {
   color: var(--Neutral-Colors-8);
 }
-.side-bar__item:hover, .side-bar__item.active {
+.side-bar__item:hover,
+.side-bar__item.active {
   color: #194165;
   border-bottom: 1px solid #194165;
 }
-.side-bar__item:hover svg, .side-bar__item.active svg {
+.side-bar__item:hover svg,
+.side-bar__item.active svg {
   color: #194165;
 }
 .side-bar__item:last-child {

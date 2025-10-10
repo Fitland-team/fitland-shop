@@ -2,11 +2,15 @@ import { useEffect, useRef, useState } from "react";
 import "./ProfileSideBar.css";
 import { NavLink } from "react-router-dom";
 import ProfileExit from "../../components/ExitProfile/ProfileExit";
+import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 
 export default function ProfileSelection() {
   const exitRef = useRef<{ open: () => void }>(null);
 
-  const [user, setUser] = useState<{ fullName?: string; email?: string } | null>(null);
+  const [user, setUser] = useState<{
+    fullName?: string;
+    email?: string;
+  } | null>(null);
 
   useEffect(() => {
     // تلاش برای خوندن اطلاعات کاربر از localStorage
@@ -21,35 +25,112 @@ export default function ProfileSelection() {
     }
   }, []);
 
+  // image
+  const [profileImage, setProfileImage] = useState<string | null>(null);
+
+  useEffect(() => {
+    const savedImage = localStorage.getItem("profileImage");
+    const justLoggedOut = localStorage.getItem("justLoggedOut");
+
+    if (justLoggedOut) {
+      // کاربر تازه از اکانتش خارج شده، پس عکس رو بذار روی حالت دیفالت
+      setProfileImage(null);
+
+      // فلگ رو حذف کن که فقط یه بار عمل کنه
+      localStorage.removeItem("justLoggedOut");
+    } else if (savedImage) {
+      // کاربر هنوز لاگینه یا تازه لاگین کرده، پس عکس ذخیره‌شده رو نشون بده
+      setProfileImage(savedImage);
+    }
+  }, []);
+
+  const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      const base64 = reader.result as string;
+      setProfileImage(base64);
+      localStorage.setItem("profileImage", base64);
+    };
+    reader.readAsDataURL(file);
+  };
+
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean>(
+    !!localStorage.getItem("isLoggedIn")
+  );
+
   return (
     <>
       <div className="profile-side-bar">
         <div className="profile-side-bar-wrapper">
           <div className="side-bar-top">
             <div className="side-bar__profile-changer">
-              <img
-                src="/images/profile.jpg"
-                alt=""
-                className="side-bar__profile-image"
+              {profileImage ? (
+                <img
+                  src={profileImage}
+                  alt="profile"
+                  className="side-bar__profile-image"
+                />
+              ) : (
+                <div className="side-bar__profile-placeholder">
+                  <svg
+                    className="my-icon"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="56"
+                    height="56"
+                    viewBox="0 0 56 56"
+                    fill="none"
+                  >
+                    <path
+                      d="M27.9997 29.7501C20.603 29.7501 14.583 23.7301 14.583 16.3334C14.583 8.93675 20.603 2.91675 27.9997 2.91675C35.3963 2.91675 41.4163 8.93675 41.4163 16.3334C41.4163 23.7301 35.3963 29.7501 27.9997 29.7501ZM27.9997 6.41675C22.5397 6.41675 18.083 10.8734 18.083 16.3334C18.083 21.7934 22.5397 26.2501 27.9997 26.2501C33.4597 26.2501 37.9163 21.7934 37.9163 16.3334C37.9163 10.8734 33.4597 6.41675 27.9997 6.41675Z"
+                      fill="#292D32"
+                    />
+                    <path
+                      d="M48.0437 53.0833C47.087 53.0833 46.2937 52.29 46.2937 51.3333C46.2937 43.2833 38.0804 36.75 28.0004 36.75C17.9204 36.75 9.70703 43.2833 9.70703 51.3333C9.70703 52.29 8.9137 53.0833 7.95703 53.0833C7.00036 53.0833 6.20703 52.29 6.20703 51.3333C6.20703 41.37 15.9837 33.25 28.0004 33.25C40.017 33.25 49.7937 41.37 49.7937 51.3333C49.7937 52.29 49.0004 53.0833 48.0437 53.0833Z"
+                      fill="#292D32"
+                    />
+                  </svg>
+                </div>
+              )}
+
+              <input
+                type="file"
+                accept="image/*"
+                id="profile-upload"
+                style={{ display: "none" }}
+                onChange={handleImageChange}
+                disabled={!isLoggedIn} // وقتی لاگ اوت بود غیر فعال
               />
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
+
+              <label
+                htmlFor="profile-upload"
+                style={{ cursor: isLoggedIn ? "pointer" : "not-allowed" }}
               >
-                <path
-                  d="M18 12.75H6C5.59 12.75 5.25 12.41 5.25 12C5.25 11.59 5.59 11.25 6 11.25H18C18.41 11.25 18.75 11.59 18.75 12C18.75 12.41 18.41 12.75 18 12.75Z"
-                  fill="#000306"
-                />
-                <path
-                  d="M12 18.75C11.59 18.75 11.25 18.41 11.25 18V6C11.25 5.59 11.59 5.25 12 5.25C12.41 5.25 12.75 5.59 12.75 6V18C12.75 18.41 12.41 18.75 12 18.75Z"
-                  fill="#000306"
-                />
-              </svg>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style={{ cursor: "pointer" }}
+                >
+                  <path
+                    d="M18 12.75H6C5.59 12.75 5.25 12.41 5.25 12C5.25 11.59 5.59 11.25 6 11.25H18C18.41 11.25 18.75 11.59 18.75 12C18.75 12.41 18.41 12.75 18 12.75Z"
+                    fill="#000306"
+                  />
+                  <path
+                    d="M12 18.75C11.59 18.75 11.25 18.41 11.25 18V6C11.25 5.59 11.59 5.25 12 5.25C12.41 5.25 12.75 5.59 12.75 6V18C12.75 18.41 12.41 18.75 12 18.75Z"
+                    fill="#000306"
+                  />
+                </svg>
+              </label>
             </div>
-            <h4 className="side-bar__profile-name">{user?.fullName ? user.fullName : ""}</h4>
+
+            <h4 className="side-bar__profile-name">
+              {user?.fullName ? user.fullName : ""}
+            </h4>
             <p className="side-bar__profile-email">
               {user?.email ? user.email : ""}
             </p>
@@ -77,9 +158,9 @@ export default function ProfileSelection() {
                     <path
                       d="M12.4974 1.66699H7.4974C3.33073 1.66699 1.66406 3.33366 1.66406 7.50033V12.5003C1.66406 15.6503 2.61406 17.3753 4.88073 18.017C5.06406 15.8503 7.28906 14.142 9.9974 14.142C12.7057 14.142 14.9307 15.8503 15.1141 18.017C17.3807 17.3753 18.3307 15.6503 18.3307 12.5003V7.50033C18.3307 3.33366 16.6641 1.66699 12.4974 1.66699ZM9.9974 11.8086C8.3474 11.8086 7.01406 10.467 7.01406 8.81701C7.01406 7.16701 8.3474 5.83366 9.9974 5.83366C11.6474 5.83366 12.9807 7.16701 12.9807 8.81701C12.9807 10.467 11.6474 11.8086 9.9974 11.8086Z"
                       stroke="currentColor"
-                      stroke-width="1.5"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                     <path
                       d="M9.99896 12.433C8.00729 12.433 6.39062 10.808 6.39062 8.81636C6.39062 6.82469 8.00729 5.20801 9.99896 5.20801C11.9906 5.20801 13.6073 6.82469 13.6073 8.81636C13.6073 10.808 11.9906 12.433 9.99896 12.433ZM9.99896 6.45801C8.69896 6.45801 7.64063 7.51636 7.64063 8.81636C7.64063 10.1247 8.69896 11.183 9.99896 11.183C11.299 11.183 12.3573 10.1247 12.3573 8.81636C12.3573 7.51636 11.299 6.45801 9.99896 6.45801Z"
