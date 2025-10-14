@@ -83,6 +83,10 @@
     .header-bottom__options {
         display: none;
     }
+
+    .header-bottom__palette {
+        display: none;
+    }
 }
 
 /* End Responsive */

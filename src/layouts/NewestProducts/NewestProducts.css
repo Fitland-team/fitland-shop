@@ -26,3 +26,65 @@
     color: var(--Neutral-Colors-7);
     font-weight: 700;
 }
+
+/* Start Responsive */
+
+@media (max-width: 390px) {
+
+    .newest-products {
+        margin-top: 3rem;
+    }
+
+    .newest-product__card {
+        width: 163px !important;
+        height: 225px !important;
+    }
+
+    .newest-product__card-title img {
+        width: 165px;
+        height: 84px;
+    }
+
+    .newest-product__card-title-content {
+        line-height: 1rem !important;
+        width: 144px !important;
+        right: 5px !important;
+        bottom: 18px !important;
+    }
+
+    .newest-product__card-title-text,
+    .newest-product__card-title-text,
+    .newest-product__card-title-text-sapn {
+        font-size: 8px;
+        font-weight: 500;
+    }
+
+    .newest-products__content {
+        display: none;
+    }
+
+    .newest-product__card-overlay {
+        padding-top: 1rem;
+    }
+
+    .newest-product__card-overlay-title {
+        padding-top: 1rem;
+    }
+
+    .newest-product__card-overlay-wrapper {
+        width: 127px !important;
+    }
+
+    .newest-product__card-overlay-title {
+        font-size: 12px !important;
+        font-weight: 400 !important;
+    }
+
+    .newest-product__card-overlay-btn {
+        font-size: 9px !important;
+        padding: 8px 1px !important;
+        height: 32px !important;
+    }
+}
+
+/* End Responsive */
