@@ -63,3 +63,37 @@
   border: 1px solid #ddd;
   cursor: pointer;
 }
+
+/* Start Responsive */
+
+@media (max-width: 480px) {
+  
+  .product-card {
+    height: fit-content;
+  }
+
+  .product-rating-title-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .product__title {
+    font-size: 12px;
+  }
+
+  .product-img-container {
+    height: 170px;
+  }
+
+  .product__size-range {
+    font-size: 9px;
+  }
+
+  .product__price {
+    font-size: 10px;
+  }
+
+}
+
+/* End Responsive */

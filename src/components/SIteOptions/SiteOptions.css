@@ -39,3 +39,39 @@
     color: var(--secondary);
     font-weight: 600;
 }
+
+/* Start Responsive */
+
+@media (max-width: 480px) {
+
+    .site-options {
+        flex-direction: column;
+    }
+
+    .site-options__right-box {
+        max-width: 80px;
+        max-height: 75px;
+        font-size: 9px;
+        font-weight: 400;
+        padding: 0 17px !important;
+        text-align: center;
+    }
+
+    .site-options__right-box svg {
+        width: 32px !important;
+        height: 23px !important;
+    }
+
+    .site-options__left {
+        max-width: 261px;
+        text-align: center;
+    }
+
+    .site-options__left-content {
+        font-size: 14px;
+        font-weight: 700;
+    }
+}
+
+
+/* End Responsive */

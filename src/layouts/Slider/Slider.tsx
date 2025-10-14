@@ -1,11 +1,11 @@
 import "./Slider.css";
-import ProductItem from "../../components/ProductItem/ProductItem";
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import { Autoplay, Navigation } from "swiper/modules";
 import { products } from "../../api/products";
 import { useState } from "react";
+import ProductCard from "../../components/ProductCard/ProductCard";
 
 type paginationProps = {
   title: string
@@ -20,7 +20,6 @@ function Pagination({ title, bgImage }: paginationProps) {
   return (
     <div className="pagination" style={{ backgroundImage: `url(${bgImage})` }}>
       <div className="container">
-
         <h2 className={`pagination__title ${bgImage ? 'pagination-title__bgimage' : ''}`}>{title}</h2>
         <div className="pagination-button-wrapper">
           <button className="pagination__see-all-button">
@@ -51,9 +50,7 @@ function Pagination({ title, bgImage }: paginationProps) {
         <div className="pagination-product-wrapper">
           <Swiper
             modules={[Navigation, Autoplay]}
-            spaceBetween={170}
             loop={true}
-            slidesPerView={3}
             navigation={{
               nextEl: ".pagination__arrow-left",
               prevEl: ".pagination__arrow-right",
@@ -63,16 +60,28 @@ function Pagination({ title, bgImage }: paginationProps) {
               disableOnInteraction: false
             }}
             speed={500}
+            breakpoints={{
+              0: {             
+                slidesPerView: 2,
+                spaceBetween: 15,    
+              },
+              480: {        
+                slidesPerView: 3,
+                spaceBetween: 170,
+              }
+            }}
           >
             {
               homeProducts.map(product => (
-                  <SwiperSlide key={product.id}>
-                    <ProductItem
-                      image={product.image}
-                      title={product.title}
-                      price={product.price}
-                    />
-                  </SwiperSlide>
+                <SwiperSlide key={product.id}>
+                  <ProductCard
+                    id={product.id}
+                    image={product.image}
+                    title={product.title}
+                    price={product.price}
+                    rating={product.rating}
+                  />
+                </SwiperSlide>
               ))
             }
           </Swiper>

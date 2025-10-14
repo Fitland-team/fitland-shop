@@ -64,7 +64,7 @@
     }
 
     .newest-product__card-overlay {
-        padding-top: 1rem;
+        padding-top: 1rem !important;
     }
 
     .newest-product__card-overlay-title {
@@ -73,6 +73,12 @@
 
     .newest-product__card-overlay-wrapper {
         width: 127px !important;
+    }
+
+    .newest-product__card-img {
+        width: 392px;
+        object-fit: cover !important;
+        height: 100%;
     }
 
     .newest-product__card-overlay-title {
