@@ -222,7 +222,7 @@
 
 /* Start Responsive */
 
-@media (max-width: 390px) {
+@media (max-width: 480px) {
 
     .header-top__first-section {
         display: flex;

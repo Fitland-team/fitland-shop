@@ -29,7 +29,7 @@
 
 /* Start Responsive */
 
-@media (max-width: 390px) {
+@media (max-width: 480px) {
 
     .newest-products {
         margin-top: 3rem;

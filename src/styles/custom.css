@@ -113,7 +113,7 @@ ol {
 
 /* Custom Responsive */
 
-@media (max-width: 390px) {
+@media (max-width: 480px) {
   .container {
     max-width: 342px;
     margin: 0 auto;
