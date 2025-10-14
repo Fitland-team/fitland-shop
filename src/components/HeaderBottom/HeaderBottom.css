@@ -54,3 +54,35 @@
     position: absolute;
     bottom: -56px;
 }
+
+/* Start Responsive */
+
+@media (max-width: 390px) {
+
+    .header-bottom {
+        width: 342px;
+        margin-top: 2.5rem;
+    }
+
+    .header-bottom__desc-text,
+    .header-bottom__desc-content {
+        font-size: 10px;
+        font-weight: 500;
+    }
+
+    .header-bottom__desc-title,
+    .header-bottom__desc-intro {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .header-bottom__img {
+        display: none;
+    }
+
+    .header-bottom__options {
+        display: none;
+    }
+}
+
+/* End Responsive */

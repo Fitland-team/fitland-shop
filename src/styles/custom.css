@@ -110,3 +110,12 @@ ol {
   background: var(--primary);
   border-radius: 8px;
 }
+
+/* Custom Responsive */
+
+@media (max-width: 390px) {
+  .container {
+    max-width: 342px;
+    margin: 0 auto;
+  }
+}

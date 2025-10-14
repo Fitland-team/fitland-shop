@@ -22,3 +22,20 @@
     font-size: 16px;
     font-weight: 700;
 }
+
+/* Start Responsive */
+
+@media (max-width: 390px) {
+
+    .main-bottom {
+        width: 166px;
+        padding: 8px 16px;
+    }
+
+    .main-bottom__title {
+        font-size: 12px;
+        font-weight: 400;
+    }
+}
+
+/* End Responsive */
