@@ -14,3 +14,15 @@
 .products-section__navigate-text:last-child {
     color: var(--Neutral-Colors-8);
 }
+
+/* Start Responsive */
+
+@media (max-width: 480px) {
+    
+    .products-section__navigate {
+        display: none;
+    }
+
+}
+
+/* End Responsive */

@@ -13,12 +13,15 @@ import { ArrowBack, ArrowForward } from "@mui/icons-material";
 import Stack from "@mui/material/Stack";
 import ProductSectionNavigate from "../../components/ProductSectionNavigate/ProductSectionNavigate";
 import ProductsFilter from "../../components/ProductsFilter/ProductsFilter";
+import useIsMobile from "../../Hooks/useIsMobile";
 
 function Products() {
 
   const ITEMS_PER_PAGE = 12;
   const [page, setPage] = useState(1);
   const [filteredProducts, setFilteredProducts] = useState<product[]>(products);
+
+  const isMobile = useIsMobile()
 
   const pageCount = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
 
@@ -34,7 +37,7 @@ function Products() {
   return (
     <div>
       <HeaderTop />
-      {/* <div className="container">
+      <div className="container">
         <div className="products-section">
           <ProductSectionNavigate />
 
@@ -58,9 +61,8 @@ function Products() {
 
                 </>
               </div>
-
               <Stack
-                spacing={2}
+                spacing={isMobile ? 1 : 2} // spacing کمتر برای موبایل
                 style={{ alignSelf: "center", marginTop: "32px" }}
               >
                 <Pagination
@@ -79,21 +81,21 @@ function Products() {
                   )}
                   sx={{
                     "& .MuiPaginationItem-root": {
-                      minWidth: "48px",
-                      height: "48px",
-                      fontSize: "16px",
+                      minWidth: isMobile ? "36px" : "48px",
+                      height: isMobile ? "36px" : "48px",
+                      fontSize: isMobile ? "14px" : "16px",
                       color: "#01070d",
                       borderRadius: "50%",
                       "&:hover": {
-                        backgroundColor: "transparent", // هاور رنگ پس‌زمینه رو تغییر نده
-                        color: "#01070d", // رنگ متن مشکی بمونه
+                        backgroundColor: "transparent",
+                        color: "#01070d",
                       },
                     },
                     "& .MuiPaginationItem-root.Mui-selected": {
                       backgroundColor: "#032340",
                       color: "#fff",
                       "&:hover": {
-                        backgroundColor: "#032340", // حتی تو هاور هم همون رنگ انتخاب بمونه
+                        backgroundColor: "#032340",
                         color: "#fff",
                       },
                     },
@@ -104,7 +106,7 @@ function Products() {
           </div>
         </div>
       </div>
-      <Footer /> */}
+      {isMobile ? <FooterMobile /> : <Footer />}
     </div>
   );
 }

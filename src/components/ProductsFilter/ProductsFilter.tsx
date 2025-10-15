@@ -18,6 +18,8 @@ import Switch from "@mui/material/Switch";
 import type { SwitchProps } from "@mui/material/Switch";
 
 import type { product } from "../../api/products";
+import useIsMobile from "../../Hooks/useIsMobile";
+import TuneIcon from '@mui/icons-material/Tune';
 
 type ProductsFilterProps = {
   products: product[];
@@ -27,6 +29,8 @@ type ProductsFilterProps = {
 const ProductsFilter: React.FC<ProductsFilterProps> = ({ products, onPriceChange }) => {
 
   const [value, setValue] = useState<number[]>([0, 50000000]);
+
+  const isMobile = useIsMobile()
 
   const IOSSwitch = styled((props: SwitchProps) => (
     <Switch
@@ -138,298 +142,187 @@ const ProductsFilter: React.FC<ProductsFilterProps> = ({ products, onPriceChange
     return marks;
   }
 
+  const [isActive, setIsActive] = useState(false)
+
+  const moveFilterHandler = () => {
+    setIsActive(!isActive)
+  }
+
+  console.log(isActive)
+
   const marks = generateMarks();
   return (
-    <div className="products-section__right">
-      <div className="products-section__right-filter">
-        <div className="products-section__right-filter-title">
-          <p>فیلتر ها</p>
-          <p>حذف فیلتر ها</p>
-        </div>
-        <div className="products-section__right-filter-buttons">
-          <div className="products-section__right-filter-buttons1">
-            <h3>محصولات موجود </h3>
-            <FormControlLabel control={<IOSSwitch sx={{ m: 1 }} />} label="" />
-          </div>
-          <div className="products-section__right-filter-buttons2">
-            <h3>محصولات تخفیف دار</h3>
-            <FormControlLabel control={<IOSSwitch sx={{ m: 1 }} />} label="" />
-          </div>
-        </div>
-        <div className="products-section__right-filter-accordion">
-          <Accordion elevation={0}>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1-content"
-              id="panel1-header"
-            >
-              <Typography
-                component="span"
-                className="products-accordion__title"
-              >
-                قیمت
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails sx={{ padding: 0 }}>
-              <div className="products-section__accordion-price">
-                <div className="products-section__accordion-price-max">
-                  <span>بیشترین</span>
-                  <input
-                    type="text"
-                    placeholder="وارد کنید"
-                    onChange={(e) => handleInputChange(1, e.target.value)}
-                    value={value[1].toLocaleString()}
-                  />
-                </div>
-                <div className="products-section__accordion-price-min">
-                  <span>کمترین</span>
-                  <input
-                    type="text"
-                    placeholder="وارد کنید"
-                    onChange={(e) => handleInputChange(0, e.target.value)}
-                    value={value[0].toLocaleString()}
-                  />
-                </div>
-                <Box sx={{ width: "100%" }}>
-                  <Slider
-                    value={value}
-                    onChange={handleChange}
-                    valueLabelDisplay="auto"
-                    min={0}
-                    max={50000000}
-                    valueLabelFormat={(val) => `${val.toLocaleString()} تومان`}
-                    step={null}
-                    marks={marks.map((m) => ({ value: m }))}
+    <>
+      <div className="produtcts-filter__mobile">
+        <button className="products-filter__mobile-btn" onClick={moveFilterHandler}>
+          <TuneIcon className="filter-icon__mobile" />
+          فیلترها
+        </button>
+      </div>
+      <>
+        <div className={`products-section__right ${isActive ? ('active') : ('')}`}>
+          <div className="products-section__right-filter">
+            <div className="products-section__right-filter-title">
+              <p>فیلتر ها</p>
+              <p>حذف فیلتر ها</p>
+            </div>
+            <div className="products-section__right-filter-buttons">
+              <div className="products-section__right-filter-buttons1">
+                <h3>محصولات موجود </h3>
+                <FormControlLabel control={<IOSSwitch sx={{ m: 1 }} />} label="" />
+              </div>
+              <div className="products-section__right-filter-buttons2">
+                <h3>محصولات تخفیف دار</h3>
+                <FormControlLabel control={<IOSSwitch sx={{ m: 1 }} />} label="" />
+              </div>
+            </div>
+            <div className="products-section__right-filter-accordion">
+              <Accordion elevation={0}>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel1-content"
+                  id="panel1-header"
+                >
+                  <Typography
+                    component="span"
+                    className="products-accordion__title"
                     sx={{
-                      color: "#fa541c",
-                      "& .MuiSlider-thumb": {
-                        backgroundColor: "#fa541c",
+                      fontSize: {
+                        xs: '12px !important',
+                        sm: '14px',
                       },
                     }}
-                  />
-                </Box>
-              </div>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion elevation={0}>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel2-content"
-              id="panel2-header"
-            >
-              <Typography
-                component="span"
-                className="products-accordion__title"
-              >
-                رنگ
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails sx={{ padding: 0 }}>
-              <div className="products-section__accordion-filter-colors">
-                <div className="products-section__accordion-filter-color1 products-color__filter"></div>
-                <div className="products-section__accordion-filter-color2 products-color__filter"></div>
-                <div className="products-section__accordion-filter-color3 products-color__filter"></div>
-                <div className="products-section__accordion-filter-color4 products-color__filter"></div>
-                <div className="products-section__accordion-filter-color5 products-color__filter"></div>
-                <div className="products-section__accordion-filter-color6 products-color__filter"></div>
-                <div className="products-section__accordion-filter-color7 products-color__filter"></div>
-              </div>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion elevation={0} sx={{ padding: 0 }}>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel2-content"
-              id="panel2-header"
-            >
-              <Typography
-                component="span"
-                className="products-accordion__title"
-              >
-                سایز
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <div className="products-section__accordion-size">
-                <button className="products-section__accordion-size-btn">
-                  L
-                </button>
-                <button className="products-section__accordion-size-btn">
-                  M
-                </button>
-                <button className="products-section__accordion-size-btn">
-                  S
-                </button>
-                <button className="products-section__accordion-size-btn">
-                  XL
-                </button>
-                <button className="products-section__accordion-size-btn">
-                  XXL
-                </button>
-              </div>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion elevation={0}>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel2-content"
-              id="panel2-header"
-            >
-              <Typography
-                component="span"
-                className="products-accordion__title"
-              >
-                برند
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails sx={{ padding: 0 }}>
-              <div className="products-section__filter-brand">
-                <div className="products-section__filter-brand-search">
-                  <SearchIcon className="products-section__filter-brand-search-icon" />
-                  <input type="text" placeholder="جستجو" />
-                </div>
-                <div className="products-section__filter-brand-btns">
-                  <button className="products-section__filter-brand-btn">
-                    The North Face
-                  </button>
-                  <button className="products-section__filter-brand-btn">
-                    Under Armour
-                  </button>
-                  <button className="products-section__filter-brand-btn">
-                    nike
-                  </button>
-                  <button className="products-section__filter-brand-btn">
-                    nike
-                  </button>
-                  <button className="products-section__filter-brand-btn">
-                    Fila
-                  </button>
-                  <button className="products-section__filter-brand-btn">
-                    adidas
-                  </button>
-                  <button className="products-section__filter-brand-btn">
-                    Fila
-                  </button>
-                  <button className="products-section__filter-brand-btn">
-                    adidas
-                  </button>
-                  <button className="products-section__filter-brand-btn">
-                    Under Armour
-                  </button>
-                </div>
-              </div>
-            </AccordionDetails>
-          </Accordion>
+                  >
+                    قیمت
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails sx={{ padding: 0 }}>
+                  <div className="products-section__accordion-price">
+                    <div className="products-section__accordion-price-max">
+                      <span>بیشترین</span>
+                      <input
+                        type="text"
+                        placeholder="وارد کنید"
+                        onChange={(e) => handleInputChange(1, e.target.value)}
+                        value={value[1].toLocaleString()}
+                      />
+                    </div>
+                    <div className="products-section__accordion-price-min">
+                      <span>کمترین</span>
+                      <input
+                        type="text"
+                        placeholder="وارد کنید"
+                        onChange={(e) => handleInputChange(0, e.target.value)}
+                        value={value[0].toLocaleString()}
+                      />
+                    </div>
+                    <Box sx={{
+                      width: {
+                        xs: "170px",   
+                        sm: "100%", 
+                      },
+                      mx: {
+                        xs: "auto",     
+                        sm: 0,          
+                      },
+                      display: "block",    
+                    }}>
+                      <Slider
+                        value={value}
+                        onChange={handleChange}
+                        valueLabelDisplay="auto"
+                        min={0}
+                        max={50000000}
+                        valueLabelFormat={(val) => `${val.toLocaleString()} تومان`}
+                        step={null}
+                        marks={marks.map((m) => ({ value: m }))}
+                        sx={{
+                          color: "#fa541c",
+                          "& .MuiSlider-thumb": {
+                            backgroundColor: "#fa541c",
+                          },
+                        }}
+                      />
+                    </Box>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion elevation={0}>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel2-content"
+                  id="panel2-header"
+                >
+                  <Typography
+                    component="span"
+                    className="products-accordion__title"
+                    sx={{
+                      fontSize: {
+                        xs: '12px !important',
+                        sm: '14px',
+                      },
+                    }}
+                  >
+                    رنگ
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails sx={{ padding: 0 }}>
+                  <div className="products-section__accordion-filter-colors">
+                    <div className="products-section__accordion-filter-color1 products-color__filter"></div>
+                    <div className="products-section__accordion-filter-color2 products-color__filter"></div>
+                    <div className="products-section__accordion-filter-color3 products-color__filter"></div>
+                    <div className="products-section__accordion-filter-color4 products-color__filter"></div>
+                    <div className="products-section__accordion-filter-color5 products-color__filter"></div>
+                    <div className="products-section__accordion-filter-color6 products-color__filter"></div>
+                    <div className="products-section__accordion-filter-color7 products-color__filter"></div>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
+              <Accordion elevation={0} sx={{ padding: 0 }}>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="panel2-content"
+                  id="panel2-header"
+                >
+                  <Typography
+                    component="span"
+                    className="products-accordion__title"
+                    sx={{
+                      fontSize: {
+                        xs: '12px !important',
+                        sm: '14px',
+                      },
+                    }}
+                  >
+                    سایز
+                  </Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <div className="products-section__accordion-size">
+                    <button className="products-section__accordion-size-btn">
+                      L
+                    </button>
+                    <button className="products-section__accordion-size-btn">
+                      M
+                    </button>
+                    <button className="products-section__accordion-size-btn">
+                      S
+                    </button>
+                    <button className="products-section__accordion-size-btn">
+                      XL
+                    </button>
+                    <button className="products-section__accordion-size-btn">
+                      XXL
+                    </button>
+                  </div>
+                </AccordionDetails>
+              </Accordion>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </>
+    </>
   );
 }
 
-
 export default React.memo(ProductsFilter);
-
-// import React, { useCallback, useEffect, useState } from "react";
-// import "./ProductsFilter.css";
-// import Slider from "@mui/material/Slider";
-// import Box from "@mui/material/Box";
-
-// import type { product } from "../../api/products";
-
-// type ProductsFilterProps = {
-//   products: product[];
-//   onPriceChange: (filtered: product[]) => void;
-// };
-
-// const ProductsFilter: React.FC<ProductsFilterProps> = ({ products, onPriceChange }) => {
-//   // [minPrice, maxPrice]
-//   const [value, setValue] = useState<number[]>([0, 50000000]);
-
-//   const handleChange = useCallback((event: Event, newValue: number | number[]) => {
-//     if (Array.isArray(newValue)) setValue(newValue);
-//   }, []);
-
-//   const handleInputChange = useCallback((index: number, newVal: string) => {
-//     let parsed = parseInt(newVal.replace(/\D/g, "")) || 0;
-//     if (parsed < 0) parsed = 0;
-//     if (parsed > 50000000) parsed = 50000000;
-
-//     const newValue = [...value];
-//     newValue[index] = parsed;
-//     setValue(newValue);
-//   }, [value]);
-
-//   // فیلتر کردن محصولات هر بار که بازه قیمت تغییر کنه
-//   useEffect(() => {
-//     const filtered = products.filter(
-//       (p) => p.price >= value[0] && p.price <= value[1]
-//     );
-//     onPriceChange(filtered);
-//   }, [value, products, onPriceChange]);
-
-//   const getStep = useCallback((val: number) => {
-//     if (val <= 1000000) return 200000;
-//     if (val <= 5000000) return 500000;
-//     if (val <= 10000000) return 1000000;
-//     return 5000000;
-//   }, []);
-
-//   const generateMarks = () => {
-//     const marks: number[] = [];
-//     let current = 0;
-//     while (current < 50000000) {
-//       marks.push(current);
-//       current += getStep(current);
-//     }
-//     if (marks[marks.length - 1] !== 50000000) marks.push(50000000);
-//     return marks.map((m) => ({ value: m }));
-//   };
-
-//   const marks = generateMarks();
-
-//   return (
-//     <div className="products-section__right">
-//       <div className="products-section__right-filter">
-//         <h3>فیلتر قیمت</h3>
-//         <div className="products-section__accordion-price">
-//           <div className="products-section__accordion-price-min">
-//             <span>کمترین</span>
-//             <input
-//               type="text"
-//               placeholder="وارد کنید"
-//               value={value[0].toLocaleString()}
-//               onChange={(e) => handleInputChange(0, e.target.value)}
-//             />
-//           </div>
-//           <div className="products-section__accordion-price-max">
-//             <span>بیشترین</span>
-//             <input
-//               type="text"
-//               placeholder="وارد کنید"
-//               value={value[1].toLocaleString()}
-//               onChange={(e) => handleInputChange(1, e.target.value)}
-//             />
-//           </div>
-//           <Box sx={{ width: "100%", marginTop: 2 }}>
-//             <Slider
-//               value={value}
-//               onChange={handleChange}
-//               min={0}
-//               max={50000000}
-//               step={null}
-//               marks={marks}
-//               valueLabelDisplay="auto"
-//               valueLabelFormat={(val) => `${val.toLocaleString()} تومان`}
-//               sx={{
-//                 color: "#fa541c",
-//                 "& .MuiSlider-thumb": { backgroundColor: "#fa541c" },
-//               }}
-//             />
-//           </Box>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default React.memo(ProductsFilter);

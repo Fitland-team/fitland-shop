@@ -18,3 +18,20 @@
 .products-section__left div {
     cursor: pointer;
 }
+
+/* Start Responsive */
+
+@media (max-width: 480px) {
+
+    .products-section__left {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .product-section__bottom {
+        margin-top: 2rem;
+        flex-direction: column;
+    }
+
+}
+
+/* End Responsive */
