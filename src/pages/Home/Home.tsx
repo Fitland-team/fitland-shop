@@ -8,23 +8,11 @@ import Slider from '../../layouts/Slider/Slider'
 import SiteOptions from '../../components/SIteOptions/SiteOptions'
 import { useEffect, useState } from 'react'
 import FooterMobile from '../../layouts/FooterMobile/FooterMobile'
+import useIsMobile from '../../Hooks/useIsMobile'
 
 function Home() {
 
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
-
-    useEffect(() => {
-        const mediaQuery = window.matchMedia("(max-width: 480px)");
-
-        const handleChange = (e) => setIsMobile(e.matches);
-        handleChange(mediaQuery);
-
-        mediaQuery.addEventListener("change", handleChange);
-
-        return () => {
-            mediaQuery.removeEventListener("change", handleChange);
-        };
-    }, []);
+    const isMobile = useIsMobile()
 
     return (
         <>

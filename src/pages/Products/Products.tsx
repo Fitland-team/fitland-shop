@@ -3,7 +3,7 @@ import ProductCard from "../../components/ProductCard/ProductCard";
 import { products } from "../../api/products";
 import type { product } from "../../api/products";
 import HeaderTop from "../../components/HeaderTop/HeaderTop";
-
+import FooterMobile from "../../layouts/FooterMobile/FooterMobile";
 import Footer from "../../layouts/Footer/Footer";
 import "./Products.css";
 
@@ -34,7 +34,7 @@ function Products() {
   return (
     <div>
       <HeaderTop />
-      <div className="container">
+      {/* <div className="container">
         <div className="products-section">
           <ProductSectionNavigate />
 
@@ -104,7 +104,7 @@ function Products() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
