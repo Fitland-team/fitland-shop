@@ -189,7 +189,7 @@ const ProductsFilter: React.FC<ProductsFilterProps> = ({ products, onPriceChange
                     sx={{
                       fontSize: {
                         xs: '12px !important',
-                        sm: '14px',
+                        sm: '14px !important',
                       },
                     }}
                   >
@@ -219,11 +219,11 @@ const ProductsFilter: React.FC<ProductsFilterProps> = ({ products, onPriceChange
                     <Box sx={{
                       width: {
                         xs: "170px",   
-                        sm: "100%", 
+                        sm: "90%", 
                       },
                       mx: {
                         xs: "auto",     
-                        sm: 0,          
+                        sm: 'auto',          
                       },
                       display: "block",    
                     }}>
@@ -259,7 +259,7 @@ const ProductsFilter: React.FC<ProductsFilterProps> = ({ products, onPriceChange
                     sx={{
                       fontSize: {
                         xs: '12px !important',
-                        sm: '14px',
+                        sm: '14px !important',
                       },
                     }}
                   >
@@ -290,7 +290,7 @@ const ProductsFilter: React.FC<ProductsFilterProps> = ({ products, onPriceChange
                     sx={{
                       fontSize: {
                         xs: '12px !important',
-                        sm: '14px',
+                        sm: '14px !important',
                       },
                     }}
                   >

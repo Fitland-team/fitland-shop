@@ -13,12 +13,18 @@ import ProductBuy from "./ProductBuy/ProductBuy";
 import ProductColors from "./ProductColors/ProductColors";
 import ProductSizes from "./ProductSizes/ProductSizes";
 import ProductCommentsTab from "./ProductCommentsTab/ProductCommentsTab";
+import useIsMobile from "../../Hooks/useIsMobile";
+import FooterMobile from "../../layouts/FooterMobile/FooterMobile";
 
 type ProductBuyProps = {
   product: product;
 };
 
 function ProductDetails() {
+
+  const isMobile = useIsMobile()
+  const productsRender = useIsMobile(480)
+
   const { addToCart } = useCart();
 
   const [count, setCount] = useState(1);
@@ -36,6 +42,10 @@ function ProductDetails() {
 
   if (!product) return <p>محصول پیدا نشد</p>;
 
+  const imagesToRender = productsRender
+    ? product?.images?.slice(0, 5)
+    : product?.images?.slice(0, 6);
+
   return (
     <>
       <HeaderTop />
@@ -50,11 +60,10 @@ function ProductDetails() {
               />
             </div>
             <div className="product-details-others-imges">
-              {product?.images?.map((img, index) => (
+              {imagesToRender?.map((img, index) => (
                 <div
-                  className={`product-detailes-other-img ${
-                    img === selectedImage ? "active" : ""
-                  }`}
+                  className={`product-detailes-other-img ${img === selectedImage ? "active" : ""
+                    }`}
                   key={index}
                   onClick={() => setSelectedImage(img)}
                 >
@@ -84,7 +93,7 @@ function ProductDetails() {
             <h3 className="product-detail__price">
               {product.price.toLocaleString()} تومان
             </h3>
-            <div className="product-details-offs">
+            {/* <div className="product-details-offs">
               <h3 className="product-details__prev-price">1,200,000</h3>
               <div className="product-details__discount">
                 {product?.discount}
@@ -136,14 +145,14 @@ function ProductDetails() {
                 <ProductSharePopup productUrl={window.location.href} />
                 <IsLike id={product.id} />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
 
-        <ProductCommentsTab />
+        {/* <ProductCommentsTab /> */}
       </div>
       <SiteOptions />
-      <Footer />
+      {isMobile ? <FooterMobile /> : <Footer />}
     </>
   );
 }
