@@ -21,9 +21,8 @@ type ProductBuyProps = {
 };
 
 function ProductDetails() {
-
-  const isMobile = useIsMobile()
-  const productsRender = useIsMobile(480)
+  const isMobile = useIsMobile();
+  const productsRender = useIsMobile(480);
 
   const { addToCart } = useCart();
 
@@ -62,8 +61,9 @@ function ProductDetails() {
             <div className="product-details-others-imges">
               {imagesToRender?.map((img, index) => (
                 <div
-                  className={`product-detailes-other-img ${img === selectedImage ? "active" : ""
-                    }`}
+                  className={`product-detailes-other-img ${
+                    img === selectedImage ? "active" : ""
+                  }`}
                   key={index}
                   onClick={() => setSelectedImage(img)}
                 >
@@ -93,7 +93,7 @@ function ProductDetails() {
             <h3 className="product-detail__price">
               {product.price.toLocaleString()} تومان
             </h3>
-            {/* <div className="product-details-offs">
+            <div className="product-details-offs">
               <h3 className="product-details__prev-price">1,200,000</h3>
               <div className="product-details__discount">
                 {product?.discount}
@@ -145,11 +145,11 @@ function ProductDetails() {
                 <ProductSharePopup productUrl={window.location.href} />
                 <IsLike id={product.id} />
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
 
-        {/* <ProductCommentsTab /> */}
+        <ProductCommentsTab />
       </div>
       <SiteOptions />
       {isMobile ? <FooterMobile /> : <Footer />}

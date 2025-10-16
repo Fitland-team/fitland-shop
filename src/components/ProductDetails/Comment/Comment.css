@@ -36,10 +36,31 @@
 .comment-rate {
   display: flex;
   gap: 2px;
-  padding: 8px 14px;
 }
 .comment-body-paragraph {
-    padding: 16px 105px 16px 16px;
-    font-size: 18px;
-    color: var(--Neutral-Colors-8);
+  padding: 16px 105px 16px 16px;
+  font-size: 18px;
+  color: var(--Neutral-Colors-8);
 }
+
+/* Start Responsive */
+
+@media (max-width: 480px) {
+  .comment-wrapper {
+    height: fit-content;
+    width: fit-content;
+  }
+  .comment-user__avatar {
+    display: none ;
+  }
+  .comment-header,
+  .comment-user__profile {
+    height: fit-content;
+  }
+  .comment-body-paragraph {
+    padding: 16px;
+    font-size: 14px;
+  }
+}
+
+/* end Responsive */

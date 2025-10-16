@@ -5,7 +5,7 @@
   color: var(--white);
   width: 341px;
   padding: 8px 32px;
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-medium);
   display: flex;
   justify-content: center;
   align-items: center;
