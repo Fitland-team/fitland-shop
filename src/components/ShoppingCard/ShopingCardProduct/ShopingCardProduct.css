@@ -1,13 +1,13 @@
 .shopingcard-right {
   flex: 1;
-  height: 300px;
+  height: auto;
 }
 .shopingcard-product-item {
   border: 1px solid var(--Neutral-Colors-3);
   border-radius: var(--radius-small);
   margin-bottom: 20px;
   display: flex;
-  height: 100%;
+  height: auto;
 }
 .shoping-card__product-img-wrapper {
   flex: 1;

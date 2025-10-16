@@ -1,5 +1,6 @@
 .shoppingcard-left {
   width: 390px;
+  height: fit-content;
   border: 1px solid var(--Neutral-Colors-3);
   border-radius: var(--radius-medium);
 }
