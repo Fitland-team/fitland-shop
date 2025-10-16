@@ -6,7 +6,6 @@ import NewestProducts from "../../layouts/NewestProducts/NewestProducts"
 import HomeBanner from "../../components/HomeBanner/HomeBanner"
 import Slider from '../../layouts/Slider/Slider'
 import SiteOptions from '../../components/SIteOptions/SiteOptions'
-import { useEffect, useState } from 'react'
 import FooterMobile from '../../layouts/FooterMobile/FooterMobile'
 import useIsMobile from '../../Hooks/useIsMobile'
 

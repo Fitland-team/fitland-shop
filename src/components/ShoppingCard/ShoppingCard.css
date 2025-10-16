@@ -4,3 +4,13 @@
   flex-direction: row-reverse;
   gap: 25px;
 }
+
+/* Start Responsive */
+
+@media (max-width: 480px) {
+  .shoppingcard {
+    flex-direction: column;
+  }
+}
+
+/* End Responsive */

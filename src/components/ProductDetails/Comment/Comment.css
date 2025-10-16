@@ -2,7 +2,7 @@
   width: 806px;
   height: 190px;
   border: 1px solid var(--Neutral-Colors-4);
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-medium);
   margin-bottom: 8px;
 }
 .comment-header {

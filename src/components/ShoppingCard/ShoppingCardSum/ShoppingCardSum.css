@@ -73,3 +73,13 @@
   align-items: center;
   gap: 8px;
 }
+
+/* Start Responsive */
+
+@media (max-width: 480px) {
+  .shoppingcard-left {
+    width: fit-content;
+  }
+}
+
+/* End Responsive */
