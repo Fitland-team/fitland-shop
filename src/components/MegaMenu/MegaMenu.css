@@ -52,14 +52,3 @@
 .megamenu__item {
   font-size: 14px;
 }
-
-/* Start Responsive */
-
-@media (max-width: 390px) {
-  
-  .megamenu {
-    display: none;
-  }
-}
-
-/* End Responsive */
