@@ -11,6 +11,7 @@ import ShoppingCard from "../components/ShoppingCard/ShoppingCard";
 import Favorites from "../components/Favorites/Favorites";
 import Addresses from "../components/Addresses/Addresses";
 import Comments from "../components/Comments/Comments";
+import NotFound from "../pages/NotFound/NotFound";
 
 const routes: RouteObject[] = [
   { path: "/", element: <Home /> },
@@ -30,6 +31,7 @@ const routes: RouteObject[] = [
       { path: "comments", element: <Comments /> },
     ],
   },
+  { path: "*", element: <NotFound /> },
 ];
 
 export default routes;
