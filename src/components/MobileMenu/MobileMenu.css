@@ -139,6 +139,10 @@
     background-color: #ededed;
 }
 
+.home-sidebar__mobile {
+    margin-bottom: 1.5rem;
+}
+
 @media (max-width: 480px) {
     .mobile-menu {
         width: 100%;
@@ -208,12 +212,8 @@
         font-size: 9px;
     }
 
+    .header-top__register-icon,
     .register-icon__mobile {
-        width: 10px !important;
-        height: 10px !important;
-    }
-
-    .header-top__register-icon {
         width: 12px !important;
         height: 12px !important;
     }

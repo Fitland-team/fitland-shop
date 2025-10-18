@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './MobileMenu.css'
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
@@ -7,10 +7,12 @@ import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
 
 export default function MobileMenu() {
 
-    const [opneMenu, setOpenMenu] = useState(false)
+    const [openMenu, setOpenMenu] = useState(false)
     const [activeItem, setActiveItem] = useState('');
 
-    const toggleMenu = () => { setOpenMenu(!opneMenu) }
+    const toggleMenu = () => {
+        setOpenMenu(prev => !prev);
+    };
 
     const { cart } = useCart();
 
@@ -43,10 +45,40 @@ export default function MobileMenu() {
         }
     };
 
+    const sidebarRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        const handleEsc = (e: KeyboardEvent) => {
+            if (e.key === "Escape") {
+                setOpenMenu(false);
+            }
+        };
+        document.addEventListener("keydown", handleEsc);
+        return () => document.removeEventListener("keydown", handleEsc);
+    }, []);
+
+    const iconRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+        const handleClickOutside = (e: MouseEvent) => {
+            if (
+                sidebarRef.current &&
+                !sidebarRef.current.contains(e.target as Node) &&
+                iconRef.current &&
+                !iconRef.current.contains(e.target as Node)
+            ) {
+                setOpenMenu(false);
+            }
+        };
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
+
+
     return (
         <div className='mobile-menu'>
             <div className="mobile-menu__top">
-                <div id="nav-icon3" className={`${opneMenu && 'open'}`} onClick={toggleMenu}>
+                <div ref={iconRef} id="nav-icon3" className={`${openMenu ? 'open' : ''}`} onClick={toggleMenu}>
                     <span></span>
                     <span></span>
                     <span></span>
@@ -91,7 +123,7 @@ export default function MobileMenu() {
                     </div>
                 </div>
             </div>
-            <div className={`mobile-sidebar__menu ${opneMenu ? 'active' : ''}`}>
+            <div ref={sidebarRef} className={`mobile-sidebar__menu ${openMenu ? 'active' : ''}`}>
                 <div className="register-sidebar__mobile">
                     <svg width="151" height="32" viewBox="0 0 151 32" fill="none" xmlns="http://www.w3.org/2000/svg" className='fitland-icon__mobile-sidebar' >
                         <g clipPath="url(#clip0_4036_9310)">
@@ -161,6 +193,19 @@ export default function MobileMenu() {
                             )}
                         </div>
                     </div>
+                </div>
+                <div className="home-sidebar__mobile">
+                    <h1 className="navbar-right__mobile">صفحه اصلی</h1>
+                    <Link to="/"
+                        className={`navbar-right-item__mobile ${activeItem === "home" ? "active" : ""}`}
+                        onClick={() =>
+                            setActiveItem(activeItem === "home" ? "" : "home")
+                        }
+                    >
+                        <span className="navbar-right__item-link-mobile">
+                            خانه
+                        </span>
+                    </Link>
                 </div>
                 <div className="navbar-right__mobile">
                     <h1 className="navbar-right__mobile-title">
