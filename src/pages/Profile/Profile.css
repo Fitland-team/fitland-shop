@@ -11,6 +11,10 @@
     .profile-content {
         margin-top: 3rem;
     }
+
+    .profile-wrapper {
+        width: 100%;
+    }
 }
 
 /* End Responsive */

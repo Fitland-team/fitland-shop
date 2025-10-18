@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import BorderColorIcon from "@mui/icons-material/BorderColor";
-
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import useIsMobile from "../../Hooks/useIsMobile";
+import useSmartBack from "../../Hooks/useSmartBack";
+import useProfileSidebar from "../../Hooks/useProfileSidebar";
 import "./Account.css";
 
 export default function Account() {
@@ -11,6 +14,9 @@ export default function Account() {
   const [identity, setIdentity] = useState<string>("");
   const [gender, setGender] = useState<string>("");
   const [email, setEmail] = useState<string>("");
+  const { showSidebar, isMobile } = useProfileSidebar();
+  const handleBack = useSmartBack('/profile')
+
 
   // گرفتن اطلاعات از localStorage وقتی کامپوننت لود شد
   useEffect(() => {
@@ -73,7 +79,10 @@ export default function Account() {
   return (
     <div className="account">
       <div className="account-title">
-        <h2>حساب کاربری</h2>
+        <h2 className="account-title__text">
+          {isMobile && !showSidebar && <ArrowRightAltIcon className="back-route__mobile" onClick={handleBack} />}
+          حساب کاربری
+        </h2>
       </div>
 
       {!showProfile ? (

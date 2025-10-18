@@ -119,3 +119,61 @@
     top: 15px;
     cursor: pointer;
 }
+
+/* Start Responsive */
+
+@media (max-width: 480px) {
+
+    .account-wrapper,
+    .profile-box {
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .account-title__text {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        color: var(--secondary) !important;
+        font-size: 16px !important;
+    }
+
+    .back-route__mobile {
+        width: 16px !important;
+        height: 16px !important;
+        cursor: pointer;
+    }
+
+    .account-title::before {
+        display: none;
+    }
+
+    .account-wrapper__input input {
+        font-size: 12px;
+    }
+
+    .labelline {
+        font-size: 10px;
+        margin: 12px 0;
+    }
+
+    .account-wrapper__input input:focus+.labelline,
+    .account-wrapper__input input:valid+.labelline {
+        transform: translate(-20px, -22px) scale(0.88)
+    }
+
+    .profile-box {
+        gap: 1rem;
+    }
+
+    .profile-box__content h1 {
+        font-size: 18px;
+    }
+
+    .profile-box__content p {
+        font-size: 14px;
+    }
+
+}
+
+/* End Responsive */
