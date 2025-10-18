@@ -13,7 +13,6 @@ export default function ProfileSelection() {
   } | null>(null);
 
   useEffect(() => {
-    // تلاش برای خوندن اطلاعات کاربر از localStorage
     const storedUser = localStorage.getItem("loggedInUser");
     if (storedUser) {
       try {
@@ -33,13 +32,9 @@ export default function ProfileSelection() {
     const justLoggedOut = localStorage.getItem("justLoggedOut");
 
     if (justLoggedOut) {
-      // کاربر تازه از اکانتش خارج شده، پس عکس رو بذار روی حالت دیفالت
       setProfileImage(null);
-
-      // فلگ رو حذف کن که فقط یه بار عمل کنه
       localStorage.removeItem("justLoggedOut");
     } else if (savedImage) {
-      // کاربر هنوز لاگینه یا تازه لاگین کرده، پس عکس ذخیره‌شده رو نشون بده
       setProfileImage(savedImage);
     }
   }, []);
@@ -115,6 +110,7 @@ export default function ProfileSelection() {
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   style={{ cursor: "pointer" }}
+                  className="add-profile__mobile"
                 >
                   <path
                     d="M18 12.75H6C5.59 12.75 5.25 12.41 5.25 12C5.25 11.59 5.59 11.25 6 11.25H18C18.41 11.25 18.75 11.59 18.75 12C18.75 12.41 18.41 12.75 18 12.75Z"

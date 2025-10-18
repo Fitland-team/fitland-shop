@@ -3,3 +3,14 @@
     margin-top: 2rem;
     gap: 2rem;
 }
+
+/* Start Responsive */
+
+@media (max-width: 480px) {
+
+    .profile-content {
+        margin-top: 3rem;
+    }
+}
+
+/* End Responsive */
