@@ -1,5 +1,4 @@
 import type { RouteObject } from "react-router-dom";
-import { Navigate } from "react-router-dom";
 import Home from "../pages/Home/Home";
 import Products from "../pages/Products/Products";
 import Login from "../pages/Login/Login";
@@ -9,10 +8,8 @@ import Profile from "../pages/Profile/Profile";
 import Account from "../components/Account/Account";
 import ShoppingCard from "../components/ShoppingCard/ShoppingCard";
 import Favorites from "../components/Favorites/Favorites";
-import Addresses from "../components/Addresses/Addresses";
 import Comments from "../components/Comments/Comments";
 import NotFound from "../pages/NotFound/NotFound";
-import useIsMobile from "../Hooks/useIsMobile";
 
 const routes: RouteObject[] = [
   { path: "/", element: <Home /> },
@@ -27,7 +24,6 @@ const routes: RouteObject[] = [
     children: [
       { path: "account", element: <Account /> },
       { path: "favorites", element: <Favorites /> },
-      { path: "addresses", element: <Addresses /> },
       { path: "comments", element: <Comments /> },
     ],
   },

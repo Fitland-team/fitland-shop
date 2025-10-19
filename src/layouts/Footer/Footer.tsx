@@ -8,7 +8,7 @@ function Footer() {
         <div className="footer-wrapper">
           <div className="footer__top">
             <div className="footer__links">
-              <div className="footer__column favorite">
+              <div className="footer__column footer-column__favorite">
                 <p className="footer__title">محبوب‌ترین‌ها</p>
                 <ul className="footer__list">
                   <li>لباس مردانه</li>
