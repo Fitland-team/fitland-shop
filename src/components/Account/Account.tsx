@@ -15,7 +15,7 @@ export default function Account() {
   const [gender, setGender] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const { showSidebar, isMobile } = useProfileSidebar();
-  const handleBack = useSmartBack('/profile')
+  const handleBack = useSmartBack()
 
 
   // گرفتن اطلاعات از localStorage وقتی کامپوننت لود شد

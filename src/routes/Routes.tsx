@@ -12,6 +12,7 @@ import Favorites from "../components/Favorites/Favorites";
 import Addresses from "../components/Addresses/Addresses";
 import Comments from "../components/Comments/Comments";
 import NotFound from "../pages/NotFound/NotFound";
+import useIsMobile from "../Hooks/useIsMobile";
 
 const routes: RouteObject[] = [
   { path: "/", element: <Home /> },
@@ -24,7 +25,6 @@ const routes: RouteObject[] = [
     path: "/profile",
     element: <Profile />,
     children: [
-      { index: true, element: <Navigate to="account" replace /> },
       { path: "account", element: <Account /> },
       { path: "favorites", element: <Favorites /> },
       { path: "addresses", element: <Addresses /> },
