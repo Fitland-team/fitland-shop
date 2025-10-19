@@ -69,3 +69,39 @@
 .exit__btn:hover {
     color: red;
 }
+
+/* Start Responsive */
+
+@media (max-width: 480px) {
+  
+  .exit-content {
+    height: fit-content;
+    max-width: 400px;
+  }
+
+  .exit__title {
+    font-size: 14px;
+  }
+
+  .exit__close-btn-svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .exit-bottom-buttons {
+    margin-top: 24px;
+  }
+
+  .exit-bottom {
+    font-size: 11px;
+  }
+
+  .cancel__exit,
+  .exit__btn {
+    width: 108px;
+    height: 40px;
+  }
+
+}
+
+/* End Responsive */
