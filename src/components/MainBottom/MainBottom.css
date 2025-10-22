@@ -25,6 +25,45 @@
 
 /* Start Responsive */
 
+/* 🖥 تا 1280px (دسکتاپ متوسط) */
+@media (max-width: 1280px) {
+  .main-bottom {
+    padding: 9px 22px;
+    gap: 7px;
+  }
+
+  .main-bottom__title {
+    font-size: 15px;
+    font-weight: 650;
+  }
+}
+
+/* 💻 تا 1024px (لپ‌تاپ کوچک / تبلت افقی) */
+@media (max-width: 1024px) {
+  .main-bottom {
+    padding: 8px 20px;
+    gap: 6px;
+  }
+
+  .main-bottom__title {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+/* 📱 تا 920px (تبلت عمودی / موبایل بزرگ) */
+@media (max-width: 920px) {
+  .main-bottom {
+    padding: 8px 18px;
+    gap: 5px;
+  }
+
+  .main-bottom__title {
+    font-size: 13px;
+    font-weight: 550;
+  }
+}
+
 @media (max-width: 480px) {
 
     .main-bottom {

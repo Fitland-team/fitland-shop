@@ -194,10 +194,6 @@
     transition: all 200ms ease;
 }
 
-.navbar-left__item-link-home {
-    /* fill: var(--black); */
-}
-
 .navbar-left__item-link:hover {
     color: var(--primary);
 }
@@ -217,11 +213,162 @@
 
 /* Start Responsive */
 
+/* 🖥 تا 1280px */
+@media (max-width: 1280px) {
+  .header-top__first-section {
+    margin-top: 30px;
+    gap: 1.5rem;
+  }
+
+  .header-top__search-box {
+    width: 520px;
+    height: 42px;
+  }
+
+  .header-top__search::placeholder {
+    font-size: 11px;
+  }
+
+  .header-top__register-btn {
+    width: 130px;
+    height: 44px;
+  }
+
+  .header-top__register-title {
+    font-size: 13px;
+  }
+
+  .navbar {
+    padding: 14px 30px;
+    gap: 1.5rem;
+  }
+
+  .navbar-right-list,
+  .navbar-left-list {
+    gap: 1.8rem;
+  }
+
+  .navbar-right__item-link,
+  .navbar-left__item-link {
+    font-size: 15px;
+  }
+}
+
+/* 💻 تا 1024px */
+@media (max-width: 1024px) {
+  .header-top__first-section {
+    flex-wrap: wrap;
+    margin-top: 25px;
+    gap: 1rem;
+  }
+
+  .header-top__search-box {
+    width: 100%;
+    max-width: 420px;
+    height: 40px;
+    margin: 0 auto;
+  }
+
+  .header-top__search {
+    font-size: 12px;
+    padding-right: 2.5rem;
+  }
+
+  .header-top__icon-title {
+    font-size: 11px;
+  }
+
+  .header-top__register-card {
+    gap: 1rem;
+  }
+
+  .header-top__register-btn {
+    width: 120px;
+    height: 40px;
+    gap: 6px;
+  }
+
+  .header-top__register-title {
+    font-size: 12px;
+  }
+
+  .header-top__card {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+  }
+
+  .navbar {
+    padding: 12px 24px;
+    margin-top: 2rem;
+  }
+
+  .navbar-right-list,
+  .navbar-left-list {
+    gap: 1.4rem;
+  }
+
+  .navbar-right__item-link,
+  .navbar-left__item-link {
+    font-size: 14px;
+  }
+}
+
+/* 💻 تا 920px — فقط اندازه‌ها فشرده‌تر، ساختار ثابت */
+@media (max-width: 928px) {
+  .header-top__first-section {
+    gap: 0.8rem;
+    margin-top: 20px;
+  }
+
+  .header-top__search-box {
+    max-width: 380px;
+    height: 38px;
+  }
+
+  .header-top__search::placeholder {
+    font-size: 10px;
+  }
+
+  .header-top__register-btn {
+    width: 110px;
+    height: 38px;
+  }
+
+  .header-top__register-title {
+    font-size: 11px;
+  }
+
+  .header-top__card {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navbar {
+    padding: 10px 20px;
+    margin-top: 1.5rem;
+  }
+
+  .navbar-right-list,
+  .navbar-left-list {
+    gap: 1.2rem;
+  }
+
+  .navbar-right__item-link,
+  .navbar-left__item-link {
+    font-size: 10px;
+  }
+}
+
 @media (max-width: 480px) {
 
     .header-top__second-section {
         display: none;
     }
 }
+
+
+
+
 
 /* End Responsive */

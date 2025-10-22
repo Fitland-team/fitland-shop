@@ -15,11 +15,29 @@
 
 /* Start Header Responsive */
 
+/* 💻 تا 1280px */
+@media (max-width: 1280px) {
+    .header-top-title h3 {
+        font-size: 13px;
+        font-weight: 650;
+    }
+}
+
+/* 💻 تا 1024px */
+@media (max-width: 1024px) {
+    .header-top-title h3 {
+        font-size: 12px;
+        font-weight: 600;
+    }
+}
+
 @media (max-width: 480px) {
     .header-top-title h3 {
         font-size: 10px;
         font-weight: 500;
     }
 }
+
+
 
 /* End Header Responsive */

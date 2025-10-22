@@ -119,3 +119,27 @@ ol {
     margin: 0 auto;
   }
 }
+
+/* 📲 تبلت */
+@media (max-width: 768px) {
+  .container {
+    max-width: 680px;
+    padding: 0 16px;
+  }
+}
+
+/* 💻 لپ‌تاپ کوچک */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 920px;
+    padding: 0 20px;
+  }
+}
+
+/* 🖥 دسکتاپ متوسط */
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1120px;
+    padding: 0 24px;
+  }
+}

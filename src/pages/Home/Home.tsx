@@ -16,7 +16,7 @@ function Home() {
     return (
         <>
             <Header />
-            <NewestProducts title="جدید ترین محصولات" content="جدید ترین محصولات با ارسال رایگان تهیه 
+            {/* <NewestProducts title="جدید ترین محصولات" content="جدید ترین محصولات با ارسال رایگان تهیه 
 کنید و در سریع ترین زمان درب منزل تحویل بگیرید" firstImg="/images/Newest-Product-girl2.png" secondImg="/images/Newest-Product-girl.png" />
             <HomeBanner bgSrc="/images/Home-Banner.jpg" title="برای حال خوب" content="لوازم ایروبیک و تناسب اندام بگیر" />
             <Slider title="تخفیفات ویژه" bgImage='/images/Subtract.png' />
@@ -30,7 +30,7 @@ function Home() {
                 <img src="../public/images/Ben10.png" alt="" />
             </div>
             <SiteOptions />
-            {isMobile ? <FooterMobile /> : <Footer />}
+            {isMobile ? <FooterMobile /> : <Footer />} */}
         </>
     )
 }
