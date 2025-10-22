@@ -78,3 +78,43 @@
     padding-bottom: .5rem;
 }
 
+/* ===================== */
+/*      RESPONSIVE       */
+/* ===================== */
+
+/* --- 1280px --- */
+@media (max-width: 1280px) {
+  .comment-box__content {
+    height: 190px;
+    gap: 1rem;
+  }
+
+  .comment-desc__text {
+    width: 420px;
+  }
+}
+
+/* --- 1024px --- */
+@media (max-width: 1024px) {
+  .comment-box__content {
+    padding: 0.6rem;
+  }
+
+  .comment-img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .comment-desc__text {
+    width: 360px;
+    font-size: 13px;
+  }
+
+  .comment-desc__title {
+    font-size: 17px;
+  }
+
+  .comment-desc__color {
+    font-size: 15px;
+  }
+}
