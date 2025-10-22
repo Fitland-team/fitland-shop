@@ -29,6 +29,79 @@
 
 /* Start Responsive */
 
+/* 🖥 دسکتاپ متوسط — تا 1280px */
+@media (max-width: 1280px) {
+  .newest-products {
+    margin-top: 6rem;
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+
+  .newest-products__content {
+    width: 280px;
+    gap: 14px;
+  }
+
+  .newest-products__content-title {
+    font-size: 22px;
+  }
+
+  .newest-products__content-text {
+    font-size: 16px;
+  }
+}
+
+/* 💻 لپ‌تاپ کوچک / تبلت افقی — تا 1024px */
+@media (max-width: 1024px) {
+  .newest-products {
+    margin-top: 5rem;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .newest-products__content {
+    width: 250px;
+    gap: 12px;
+    align-self: center;
+  }
+
+  .newest-products__content-title {
+    font-size: 20px;
+  }
+
+  .newest-products__content-text {
+    font-size: 15px;
+  }
+}
+
+/* 📱 سایز میانی — تا 920px */
+@media (max-width: 920px) {
+  .newest-products {
+    margin-top: 4.5rem;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 45px;
+  }
+
+  .newest-products__content {
+    width: 230px;
+    gap: 10px;
+    align-self: center;
+  }
+
+  .newest-products__content-title {
+    font-size: 18px;
+  }
+
+  .newest-products__content-text {
+    font-size: 14px;
+  }
+}
+
+
 @media (max-width: 480px) {
 
     .newest-products {
