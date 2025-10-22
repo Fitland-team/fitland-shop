@@ -33,6 +33,66 @@
 
 /* Start Responsive */
 
+/* 🖥 دسکتاپ متوسط — تا 1280px */
+@media (max-width: 1280px) {
+  .home-banner {
+    height: 300px;
+  }
+
+  .home-banner__box {
+    width: 320px;
+    top: 60px;
+    right: 180px;
+    gap: 24px;
+    line-height: 2rem;
+  }
+
+  .home-banner__box-title,
+  .home-banner__box-content {
+    font-size: 20px;
+  }
+}
+
+/* 💻 لپ‌تاپ کوچک / تبلت افقی — تا 1024px */
+@media (max-width: 1024px) {
+  .home-banner {
+    height: 260px;
+  }
+
+  .home-banner__box {
+    width: 280px;
+    top: 50px;
+    right: 120px;
+    gap: 20px;
+    line-height: 1.8rem;
+  }
+
+  .home-banner__box-title,
+  .home-banner__box-content {
+    font-size: 18px;
+  }
+}
+
+/* 📱 سایز میانی — تا 920px */
+@media (max-width: 920px) {
+  .home-banner {
+    height: 220px;
+  }
+
+  .home-banner__box {
+    width: 220px;
+    top: 40px;
+    right: 80px;
+    gap: 16px;
+    line-height: 1.6rem;
+  }
+
+  .home-banner__box-title,
+  .home-banner__box-content {
+    font-size: 16px;
+  }
+}
+
 @media (max-width: 480px) {
 
     .home-banner {
