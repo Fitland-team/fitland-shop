@@ -1,7 +1,7 @@
 .footer {
   background: #0d1b2a;
   color: #fff;
-  height: 558px;
+  height: fit-content;
   position: relative;
   margin-top: 32px;
 }
@@ -175,7 +175,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 3.9rem;
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .footer-copy-right__organ,
@@ -189,10 +190,111 @@
 }
 
 .footer-copy-right__full-width::after {
-  content: '';
+  content: "";
   position: absolute;
   background-color: var(--white);
+  display: block;
   width: 100%;
   height: 1px;
-  bottom: 45px;
+  bottom: 50px !important;
 }
+
+/* 🖥 دسکتاپ متوسط — تا 1280px */
+@media (max-width: 1280px) {
+  .footer__top {
+    gap: 100px;
+    padding: 36px 0;
+  }
+
+  .footer__links {
+    width: 600px;
+    justify-content: space-between;
+  }
+
+  .footer__column {
+    font-size: 13px;
+  }
+
+  .footer__title {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+
+  .footer__list li {
+    font-size: 11px;
+    line-height: 26px;
+  }
+
+  .footer__user-email-input {
+    width: 280px;
+    font-size: 14px;
+    padding: 8px 28px 8px 50px;
+  }
+
+  .footer-copy-right {
+    margin-top: 2.5rem;
+  }
+  .footer__user-email-submit {
+    left: 22px;
+    top: 44%;
+  }
+}
+
+/* 💻 لپ‌تاپ کوچک / تبلت افقی — تا 1024px */
+@media (max-width: 1024px) {
+  .footer__top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px 0;
+  }
+
+  .footer__links {
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .footer__column {
+    width: 45%;
+  }
+
+  .footer__title {
+    font-size: 12px;
+  }
+
+  .footer__list li {
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+  .footer__user-email-input {
+    width: 100%;
+    font-size: 13px;
+    padding: 8px 28px 8px 50px;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer__namad {
+    justify-content: center;
+  }
+
+  .footer__bottom-desc {
+    max-width: 100%;
+    font-size: 13px;
+  }
+
+  .footer-copy-right {
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .footer__user-email-submit {
+    left: 4px;
+    top: 42%;
+  }
+}
+

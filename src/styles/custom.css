@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'IranSans';
-  src: url('../assets/fonts/Iranian Sans.ttf') format('truetype');
+  font-family: "IranSans";
+  src: url("../assets/fonts/Iranian Sans.ttf") format("truetype");
   font-style: normal;
 }
 
@@ -21,7 +21,7 @@
 html,
 body {
   height: 100%;
-  font-family: 'IranSans', sans-serif;
+  font-family: "IranSans", sans-serif;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -64,7 +64,7 @@ select {
 input::placeholder,
 textarea::placeholder {
   color: #888;
-  font-family: 'IranSans', sans-serif;
+  font-family: "IranSans", sans-serif;
 }
 
 /* دکمه‌ها */
@@ -87,7 +87,6 @@ ol {
   padding: 0;
   margin: 0;
 }
-
 
 .container {
   max-width: 1224px;
@@ -113,6 +112,39 @@ ol {
 
 /* Custom Responsive */
 
+/* 🖥 دسکتاپ متوسط */
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1120px;
+    padding: 0 24px;
+          overflow-x: hidden;
+      overflow-y: hidden;
+  }
+  /* 💻 لپ‌تاپ کوچک */
+  @media (max-width: 1024px) {
+    .container {
+      max-width: 920px;
+      padding: 0 20px;
+
+    }
+  }
+}
+
+/* سایز میانی — تا 920px */
+@media (max-width: 920px) {
+  .container {
+    max-width: 900px; /* نزدیک به سایز اصلی */
+    padding: 0 20px; /* padding منطقی */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 680px;
+    padding: 0 16px;
+  }
+}
+
 @media (max-width: 480px) {
   .container {
     max-width: 342px;
@@ -121,25 +153,3 @@ ol {
 }
 
 /* 📲 تبلت */
-@media (max-width: 768px) {
-  .container {
-    max-width: 680px;
-    padding: 0 16px;
-  }
-}
-
-/* 💻 لپ‌تاپ کوچک */
-@media (max-width: 1024px) {
-  .container {
-    max-width: 920px;
-    padding: 0 20px;
-  }
-}
-
-/* 🖥 دسکتاپ متوسط */
-@media (max-width: 1280px) {
-  .container {
-    max-width: 1120px;
-    padding: 0 24px;
-  }
-}

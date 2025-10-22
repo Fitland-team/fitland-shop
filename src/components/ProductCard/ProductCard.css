@@ -55,14 +55,15 @@
   margin-bottom: 3px;
 }
 
-.product__color-circles {}
+.product__color-circles {
+}
 
 .color-circle {
   width: 18px;
   height: 18px;
 }
 
-.color-circle+.color-circle {
+.color-circle + .color-circle {
   margin-right: -5px;
 }
 
@@ -77,8 +78,103 @@
 
 /* Start Responsive */
 
-@media (max-width: 480px) {
+/* 🖥 دسکتاپ متوسط — تا 1280px */
+@media (max-width: 1280px) {
+  .product-card {
+    max-width: 260px;
+    height: 390px;
+  }
 
+  .product-img-container {
+    height: 240px;
+  }
+
+  .product-attribute {
+    padding: 12px;
+  }
+
+  .product__title {
+    font-size: 12px;
+  }
+
+  .product__price {
+    font-size: 13px;
+  }
+
+  .product__size-range {
+    font-size: 11px;
+  }
+
+  .color-circle {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+/* 💻 لپ‌تاپ کوچک / تبلت افقی — تا 1024px */
+@media (max-width: 1024px) {
+  .product-card {
+    max-width: 230px;
+    height: 360px;
+  }
+
+  .product-img-container {
+    height: 210px;
+  }
+
+  .product-rating-title-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product__title {
+    font-size: 14px;
+  }
+
+  .product__price {
+    font-size: 12px;
+  }
+
+  .product__size-range {
+    font-size: 10px;
+  }
+
+  .color-circle {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* 📱 سایز میانی — تا 920px */
+@media (max-width: 920px) {
+  .product-card {
+    max-width: 200px;
+    height: 330px;
+  }
+
+  .product-img-container {
+    height: 180px;
+  }
+
+  .product__title {
+    font-size: 13px;
+  }
+
+  .product__price {
+    font-size: 11px;
+  }
+
+  .product__size-range {
+    font-size: 9px;
+  }
+
+  .color-circle {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+@media (max-width: 480px) {
   .product-card {
     height: fit-content;
   }
@@ -104,7 +200,6 @@
   .product__price {
     font-size: 10px;
   }
-
 }
 
 /* End Responsive */

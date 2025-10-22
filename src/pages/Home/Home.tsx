@@ -19,7 +19,7 @@ function Home() {
             <NewestProducts title="جدید ترین محصولات" content="جدید ترین محصولات با ارسال رایگان تهیه 
 کنید و در سریع ترین زمان درب منزل تحویل بگیرید" firstImg="/images/Newest-Product-girl2.png" secondImg="/images/Newest-Product-girl.png" />
             <HomeBanner bgSrc="/images/Home-Banner.jpg" title="برای حال خوب" content="لوازم ایروبیک و تناسب اندام بگیر" />
-            {/* <Slider title="تخفیفات ویژه" bgImage='/images/Subtract.png' />
+            <Slider title="تخفیفات ویژه" bgImage='/images/Subtract.png' />
             <Slider title="جدید ترین کفش های ورزشی " />
             <HomeBanner bgSrc="/images/Home-Banner-2.jpg" title="برای حال خوب" content="لوازم ایروبیک و تناسب اندام بگیر" />
             <Slider title="تخفیفات ویژه" bgImage='images/Subtract2.png' />
@@ -30,7 +30,7 @@ function Home() {
                 <img src="../public/images/Ben10.png" alt="" />
             </div>
             <SiteOptions />
-            {isMobile ? <FooterMobile /> : <Footer />} */}
+            {isMobile ? <FooterMobile /> : <Footer />}
         </>
     )
 }
