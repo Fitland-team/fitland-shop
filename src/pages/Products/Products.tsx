@@ -17,11 +17,13 @@ import useIsMobile from "../../Hooks/useIsMobile";
 
 function Products() {
 
-  const ITEMS_PER_PAGE = 12;
-  const [page, setPage] = useState(1);
-  const [filteredProducts, setFilteredProducts] = useState<product[]>(products);
+
 
   const isMobile = useIsMobile()
+
+  const ITEMS_PER_PAGE = isMobile ? 8 : 12;
+  const [page, setPage] = useState(1);
+  const [filteredProducts, setFilteredProducts] = useState<product[]>(products);
 
   const pageCount = Math.ceil(filteredProducts.length / ITEMS_PER_PAGE);
 

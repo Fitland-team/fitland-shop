@@ -14,13 +14,13 @@ import { ArrowBack, ArrowForward } from "@mui/icons-material";
 
 export default function Favorites() {
 
-  const ITEMS_PER_PAGE = 12;
-  const [page, setPage] = useState(1);
-
   const { favorites } = useFavorites();
 
   const { showSidebar, isMobile } = useProfileSidebar();
   const handleBack = useSmartBack()
+
+  const ITEMS_PER_PAGE = isMobile ? 8 : 12;
+  const [page, setPage] = useState(1);
 
   const favProducts: product[] = products.filter((p: product) =>
     favorites.includes(p.id)
