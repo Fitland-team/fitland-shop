@@ -148,6 +148,7 @@ ol {
     max-width: 440px;
     padding: 0 16px;
     margin: 0 auto;
+    overflow-x: hidden;
   }
 }
 
