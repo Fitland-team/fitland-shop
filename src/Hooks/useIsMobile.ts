@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 
 function useIsMobile(breakpoint = 480) {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= breakpoint);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia(`(max-width: ${breakpoint}px)`);
+    const maxWidth = Math.max(breakpoint, 760);
+    const mediaQuery = window.matchMedia(`(max-width: ${maxWidth}px)`);
 
     const handleChange = (e) => setIsMobile(e.matches);
 

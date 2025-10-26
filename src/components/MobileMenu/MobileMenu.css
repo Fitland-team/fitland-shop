@@ -143,6 +143,97 @@
     margin-bottom: 1.5rem;
 }
 
+
+@media (max-width: 768px) {
+  .mobile-menu {
+    width: 100%;
+  }
+
+  .mobile-menu__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .fitland-icon__mobile {
+    width: 120px;
+    height: 26px;
+  }
+
+  .fitland-icon__mobile-sidebar {
+    width: 80px;
+    height: 16px;
+  }
+
+  .header-top__card {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+  }
+
+  .header-top__card-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-top__card-mobile-icon {
+    color: var(--white);
+    width: 22px !important;
+    height: 22px !important;
+  }
+
+  .header-top__card-count {
+    font-size: 9px;
+    width: 14px;
+    height: 14px;
+    top: -3px;
+    left: -2px;
+  }
+
+  .header-top__search-box {
+    width: 100%;
+  }
+
+  .header-top__search {
+    border-radius: 8px;
+  }
+
+  .header-top__register {
+    padding-left: .5rem;
+  }
+
+  .header-top__register-btn {
+    width: 110px;
+    height: 36px;
+    border-radius: 4px;
+  }
+
+  .header-top__register-title {
+    font-size: 10px;
+  }
+
+  .header-top__register-icon,
+  .register-icon__mobile {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  #nav-icon3 {
+    width: 28px;
+    height: 28px;
+  }
+
+  #nav-icon3 span {
+    height: 3px;
+  }
+
+  .mobile-sidebar__menu {
+    width: 240px;
+  }
+}
+
+
 @media (max-width: 480px) {
     .mobile-menu {
         width: 100%;

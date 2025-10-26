@@ -21,6 +21,17 @@
 
 /* Start Responsive */
 
+@media (max-width: 768px) {
+    .products-section__left {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    .product-section__bottom {
+        margin-top: 2rem;
+        flex-direction: column;
+    }
+}
+
 @media (max-width: 480px) {
 
     .products-section__left {

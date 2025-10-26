@@ -161,6 +161,38 @@
   }
 }
 
+/* 📱 تبلت — تا 768px */
+@media (max-width: 768px) {
+  .pagination {
+    background-size: cover;
+    padding-bottom: 0;
+    margin-top: 40px;
+  }
+
+  .pagination__title {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .pagination__see-all-button {
+    display: none;
+  }
+
+  .pagination__arrow svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .pagination__arrow-right {
+    right: -14px;
+  }
+
+  .pagination__arrow-left {
+    left: -14px;
+  }
+}
+
+
 /* 📱 موبایل — تا 480px */
 @media (max-width: 480px) {
   .pagination {
@@ -189,23 +221,6 @@
 
   .pagination__arrow-left {
     left: -12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .pagination {
-    background-size: cover;
-    padding-bottom: 0;
-    margin-top: 50px;
-  }
-
-  .pagination__title {
-    font-size: 14px;
-    font-weight: 400;
-  }
-
-  .pagination__see-all-button {
-    display: none;
   }
 }
 

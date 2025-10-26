@@ -117,8 +117,6 @@ ol {
   .container {
     max-width: 1120px;
     padding: 0 24px;
-          overflow-x: hidden;
-      overflow-y: hidden;
   }
   /* 💻 لپ‌تاپ کوچک */
   @media (max-width: 1024px) {
@@ -133,8 +131,8 @@ ol {
 /* سایز میانی — تا 920px */
 @media (max-width: 920px) {
   .container {
-    max-width: 900px; /* نزدیک به سایز اصلی */
-    padding: 0 20px; /* padding منطقی */
+    max-width: 900px;
+    padding: 0 20px;
   }
 }
 
@@ -147,7 +145,8 @@ ol {
 
 @media (max-width: 480px) {
   .container {
-    max-width: 342px;
+    max-width: 440px;
+    padding: 0 16px;
     margin: 0 auto;
   }
 }

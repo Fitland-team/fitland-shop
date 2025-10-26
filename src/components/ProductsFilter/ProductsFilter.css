@@ -196,6 +196,63 @@
 
 /* Start Responsive */
 
+@media (max-width: 768px) {
+  .products-section__right {
+    position: absolute;
+    background-color: var(--white);
+    top: 218px;
+    right: -310px;
+    transition: all 250ms ease-out;
+    width: 227px;
+  }
+
+  .products-section__right-filter-title,
+  .products-section__right-filter-buttons1,
+  .products-section__right-filter-buttons2,
+  .products-section__accordion-price-max span,
+  .products-section__accordion-price-min span,
+  .products-section__accordion-price-max input,
+  .products-section__accordion-price-min input {
+    font-size: 10px;
+  }
+
+  .products-section__right.active {
+    top: 218px;
+    right: 20px;
+  }
+
+  .produtcts-filter__mobile {
+    display: block;
+  }
+
+  .products-filter__mobile-btn {
+    font-size: 14px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #ededed;
+    border-radius: 8px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  .filter-icon__mobile {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .products-color__filter {
+    width: 18px;
+    height: 18px;
+  }
+
+  .products-section__accordion-size-btn {
+    width: 25px;
+    font-size: 10px;
+  }
+}
+
 @media (max-width: 480px) {
 
   .products-section__right {

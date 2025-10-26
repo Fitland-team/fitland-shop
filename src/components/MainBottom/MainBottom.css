@@ -64,6 +64,19 @@
   }
 }
 
+/* 📱 تا 768px — ساختار دسکتاپی با اندازه کوچیک‌تر */
+@media (max-width: 768px) {
+  .main-bottom {
+    padding: 6px 12px;
+    gap: 5px;
+  }
+
+  .main-bottom__title {
+    font-size: 10px;
+  }
+}
+
+
 @media (max-width: 480px) {
 
     .main-bottom {
