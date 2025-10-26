@@ -105,6 +105,62 @@
 
 /* Start Responsive */
 
+/* --- 1280px --- */
+@media (max-width: 1280px) {
+  .register-wrapper {
+    width: 420px;
+    padding: 0.9rem;
+    gap: 1.8rem;
+  }
+  .register-wrapper__input input,
+  .register-wrapper__btn {
+    width: 100%;
+  }
+}
+
+/* --- 1024px --- */
+@media (max-width: 1024px) {
+  .register-wrapper {
+    width: 380px;
+    gap: 1.5rem;
+    padding: 0.8rem;
+  }
+
+  .register-wrapper__title h2 {
+    font-size: 24px;
+  }
+
+  .register-wrapper__input label {
+    font-size: 13px;
+  }
+}
+
+/* --- 920px --- */
+@media (max-width: 920px) {
+  .register-wrapper {
+    width: 90%;
+    max-width: 420px;
+    gap: 1.2rem;
+    padding: 1rem;
+  }
+
+  .register-wrapper__title h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .register-wrapper__input input,
+  .register-wrapper__btn {
+    width: 100%;
+  }
+
+  .register-wrapper__input label,
+  .register-checkbox label,
+  .error-text {
+    font-size: 13px;
+  }
+}
+
 @media (max-width: 480px) {
   .register {
     display: flex;

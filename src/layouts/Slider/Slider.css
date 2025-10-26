@@ -73,8 +73,126 @@
 }
 
 /* Start Responsive */
-@media (max-width: 480px) {
 
+/* 🖥 دسکتاپ متوسط — تا 1280px */
+@media (max-width: 1280px) {
+  .pagination {
+    padding-bottom: 30px;
+    margin-top: 50px;
+  }
+
+  .pagination__title {
+    font-size: 28px;
+  }
+
+  .pagination__arrow svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .pagination__see-all-button span {
+    font-size: 16px;
+  }
+
+  .pagination__arrow-right {
+    right: -32px;
+  }
+
+  .pagination__arrow-left {
+    left: -32px;
+  }
+}
+
+/* 💻 لپ‌تاپ کوچک / تبلت افقی — تا 1024px */
+@media (max-width: 1024px) {
+  .pagination {
+    padding-bottom: 25px;
+    margin-top: 45px;
+  }
+
+  .pagination__title {
+    font-size: 24px;
+  }
+
+  .pagination__arrow svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .pagination__see-all-button span {
+    font-size: 15px;
+  }
+
+  .pagination__arrow-right {
+    right: -24px;
+  }
+
+  .pagination__arrow-left {
+    left: -24px;
+  }
+}
+
+/* 📱 سایز میانی — تا 920px */
+@media (max-width: 920px) {
+  .pagination {
+    padding-bottom: 20px;
+    margin-top: 40px;
+  }
+
+  .pagination__title {
+    font-size: 20px;
+  }
+
+  .pagination__arrow svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .pagination__see-all-button span {
+    font-size: 14px;
+  }
+
+  .pagination__arrow-right {
+    right: -22px;
+  }
+
+  .pagination__arrow-left {
+    left: -22px;
+  }
+}
+
+/* 📱 موبایل — تا 480px */
+@media (max-width: 480px) {
+  .pagination {
+    background-size: cover;
+    padding-bottom: 0;
+    margin-top: 35px;
+  }
+
+  .pagination__title {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .pagination__see-all-button {
+    display: none;
+  }
+
+  .pagination__arrow svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .pagination__arrow-right {
+    right: -12px;
+  }
+
+  .pagination__arrow-left {
+    left: -12px;
+  }
+}
+
+@media (max-width: 480px) {
   .pagination {
     background-size: cover;
     padding-bottom: 0;
@@ -89,7 +207,6 @@
   .pagination__see-all-button {
     display: none;
   }
-
 }
 
 /* End Responsive */

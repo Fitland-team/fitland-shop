@@ -86,3 +86,123 @@
 .newest-product__card-title-text-sapn {
     color: var(--primary);
 }
+
+/* 🖥 دسکتاپ متوسط — تا 1280px */
+@media (max-width: 1280px) {
+  .newest-product__card {
+    width: 300px;
+    height: 360px;
+  }
+
+  .newest-product__card-overlay-wrapper {
+    width: 210px;
+    gap: 28px;
+  }
+
+  .newest-product__card-overlay {
+        padding-top: 6rem;
+  }
+
+  .newest-product__card-overlay-title {
+    font-size: 16px;
+  }
+
+  .newest-product__card-overlay-btn {
+    font-size: 12px;
+    height: 50px;
+    padding: 6px 28px;
+  }
+
+  .newest-product__card-img {
+    width: 350px;
+  }
+
+  .newest-product__card-title-content {
+    font-size: 16px;
+    bottom: 24px;
+    right: 14px;
+  }
+  .newest-product__card-title-text {
+    font-size: 14px;
+  }
+}
+
+/* 💻 لپ‌تاپ کوچک / تبلت افقی — تا 1024px */
+@media (max-width: 1024px) {
+  .newest-product__card {
+    width: 260px;
+    height: 320px;
+  }
+
+  .newest-product__card-overlay-wrapper {
+    width: 190px;
+    gap: 24px;
+  }
+
+  .newest-product__card-overlay {
+        padding-top: 4rem;
+  }
+
+  .newest-product__card-overlay-title {
+    font-size: 15px;
+  }
+
+  .newest-product__card-overlay-btn {
+    font-size: 10px;
+    height: 46px;
+    padding: 6px 24px;
+  }
+
+  .newest-product__card-img {
+    width: 300px;
+  }
+
+  .newest-product__card-title-content {
+    font-size: 14px;
+    bottom: 18px;
+    right: 10px;
+  }
+    .newest-product__card-title-text {
+    font-size: 11px;
+  }
+}
+
+/* 📱 سایز میانی — تا 920px */
+@media (max-width: 920px) {
+  .newest-product__card {
+    width: 220px;
+    height: 280px;
+  }
+
+  .newest-product__card-overlay-wrapper {
+    width: 180px;
+    gap: 22px;
+  }
+
+  .newest-product__card-overlay {
+        padding-top: 2rem;
+  }
+
+  .newest-product__card-overlay-title {
+    font-size: 14px;
+  }
+
+  .newest-product__card-overlay-btn {
+    font-size: 10px;
+    height: 44px;
+    padding: 5px 22px;
+  }
+
+  .newest-product__card-img {
+    width: 280px;
+  }
+
+  .newest-product__card-title-content {
+    font-size: 13px;
+    bottom: 12px;
+    right: 8px;
+  }
+      .newest-product__card-title-text {
+    font-size: 8px;
+  }
+}
