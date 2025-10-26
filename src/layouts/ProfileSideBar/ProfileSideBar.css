@@ -202,8 +202,7 @@
   .add-profile__mobile {
     width: 20px !important;
     height: 20px !important;
-    right: 136px !important;
-    bottom: -1px !important;
+    right: 0 !important;
   }
 
   .side-bar__profile-name {
