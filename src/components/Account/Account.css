@@ -71,8 +71,8 @@
   border: 1px solid rgba(25, 65, 101, 1) !important;
 }
 
-.account-wrapper__input input:focus + .labelline,
-.account-wrapper__input input:valid + .labelline {
+.account-wrapper__input input:focus+.labelline,
+.account-wrapper__input input:valid+.labelline {
   transform: translate(-20px, -23px) scale(0.88);
   z-index: 2;
   padding: 0 5px;
@@ -124,6 +124,7 @@
 
 /* --- 1280px --- */
 @media (max-width: 1280px) {
+
   .account-wrapper,
   .profile-box {
     max-width: 730px;
@@ -138,6 +139,7 @@
 
 /* --- 1024px --- */
 @media (max-width: 1024px) {
+
   .account-wrapper,
   .profile-box {
     max-width: 650px;
@@ -155,9 +157,10 @@
 
 /* --- 920px --- */
 @media (max-width: 920px) {
+
   .account-wrapper,
   .profile-box {
-    max-width: 645px;
+    max-width: 575px;
     padding: 20px;
   }
 
@@ -168,6 +171,16 @@
 
   .labelline {
     font-size: 12px;
+  }
+
+  .account-title {
+    margin-right: 0;
+  }
+
+  .account-title__text {
+    display: flex;
+    align-items: center;
+    gap: 6px;
   }
 
   .account-title h2 {
@@ -183,7 +196,44 @@
   }
 }
 
+/* --- 830px --- */
+
+@media (max-width: 830px) {
+  
+  .account-wrapper {
+    max-width: 520px;
+  }
+
+}
+
+/* --- 760px --- */
+
+@media (max-width: 760px) {
+
+  .profile-content {
+    width: 100%;
+  }
+
+  .profile-wrapper {
+    width: 100%;
+  }
+  
+  .account-title::before {
+    display: none;
+  }
+
+  .account-wrapper {
+    max-width: 100% !important;
+  }
+
+  .profile-box {
+    max-width: 100%;
+  }
+
+}
+
 @media (max-width: 480px) {
+
   .account-wrapper,
   .profile-box {
     width: 100%;
@@ -217,8 +267,8 @@
     margin: 12px 0;
   }
 
-  .account-wrapper__input input:focus + .labelline,
-  .account-wrapper__input input:valid + .labelline {
+  .account-wrapper__input input:focus+.labelline,
+  .account-wrapper__input input:valid+.labelline {
     transform: translate(-20px, -22px) scale(0.88);
   }
 
