@@ -10,6 +10,7 @@
   justify-content: center;
   z-index: 1000;
 }
+
 .exit-content {
   background-color: var(--white);
   border-radius: var(--radius-large);
@@ -18,6 +19,7 @@
   padding: 16px;
   position: relative;
 }
+
 .exit-top {
   display: flex;
   align-items: center;
@@ -25,27 +27,33 @@
   padding-bottom: 8px;
   border-bottom: 1px solid var(--Neutral-Colors-4);
 }
+
 .exit__title {
   color: var(--black);
   font-size: 20px;
   font-weight: 300;
 }
+
 .exit__close-btn {
   cursor: pointer;
 }
+
 .exit-bottom {
   margin-top: 16px;
   font-size: 16px;
 }
+
 .exit-bottom__description {
-    color: #434343;
+  color: #434343;
 }
+
 .exit-bottom-buttons {
   display: flex;
   gap: 16px;
   justify-content: flex-end;
   margin-top: 44px;
 }
+
 .cancel__exit {
   width: 128px;
   height: 44px;
@@ -54,26 +62,77 @@
   border-radius: var(--radius-medium);
   transition: all 250ms ease;
 }
+
 .exit__btn {
-    width: 128px;
-    height: 44px;
-    color: var(--white);
-    background-color: var(--secondary);
-    border-radius: var(--radius-medium);
-    transition: all 250ms ease;
+  width: 128px;
+  height: 44px;
+  color: var(--white);
+  background-color: var(--secondary);
+  border-radius: var(--radius-medium);
+  transition: all 250ms ease;
 }
+
 .cancel__exit:hover {
-    background-color: var(--secondary);
-    color: var(--white);
+  background-color: var(--secondary);
+  color: var(--white);
 }
+
 .exit__btn:hover {
-    color: red;
+  color: red;
 }
 
 /* Start Responsive */
 
+/* ---760px--- */
+
+@media (max-width: 760px) {
+
+  .exit-content {
+    width: 580px;
+    height: fit-content;
+  }
+
+  .exit__title {
+    font-size: 18px;
+  }
+
+  .exit-bottom {
+    font-size: 13px;
+  }
+
+  .cancel__exit,
+  .exit__btn {
+    width: 110px;
+  }
+
+}
+
+/* ---590px--- */
+
+@media (max-width: 590px) {
+
+  .exit-content {
+    width: 500px;
+    height: fit-content;
+  }
+
+  .exit__title {
+    font-size: 16px;
+  }
+
+  .exit-bottom {
+    font-size: 11px;
+  }
+
+  .cancel__exit,
+  .exit__btn {
+    width: 95px;
+  }
+
+}
+
 @media (max-width: 480px) {
-  
+
   .exit-content {
     height: fit-content;
     max-width: 400px;
