@@ -57,6 +57,26 @@
 
 /* Start Responsive */
 
+/* ---760px--- */
+
+@media (max-width: 760px) {
+  
+  .favorite-title {
+    margin-right: 0;
+  }
+
+  .favorite-title::before {
+    display: none;
+  }
+
+  .favorite-title__text {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+}
+
 @media (max-width: 480px) {
 
   .favorite-title {
