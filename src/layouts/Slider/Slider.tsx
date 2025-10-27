@@ -1,26 +1,30 @@
 import "./Slider.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import 'swiper/css';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/navigation";
 import { Autoplay, Navigation } from "swiper/modules";
 import { products } from "../../api/products";
 import { useState } from "react";
 import ProductCard from "../../components/ProductCard/ProductCard";
 
 type paginationProps = {
-  title: string
-  bgImage?: string
-}
+  title: string;
+  bgImage?: string;
+};
 
 function Pagination({ title, bgImage }: paginationProps) {
-
-  const [homeProducts, setHomeProducts] = useState(products)
-
+  const [homeProducts, setHomeProducts] = useState(products);
 
   return (
     <div className="pagination" style={{ backgroundImage: `url(${bgImage})` }}>
       <div className="container">
-        <h2 className={`pagination__title ${bgImage ? 'pagination-title__bgimage' : ''}`}>{title}</h2>
+        <h2
+          className={`pagination__title ${
+            bgImage ? "pagination-title__bgimage" : ""
+          }`}
+        >
+          {title}
+        </h2>
         <div className="pagination-button-wrapper">
           <button className="pagination__see-all-button">
             <svg
@@ -48,6 +52,14 @@ function Pagination({ title, bgImage }: paginationProps) {
         </div>
 
         <div className="pagination-product-wrapper">
+          <span className="pagination__arrow pagination__arrow-right">
+            <svg width="24" height="24" viewBox="0 0 24 24">
+              <path
+                d="M8.90998 20.6695C8.71998 20.6695 8.52998 20.5995 8.37998 20.4495C8.08998 20.1595 8.08998 19.6795 8.37998 19.3895L14.9 12.8695C15.38 12.3895 15.38 11.6095 14.9 11.1295L8.37998 4.60953C8.08998 4.31953 8.08998 3.83953 8.37998 3.54953C8.66998 3.25953 9.14998 3.25953 9.43998 3.54953L15.96 10.0695C16.47 10.5795 16.76 11.2695 16.76 11.9995C16.76 12.7295 16.48 13.4195 15.96 13.9295L9.43998 20.4495C9.28998 20.5895 9.09998 20.6695 8.90998 20.6695Z"
+                fill="#292D32"
+              />
+            </svg>
+          </span>
           <Swiper
             modules={[Navigation, Autoplay]}
             loop={true}
@@ -57,42 +69,49 @@ function Pagination({ title, bgImage }: paginationProps) {
             }}
             autoplay={{
               delay: 2000,
-              disableOnInteraction: false
+              disableOnInteraction: false,
             }}
             speed={500}
             breakpoints={{
-              0: {             
+              0: {
                 slidesPerView: 2,
-                spaceBetween: 15,    
+                spaceBetween: 15,
               },
-              480: {        
+              480: {
                 slidesPerView: 3,
-                spaceBetween: 170,
-              }
+                spaceBetween: 30,
+              },
+              768: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
+              920: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
+              1024: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+              },
+              1280: {
+                slidesPerView: 4,
+                spaceBetween: 30,
+              },
             }}
           >
-            {
-              homeProducts.map(product => (
-                <SwiperSlide key={product.id}>
-                  <ProductCard
-                    id={product.id}
-                    image={product.image}
-                    title={product.title}
-                    price={product.price}
-                    rating={product.rating}
-                  />
-                </SwiperSlide>
-              ))
-            }
+            {homeProducts.map((product) => (
+              <SwiperSlide key={product.id}>
+                <ProductCard
+                  id={product.id}
+                  image={product.image}
+                  title={product.title}
+                  price={product.price}
+                  rating={product.rating}
+                />
+              </SwiperSlide>
+            ))}
           </Swiper>
-          <span className="pagination__arrow pagination__arrow-right">
-            <svg width="24" height="24" viewBox="0 0 24 24">
-              <path
-                d="M8.90998 20.6695C8.71998 20.6695 8.52998 20.5995 8.37998 20.4495C8.08998 20.1595 8.08998 19.6795 8.37998 19.3895L14.9 12.8695C15.38 12.3895 15.38 11.6095 14.9 11.1295L8.37998 4.60953C8.08998 4.31953 8.08998 3.83953 8.37998 3.54953C8.66998 3.25953 9.14998 3.25953 9.43998 3.54953L15.96 10.0695C16.47 10.5795 16.76 11.2695 16.76 11.9995C16.76 12.7295 16.48 13.4195 15.96 13.9295L9.43998 20.4495C9.28998 20.5895 9.09998 20.6695 8.90998 20.6695Z"
-                fill="#292D32"
-              />
-            </svg>
-          </span>
+
           <span className="pagination__arrow pagination__arrow-left">
             <svg width="24" height="24" viewBox="0 0 24 24">
               <path

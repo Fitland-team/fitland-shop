@@ -254,7 +254,6 @@
   }
 }
 
-/* 💻 تا 1024px */
 @media (max-width: 1024px) {
   .header-top__first-section {
     flex-wrap: wrap;
@@ -271,7 +270,6 @@
 
   .header-top__search {
     font-size: 12px;
-    padding-right: 2.5rem;
   }
 
   .header-top__icon-title {
@@ -314,7 +312,6 @@
   }
 }
 
-/* 💻 تا 920px — فقط اندازه‌ها فشرده‌تر، ساختار ثابت */
 @media (max-width: 928px) {
   .header-top__first-section {
     gap: 0.8rem;

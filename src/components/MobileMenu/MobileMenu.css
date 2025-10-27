@@ -144,7 +144,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .mobile-menu {
     width: 100%;
   }
@@ -193,10 +193,6 @@
 
   .header-top__search-box {
     width: 100%;
-  }
-
-  .header-top__search {
-    border-radius: 8px;
   }
 
   .header-top__register {

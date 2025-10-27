@@ -80,12 +80,16 @@
 @media (max-width: 480px) {
 
     .main-bottom {
-        width: 166px;
-        padding: 8px 16px;
+        gap: 4px;
+        padding: 7px 10px;
+    }
+
+    .main-bottom svg {
+      width: 20px;
     }
 
     .main-bottom__title {
-        font-size: 12px;
+        font-size: 9px;
         font-weight: 400;
     }
 }

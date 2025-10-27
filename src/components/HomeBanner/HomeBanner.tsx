@@ -26,9 +26,8 @@ export default function HomeBanner({ bgSrc, title, content }: Background) {
           <h1 className="home-banner__box-title">{title}</h1>
           <span className="home-banner__box-content">{content}</span>
         </div>
-        {width > 480 && (
+        
           <MainBottom bgColor="secondary" title="مشاهده همه محصولات" />
-        )}
       </div>
     </div>
   )
