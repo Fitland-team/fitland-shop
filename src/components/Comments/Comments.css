@@ -96,7 +96,7 @@
 /* --- 1024px --- */
 @media (max-width: 1024px) {
   .comments-section {
-    max-width: 650px;
+    max-width: 610px;
     padding: 1rem 1.6rem;
   }
 
@@ -116,7 +116,7 @@
 /* --- 920px --- */
 @media (max-width: 920px) {
   .comments-section {
-    max-width: 545px;
+    max-width: 515px;
     padding: 1rem 1.4rem;
   }
 

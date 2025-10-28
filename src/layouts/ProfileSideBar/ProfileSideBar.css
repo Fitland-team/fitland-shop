@@ -1,14 +1,16 @@
 .profile-side-bar {
-  width: 300px;
+  width: 350px;
   height: fit-content;
   position: sticky;
   top: 10px;
 }
+
 .profile-side-bar-wrapper {
   border-radius: var(--radius-large);
   height: 100%;
   box-shadow: 0px 4px 30px 4px rgba(0, 0, 0, 0.06);
 }
+
 .side-bar-top {
   border-radius: var(--radius-large);
   background: linear-gradient(to bottom, #feeee8 0%, var(--white) 100%);
@@ -16,11 +18,13 @@
   text-align: center;
   height: 250px;
 }
+
 .side-bar__profile-changer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .side-bar__profile-changer svg {
   cursor: pointer;
   width: 32px;
@@ -31,6 +35,7 @@
   background-color: var(--white);
   border-radius: var(--radius-full);
 }
+
 .side-bar__profile-image {
   width: 100px;
   height: 100px;
@@ -38,6 +43,7 @@
   border: 2px solid var(--white);
   object-fit: cover;
 }
+
 .side-bar__profile-placeholder {
   width: 100px;
   height: 100px;
@@ -61,6 +67,7 @@
   padding: 10px;
   padding-top: 13px;
 }
+
 .side-bar__profile-email {
   font-size: 12px;
   color: #01070d;
@@ -68,15 +75,18 @@
   padding-right: 52px;
   padding-bottom: 48px;
 }
+
 .side-bar-bottom {
   width: 100%;
   padding: 0 20px;
   margin: 0;
   align-items: stretch;
 }
+
 .side-bar__options {
   width: 100%;
 }
+
 .side-bar__item {
   padding-top: 24px;
   padding-bottom: 24px;
@@ -87,6 +97,7 @@
   border-bottom: 1px solid var(--Neutral-Colors-2);
   cursor: pointer;
 }
+
 .side-bar__item li {
   gap: 8px;
   display: flex;
@@ -96,15 +107,18 @@
 .side-bar__item svg {
   color: var(--Neutral-Colors-8);
 }
+
 .side-bar__item:hover,
 .side-bar__item.active {
   color: #194165;
   border-bottom: 1px solid #194165;
 }
+
 .side-bar__item:hover svg,
 .side-bar__item.active svg {
   color: #194165;
 }
+
 .side-bar__item:last-child {
   border-bottom: none;
 }
@@ -113,9 +127,7 @@
 
 /* --- 1280px --- */
 @media (max-width: 1280px) {
-  .profile-side-bar {
-    width: 270px;
-  }
+
   .side-bar__profile-placeholder,
   .side-bar__profile-image {
     width: 90px;
@@ -125,18 +137,18 @@
 
 /* --- 1024px --- */
 @media (max-width: 1024px) {
-  .profile-side-bar {
-    width: 240px;
-  }
+
   .side-bar__profile-placeholder,
   .side-bar__profile-image {
     width: 80px;
     height: 80px;
   }
+
   .side-bar__profile-email {
     font-size: 11px;
     padding: 0 40px 40px;
   }
+
   .side-bar__item {
     font-size: 15px;
   }
@@ -145,38 +157,43 @@
 /* --- 920px --- */
 @media (max-width: 920px) {
   .profile-side-bar {
-    width: 100%;
     position: relative;
     margin-bottom: 20px;
   }
+
   .side-bar-top {
     height: 220px;
     padding-top: 36px;
   }
+
   .side-bar__profile-placeholder,
   .side-bar__profile-image {
     width: 70px;
     height: 70px;
   }
+
   .side-bar__profile-name,
   .side-bar__profile-email {
     font-size: 11px;
   }
+
   .side-bar__item {
     font-size: 14px;
     padding: 18px 0;
   }
+
   .side-bar__item li svg {
     width: 16px !important;
     height: 16px !important;
   }
 }
 
-/* --- 670px --- */
+/* --- 760px --- */
 
-@media (max-width: 670px) {
-
-
+@media (max-width: 760px) {
+  .profile-side-bar {
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {

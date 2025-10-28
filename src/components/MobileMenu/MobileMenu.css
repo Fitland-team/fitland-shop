@@ -83,7 +83,7 @@
     height: 100vh;
     background-color: #fff;
     position: absolute;
-    border: 1px solid black;
+    background-color: #eeeded;
     top: 0px;
     left: -280px;
     z-index: 10;
