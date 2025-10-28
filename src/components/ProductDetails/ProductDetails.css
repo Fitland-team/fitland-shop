@@ -386,6 +386,10 @@
   }
 
   .product-details-top-left {
+    max-width: 100%;
+  }
+
+  .product-details-top-left {
     display: flex;
     flex-direction: column;
     gap: 1rem;
