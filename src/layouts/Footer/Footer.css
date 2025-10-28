@@ -177,6 +177,7 @@
   justify-content: space-between;
   margin-top: 3rem;
   margin-bottom: 1.5rem;
+  padding: 0 0 1rem 0;
 }
 
 .footer-copy-right__organ,
@@ -196,7 +197,7 @@
   display: block;
   width: 100%;
   height: 1px;
-  bottom: 50px !important;
+  bottom: 55px !important;
 }
 
 /* 🖥 دسکتاپ متوسط — تا 1280px */
