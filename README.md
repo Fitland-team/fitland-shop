@@ -58,19 +58,22 @@ All user data, profiles, and cart information are stored locally using **LocalSt
 
 ## 📁 Folder Structure
 
+## 📦 Project Structure
+```bash
 src/
-┣ assets/
-┣ components/
-┣ contexts/
-┣ hooks/
-┣ layouts/
-┣ pages/
-┣ routes/
-┣ styles/
-┣ utils/
-┣ App.tsx
-┣ App.css
-┗ main.tsx
+┣ assets/        # Static files (images, icons, etc.)
+┣ components/    # Reusable UI components
+┣ contexts/      # Context API for global state
+┣ hooks/         # Custom React hooks
+┣ layouts/       # Page layout components
+┣ pages/         # App pages (Home, Products, Profile, etc.)
+┣ routes/        # Route configuration
+┣ styles/        # Global CSS files
+┣ utils/         # Helper functions
+┣ App.tsx        # Root component
+┣ App.css        # Global styles
+┗ main.tsx       # Application entry point
+
 ---
 
 ## ⚙️ Installation & Setup
