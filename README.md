@@ -1,69 +1,87 @@
-# React + TypeScript + Vite
+# 🏋️‍♂️ Fitland – Online Sports Equipment Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📖 Overview
+**Fitland** is a fully responsive e-commerce web application built with **React**, **TypeScript**, and **pure CSS**.  
+Users can browse, filter, like, and purchase various sports products.  
+All user data, profiles, and cart information are stored locally using **LocalStorage**, ensuring a fast, backend-free experience.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+- 🎨 **Fully Responsive Design** – Optimized for all screen sizes  
+- 🏋️‍♀️ **Product Display & Selection** – Browse and view detailed product info  
+- 🛒 **Shopping Cart** – Add, remove, and manage items easily  
+- 💳 **Price Filtering** – Filter products dynamically based on price range  
+- ❤️ **Favorites & Like System** – Save and like your preferred items  
+- 🔗 **Product Sharing** – Share product links with others  
+- 👤 **Login & Register** – Regex-based authentication with validation  
+- 🧾 **Multiple Account Support** – Create unlimited accounts without overwriting previous ones  
+- 🔐 **Persistent User Profile** – All data stored securely in LocalStorage  
+- 🚪 **Logout Functionality** – Manage sessions with one click  
+- ⚙️ **404 Page Handling** – Custom Not Found page for invalid routes  
+- ⚡ **Lightweight UI** – Built with pure CSS, no external frameworks  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🧰 Tech Stack
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| Category | Technology |
+|-----------|-------------|
+| **Frontend** | React + TypeScript |
+| **Styling** | Pure CSS |
+| **State & Storage** | LocalStorage |
+| **Form Validation** | Regex |
+| **Version Control** | Git & GitHub |
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## ⚙️ Installation & Setup
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+```bash
+# 1. Clone the repository
+git clone https://github.com/Fitland-team/fitland-shop.git
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+# 2. Navigate into the project directory
+cd fitland-shop
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+# 3. Install dependencies
+npm install
+
+# 4. Run the app locally
+npm run dev
+
+
+
+## 🌐 Live Demo
+🔗 [Coming Soon](#)
+
+---
+
+## 📸 Screenshots
+
+| Home | Products | ProductDetails | Cart | Profile | Login | Register | Notfound |
+|------|-----------|------|------------------|
+| ![Home](./public/images/fitland.png) | ![Products](./public/images/products.png) | ![productDetails](./public/images/product-detail.png) | ![Cart](./public/images/shoppingcard.png) | ![profile](./public/images/profile.png) | ![login](./public/images/login.png) | ![register](./public/images/register.png) | ![notfound](./public/images/not-found.png) |
+
+---
+
+## 👨‍💻 Team
+- **[matinvalizadeh](https://github.com/matinvalizadeh)** – Frontend Developer  
+- **[ArazMaher](https://github.com/ArazMaher)** – Frontend Developer
+
+---
+
+## 📁 Folder Structure
+src/
+┣ assets/
+┣ components/
+┣ contexts/
+┣ hooks/
+┣ layouts/
+┣ pages/
+┣ routes/
+┣ styles/
+┣ utils/
+┣ App.tsx
+┣ App.css
+┗ main.tsx
