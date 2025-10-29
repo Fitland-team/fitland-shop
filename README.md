@@ -52,7 +52,12 @@ All user data, profiles, and cart information are stored locally using **LocalSt
 
 ## 👨‍💻 Team
 - **[matinvalizadeh](https://github.com/matinvalizadeh)** – Frontend Developer  
-- **[ArazMaher](https://github.com/ArazMaher)** – Frontend Developer
+- **[ArazMaher](https://github.com/ArazMaher)** – Frontend Developer  
+
+## 👥 Team Collaboration
+Fitland was built by a small team of two developers working closely together.  
+We used GitHub for collaboration, handled branches and pull requests,  
+and practiced proper commit conventions to simulate a real-world team workflow
 
 ---
 
