@@ -1,6 +1,6 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 import type { ReactNode } from "react";
-import type { product } from "../api/products"; // تایپ اصلی محصولات
+import type { product } from "../api/products";
 
 type CartProduct = product & { count: number };
 
@@ -15,18 +15,24 @@ type CartContextType = {
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
-  const [cart, setCart] = useState<CartProduct[]>([]);
+
+  const [cart, setCart] = useState<CartProduct[]>(() => {
+    const savedCart = localStorage.getItem("cart");
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   const addToCart = (product: CartProduct) => {
     setCart((prev) => {
       const existing = prev.find((p) => p.id === product.id);
       if (existing) {
-        // اگه از قبل وجود داشت، فقط تعدادش زیاد بشه
         return prev.map((p) =>
           p.id === product.id ? { ...p, count: p.count + product.count } : p
         );
       } else {
-        // اگه محصول جدید بود، اضافه کن
         return [...prev, product];
       }
     });
@@ -47,9 +53,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
   const decreaseCount = (id: number) => {
     setCart((prev) =>
       prev.map((p) =>
-        p.id === id
-          ? { ...p, count: p.count > 1 ? p.count - 1 : 1 }
-          : p
+        p.id === id ? { ...p, count: p.count > 1 ? p.count - 1 : 1 } : p
       )
     );
   };
