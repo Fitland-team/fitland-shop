@@ -77,6 +77,70 @@
 
 /* Start Responsive */
 
+/* ✅ تا 1280px */
+@media (max-width: 1280px) {
+  .shoppingcard-left {
+    width: 360px;
+  }
+
+  .shoppingcard-left-top,
+  .shoppingcard-left-center,
+  .shoppingcard-left-bottom {
+    padding: 20px;
+  }
+}
+
+/* ✅ تا 1024px */
+@media (max-width: 1024px) {
+  .shoppingcard-left {
+    width: 340px;
+  }
+
+  .shopping__discount-code {
+    font-size: 15px;
+  }
+
+  .cart-sum__item {
+    font-size: 15px;
+  }
+}
+
+/* ✅ تا 920px */
+@media (max-width: 920px) {
+  .shoppingcard-left {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .shopping__discount-holder {
+    flex-direction: column;
+  }
+}
+
+/* ✅ تا 760px */
+@media (max-width: 768px) {
+  .shoppingcard-left {
+    max-width: 390px;
+    height: fit-content;
+    border: 1px solid var(--Neutral-Colors-3);
+    border-radius: var(--radius-medium);
+  }
+
+  .shopping__discount-code {
+    text-align: center;
+  }
+
+  .shopping__discount-holder {
+    flex-direction: row;
+  }
+
+  .cart-buy-item {
+    font-size: 15px;
+    height: 44px;
+  }
+}
+
 @media (max-width: 480px) {
   .shoppingcard-left {
     width: fit-content;

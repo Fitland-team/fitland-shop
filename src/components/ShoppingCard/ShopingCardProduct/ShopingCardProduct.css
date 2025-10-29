@@ -26,7 +26,7 @@
 .delete-product {
   cursor: pointer;
   position: absolute;
-  inset: 16px auto auto 16px;
+  inset: 25px auto auto 16px;
 }
 .shoping-card__product-title {
   color: var(--black);
@@ -75,6 +75,15 @@
 
 /* Start Responsive */
 
+@media (max-width: 920px) {
+  .shoping-card__product-title {
+    font-size: 16px;
+  }
+  .shoping-card__counter {
+    height: 40px;
+    width: 80px;
+  }
+}
 @media (max-width: 480px) {
   .shopingcard-right {
     height: auto;
@@ -97,7 +106,8 @@
   }
 
   .delete-product {
-    top: -320px;
+    top: -190px;
+
     left: 8px;
   }
 
