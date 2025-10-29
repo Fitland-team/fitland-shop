@@ -71,8 +71,6 @@ src/
 ┣ App.tsx
 ┣ App.css
 ┗ main.tsx
-
-
 ---
 
 ## ⚙️ Installation & Setup
