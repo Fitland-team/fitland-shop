@@ -45,7 +45,7 @@ All user data, profiles, and cart information are stored locally using **LocalSt
 
 | Home | Products | ProductDetails | Cart | Profile | Login | Register | Notfound |
 |------|-----------|----------------|------|----------|--------|-----------|-----------|
-| ![Home](./public/images/pages/fitland.png) | ![Products](./public/images/pages/Products.png) | ![ProductDetails](./public/images/pages/Product-detail.png) | ![Cart](./public/images/pages/shoppingcard.png) | ![Profile](./public/images/pages/profile.png) | ![Login](./public/images/pages/login.png) | ![Register](./public/images/pages/register) | ![NotFound](./public/images/pages/not-found.png) |
+| ![Home](./public/images/pages/fitland.png) | ![Products](./public/images/pages/products.png) | ![ProductDetails](./public/images/pages/product-detail.png) | ![Cart](./public/images/pages/shoppingcard.png) | ![Profile](./public/images/pages/profile.png) | ![Login](./public/images/pages/login.png) | ![Register](./public/images/pages/register.png) | ![NotFound](./public/images/pages/not-found.png) |
 
 
 ---
