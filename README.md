@@ -35,22 +35,6 @@ All user data, profiles, and cart information are stored locally using **LocalSt
 
 ---
 
-## ⚙️ Installation & Setup
-
-```bash
-# 1. Clone the repository
-git clone https://github.com/Fitland-team/fitland-shop.git
-
-# 2. Navigate into the project directory
-cd fitland-shop
-
-# 3. Install dependencies
-npm install
-
-# 4. Run the app locally
-npm run dev
-
-
 
 ## 🌐 Live Demo
 🔗 [Coming Soon](#)
@@ -86,3 +70,22 @@ src/
 ┣ App.tsx
 ┣ App.css
 ┗ main.tsx
+
+---
+
+## ⚙️ Installation & Setup
+
+```bash
+# 1. Clone the repository
+git clone https://github.com/Fitland-team/fitland-shop.git
+
+# 2. Navigate into the project directory
+cd fitland-shop
+
+# 3. Install dependencies
+npm install
+
+# 4. Run the app locally
+npm run dev
+
+
