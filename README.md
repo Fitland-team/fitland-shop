@@ -61,10 +61,8 @@ and practiced proper commit conventions to simulate a real-world team workflow
 
 ---
 
-## 📁 Folder Structure
-
 ## 📦 Project Structure
-```bash
+
 src/
 ┣ assets/        # Static files (images, icons, etc.)
 ┣ components/    # Reusable UI components
