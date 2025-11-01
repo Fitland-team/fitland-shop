@@ -57,6 +57,7 @@ export const products: product[] = [
       "/fitland-shop/images/products/Rectangle 1167 (4).png",
     ],
     price: 160000,
+    color: ["737989", "716C59", "FE9AA0"],
     discount: "24%",
     rating: 1,
   },
@@ -130,7 +131,7 @@ export const products: product[] = [
   },
   {
     id: 8,
-    title: "",
+    title: "تیشرت زنانه کد 1987",
     image: "/fitland-shop/images/products/Rectangle 1167 (7).png",
     images: [
       "/fitland-shop/images/products/Rectangle 1167 (7).png",
@@ -141,6 +142,7 @@ export const products: product[] = [
       "/fitland-shop/images/products/Rectangle 1167 (4).png",
     ],
     price: 120000,
+    color: ["737989", "716C59", "FE9AA0"],
     discount: "24%",
     rating: 5,
   },
@@ -242,6 +244,7 @@ export const products: product[] = [
       "/fitland-shop/images/products/Rectangle 1167 (4).png",
     ],
     price: 371000,
+    color: ["737989", "716C59", "FE9AA0"],
     discount: "24%",
     rating: 3,
   },

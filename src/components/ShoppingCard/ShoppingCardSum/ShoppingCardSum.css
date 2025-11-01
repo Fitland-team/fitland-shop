@@ -28,6 +28,7 @@
 .shopping__discount-submit {
   height: 40px;
   display: flex;
+  align-items: center;
   gap: 8px;
   padding: 8px 20px;
   border: 1px solid var(--secondary);
@@ -144,6 +145,18 @@
 @media (max-width: 480px) {
   .shoppingcard-left {
     width: fit-content;
+  }
+
+  .shopping__discount-holder {
+    flex-direction: column;
+  }
+
+  .shopping__discount-submit {
+    justify-content: center;
+  }
+
+  .shopping__discount-submit svg {
+    display: none;
   }
 }
 

@@ -21,7 +21,7 @@ function Home() {
             <HomeBanner bgSrc="/fitland-shop/images/Home-Banner.jpg" title="برای حال خوب" content="لوازم ایروبیک و تناسب اندام بگیر" />
             <Slider title="تخفیفات ویژه" bgImage='/fitland-shop/images/Subtract.png' />
             <Slider title="جدید ترین کفش های ورزشی " />
-            <HomeBanner bgSrc="/images/Home-Banner-2.jpg" title="برای حال خوب" content="لوازم ایروبیک و تناسب اندام بگیر" />
+            <HomeBanner bgSrc="/fitland-shop/images/Home-Banner-2.jpg" title="برای حال خوب" content="لوازم ایروبیک و تناسب اندام بگیر" />
             <Slider title="تخفیفات ویژه" bgImage='images/Subtract2.png' />
             <NewestProducts title="پر فروش ترین محصولات" content="پرفروش ترین محصولات با ارسال رایگان تهیه 
 کنید و در سریع ترین زمان درب منزل تحویل بگیرید.
