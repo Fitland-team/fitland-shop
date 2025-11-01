@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import './index.css'
 import App from './App.tsx'
 import { BreadcrumbProvider } from './Contexts/BreadCrumbContext.tsx'
@@ -8,7 +8,7 @@ import { ThemeProvider } from './Contexts/ThemeContext.tsx'
 import { CartProvider } from './Contexts/CartContext.tsx'
 
 createRoot(document.getElementById("root")!).render(
-  <BrowserRouter>
+  <HashRouter>
     <ThemeProvider>
       <BreadcrumbProvider>
         <FavoritesProvider>
@@ -18,5 +18,5 @@ createRoot(document.getElementById("root")!).render(
         </FavoritesProvider>
       </BreadcrumbProvider>
     </ThemeProvider>
-  </BrowserRouter>
+  </HashRouter>
 );
