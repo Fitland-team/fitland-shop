@@ -57,6 +57,7 @@ All user data, profiles, and cart information are stored locally using **LocalSt
 ---
 
 ## 📁 Folder Structure
+
 src/
 ┣ assets/
 ┣ components/
@@ -70,6 +71,7 @@ src/
 ┣ App.tsx
 ┣ App.css
 ┗ main.tsx
+
 
 ---
 
