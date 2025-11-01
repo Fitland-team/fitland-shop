@@ -51,10 +51,10 @@ function Footer() {
                 برای دریافت تخفیف های بیشتر ما را دنبال کنید!
               </p>
               <div className="footer__icons">
-                <img className="footer__icon-item" src="/images/social/youtube.svg" alt="YouTube" />
-                <img className="footer__icon-item" src="/images/social/whatsapp.svg" alt="WhatsApp" />
-                <img className="footer__icon-item" src="/images/social/telegram.svg" alt="Telegram" />
-                <img className="footer__icon-item" src="/images/social/instagram.svg" alt="Instagram" />
+                <img className="footer__icon-item" src="/fitland-shop/images/social/youtube.svg" alt="YouTube" />
+                <img className="footer__icon-item" src="/fitland-shop/images/social/whatsapp.svg" alt="WhatsApp" />
+                <img className="footer__icon-item" src="/fitland-shop/images/social/telegram.svg" alt="Telegram" />
+                <img className="footer__icon-item" src="/fitland-shop/images/social/instagram.svg" alt="Instagram" />
               </div>
               <div className="footer-social__input-title">
                 <h3 className="footer-social__input-title-text">خبرنامه فیت‌لند</h3>
@@ -92,10 +92,10 @@ function Footer() {
             <div className="footer-namad-wrapper">
               <div className="footer__namad">
                 <span className="footer__namad-item">
-                  <img src="/images/enamad.png" alt="" />
+                  <img src="/fitland-shop/images/enamad.png" alt="" />
                 </span>
                 <span className="footer__namad-item">
-                  <img src="/images/etehadie.png" alt="" />
+                  <img src="/fitland-shop/images/etehadie.png" alt="" />
                 </span>
                 <span className="footer__namad-item">
                   <img src="images/samandehi.png" alt="" />

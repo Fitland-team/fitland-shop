@@ -1,7 +1,7 @@
 .login-img {
   width: 50%;
   height: 100%;
-  background-image: url(../../../public/images/login.png);
+  background-image: url('/fitland-shop/images/login.png');
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;

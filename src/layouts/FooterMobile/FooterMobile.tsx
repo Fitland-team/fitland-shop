@@ -13,10 +13,10 @@ export default function FooterMobile() {
                 <div className="footer-mobile__title">
                     <h1>برای دریافت تخفیف های بیشتر ما را دنبال کنید!</h1>
                     <div className="footer__icons">
-                        <img className="footer__icon-item" src="/images/social/youtube.svg" alt="YouTube" />
-                        <img className="footer__icon-item" src="/images/social/whatsapp.svg" alt="WhatsApp" />
-                        <img className="footer__icon-item" src="/images/social/telegram.svg" alt="Telegram" />
-                        <img className="footer__icon-item" src="/images/social/instagram.svg" alt="Instagram" />
+                        <img className="footer__icon-item" src="/fitland-shop/images/social/youtube.svg" alt="YouTube" />
+                        <img className="footer__icon-item" src="/fitland-shop/images/social/whatsapp.svg" alt="WhatsApp" />
+                        <img className="footer__icon-item" src="/fitland-shop/images/social/telegram.svg" alt="Telegram" />
+                        <img className="footer__icon-item" src="/fitland-shop/images/social/instagram.svg" alt="Instagram" />
                     </div>
                 </div>
                 <div className="footer-mobile__inputs">
@@ -212,13 +212,13 @@ export default function FooterMobile() {
                     <div className="footer-namad-wrapper">
                         <div className="footer__namad">
                             <span className="footer__namad-item">
-                                <img src="/images/enamad.png" alt="" />
+                                <img src="/fitland-shop/images/enamad.png" alt="" />
                             </span>
                             <span className="footer__namad-item">
-                                <img src="/images/etehadie.png" alt="" />
+                                <img src="/fitland-shop/images/etehadie.png" alt="" />
                             </span>
                             <span className="footer__namad-item">
-                                <img src="images/samandehi.png" alt="" />
+                                <img src="/fitland-shop/images/samandehi.png" alt="" />
                             </span>
                         </div>
                         <p>یک هفته ضمانت بازگشت</p>

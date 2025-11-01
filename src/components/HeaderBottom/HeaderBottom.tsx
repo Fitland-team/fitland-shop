@@ -14,7 +14,7 @@ export default function HeaderBottom() {
                         <p className='header-bottom__desc-content'>بزرگترین حراج فصل فیت لند همین حالا شرع کن و محصولات با یه تخفیف شگفت انگیز بخر!</p>
                         <MainBottom title='مشاهده  محصولات' bgColor='secondary' />
                     </div>
-                    <img src="../../images/human.png" alt="Main Photo" className='header-bottom__img' />
+                    <img src="/fitland-shop/images/human.png" alt="Main Photo" className='header-bottom__img' />
                     <div className="header-bottom__options">
                         <HeaderOptions title='۳۰۰ +' content='محصولات متنوع'>
                             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">

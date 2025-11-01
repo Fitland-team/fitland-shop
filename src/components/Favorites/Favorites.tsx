@@ -109,7 +109,7 @@ export default function Favorites() {
         <div className="dont-have-favorite">
           <div className="favorite-image-wrapper">
             <img
-              src="/images/favorite.png"
+              src="/fitland-shop/images/favorite.png"
               alt="do not have a favorite"
               className="favorite__image"
             />

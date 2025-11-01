@@ -42,7 +42,7 @@ export default function NewestProductCard({ img }: Image) {
       </div>
       <img src={img} alt="Product Image" className="newest-product__card-img" />
       <div className="newest-product__card-title">
-        <img src="../../images/new-product-shape.png" alt="" />
+        <img src="/fitland-shop/images/new-product-shape.png" alt="" />
         <div className="newest-product__card-title-content">
           <h2 className="newest-product__card-title-text">
             جدید ترین تخفیفات فصل برند نایک

@@ -80,9 +80,9 @@ export default function Register() {
       )}
 
       <div className="register-section">
-        <img src="/images/login-shape.png" alt="" className="register-shape1" />
+        <img src="/fitland-shop/images/login-shape.png" alt="" className="register-shape1" />
         <img
-          src="/images/login-shape2.png"
+          src="/fitland-shop/images/login-shape2.png"
           alt=""
           className="register-shape2"
         />
