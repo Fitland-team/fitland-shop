@@ -37,7 +37,7 @@ All user data, profiles, and cart information are stored locally using **LocalSt
 
 
 ## 🌐 Live Demo
-🔗 [Coming Soon](#)
+🔗 [View Website](fitland-team.github.io/fitland-shop/)
 
 ---
 
