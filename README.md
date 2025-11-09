@@ -61,21 +61,11 @@ and practiced proper commit conventions to simulate a real-world team workflow
 
 ---
 
-## 📦 Project Structure
-
-src/
-┣ assets/
-┣ components/
-┣ contexts/
-┣ hooks/
-┣ layouts/
-┣ pages/
-┣ routes/
-┣ styles/
-┣ utils/
-┣ App.tsx
-┣ App.css
-┗ main.tsx
+## 🧠 What We Learned
+- Effective team collaboration with Git & GitHub  
+- Handling user data with LocalStorage  
+- Building responsive layouts with pure CSS  
+- Managing state without external libraries  
 
 ---
 
