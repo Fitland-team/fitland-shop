@@ -11,7 +11,7 @@ export default function HeaderBottom() {
                         <span className="header-bottom__desc-text">راحت و مطمئن خرید کنید!</span>
                         <h1 className="header-bottom__desc-title">همراه تو در مسیر سلامتی</h1>
                         <h2 className="header-bottom__desc-intro">سهم بزرگ خودتان را امروز بگیرید! </h2>
-                        <p className='header-bottom__desc-content'>بزرگترین حراج فصل فیت لند همین حالا شرع کن و محصولات با یه تخفیف شگفت انگیز بخر!</p>
+                        <p className='header-bottom__desc-content'>بزرگترین حراج فصل فیت لند همین حالا شر,ع کن و محصولات با یه تخفیف شگفت انگیز بخر!</p>
                         <MainBottom title='مشاهده  محصولات' bgColor='secondary' />
                     </div>
                     <img src="/fitland-shop/images/human.png" alt="Main Photo" className='header-bottom__img' />
